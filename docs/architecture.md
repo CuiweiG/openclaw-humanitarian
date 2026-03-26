@@ -63,8 +63,9 @@ OpenClaw Humanitarian Network is a multi-layer information distribution system d
 ║  │  /language [code]   │       │  │  - No internet needed   │ │  ║
 ║  │  /help              │       │  └────────────┬────────────┘ │  ║
 ║  │                     │       │               │              │  ║
-║  │  Languages:         │       │  ┌────────────▼────────────┐ │  ║
-║  │  FA/DAR/AR/ZH/TR/EN │       │  │  Meshtastic + LoRa      │ │  ║
+║  │  Languages: 9       │       │  ┌────────────▼────────────┐ │  ║
+║  │  AR/FA/DAR/ZH/FR/   │       │  │  Meshtastic + LoRa      │ │  ║
+║  │  ES/RU/TR/EN        │       │  │                         │ │  ║
 ║  └─────────────────────┘       │  │  - 2-15 km range        │ │  ║
 ║                                │  │  - 915/868 MHz bands    │ │  ║
 ║                                │  │  - Text broadcasts      │ │  ║
