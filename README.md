@@ -81,7 +81,7 @@ Send `/start` → choose your language → receive today's crisis bulletins in y
 ┌─────────────────────────────────────────────────────┐
 │              TRANSLATION ENGINE                      │
 │  AI model + glossary.json (40 verified terms)        │
-│  → AR  → FA  → DAR  → ZH  → TR  → EN               │
+│  → 9 languages (see above)               │
 └────────────────────────┬────────────────────────────┘
                          │
                     ┌────┴────┐
@@ -146,7 +146,7 @@ The project maintains a verified 40-term humanitarian glossary to ensure transla
 
 ## Research Foundation
 
-This project builds on peer-reviewed research in humanitarian NLP, crisis informatics, and offline communication systems. We maintain an active [research bibliography](docs/references.md) with 30 references from IEEE, Frontiers, ICWSM, and leading humanitarian organizations.
+This project builds on peer-reviewed research in humanitarian NLP, crisis informatics, and offline communication systems. We maintain an active [research bibliography](docs/references.md) with 40+ references from IEEE, Frontiers, ICWSM, and leading humanitarian organizations.
 
 **Key research areas:**
 
