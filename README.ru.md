@@ -70,7 +70,7 @@
 
 ```bash
 git clone https://github.com/CuiweiG/openclaw-humanitarian.git
-cd crisisbridge
+cd openclaw-humanitarian
 pip install -r requirements.txt
 python src/demo.py  # Посмотрите, как это работает, за 30 секунд
 ```
@@ -89,7 +89,7 @@ python src/demo.py  # Посмотрите, как это работает, за
 
 ## Дорожная Карта
 
-- [x] Многоязычные кризисные бюллетени (AR/FA/DAR/EN/ZH/TR)
+- [x] Многоязычные кризисные бюллетени (AR/FA/DAR/EN/ZH/TR/FR/ES/RU)
 - [x] Автоматизированный конвейер ReliefWeb/УКГД ООН
 - [x] Гуманитарный глоссарий из 40 терминов (9 языков)
 - [x] Telegram-бот с поддержкой 9 языков

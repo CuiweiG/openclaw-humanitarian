@@ -40,7 +40,7 @@ CrisisBridge is a multi-layer information distribution system designed to delive
 ║  │  ┌──────────────┐     ┌──────────────────────────────┐  │    ║
 ║  │  │ glossary.json│────►│  Pluggable Backend:           │  │    ║
 ║  │  │ (40 terms,   │     │  - ClaudeBackend (API)        │  │    ║
-║  │  │  5 languages)│     │  - LocalModelBackend (future) │  │    ║
+║  │  │  8 languages)│     │  - LocalModelBackend (future) │  │    ║
 ║  │  └──────────────┘     └──────────────────────────────┘  │    ║
 ║  │                                                           │    ║
 ║  │  src/translator/quality_check.py                         │    ║
@@ -99,7 +99,7 @@ All sources are publicly accessible, no authentication required.
 
 - **`src/translator/translate.py`**: Multilingual translation pipeline. Pluggable backend design supports Claude API or local models. Validates terminology against `glossary.json`.
 - **`src/translator/quality_check.py`**: Automated quality gate. Checks word count (≤200), source attribution, terminology consistency, and numeric format (Persian ۱۲۳ vs Arabic ١٢٣).
-- **`data/glossary.json`**: 40 humanitarian terms in 5 languages (EN/FA/DAR/AR/ZH).
+- **`data/glossary.json`**: 40 humanitarian terms in 8 languages (EN/FA/DAR/AR/ZH/FR/ES/RU).
 
 ### Layer 3a — Online Distribution (Telegram Bot)
 
@@ -145,7 +145,7 @@ For scenarios where governments restrict internet access:
 
 ```bash
 git clone https://github.com/CuiweiG/openclaw-humanitarian.git
-cd crisisbridge
+cd openclaw-humanitarian
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env

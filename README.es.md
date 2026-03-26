@@ -70,7 +70,7 @@ Pipeline automatizado que:
 
 ```bash
 git clone https://github.com/CuiweiG/openclaw-humanitarian.git
-cd crisisbridge
+cd openclaw-humanitarian
 pip install -r requirements.txt
 python src/demo.py  # Véalo funcionar en 30 segundos
 ```
@@ -89,7 +89,7 @@ python src/demo.py  # Véalo funcionar en 30 segundos
 
 ## Hoja de Ruta
 
-- [x] Boletines de crisis multilingüe (AR/FA/DAR/EN/ZH/TR)
+- [x] Boletines de crisis multilingüe (AR/FA/DAR/EN/ZH/TR/FR/ES/RU)
 - [x] Pipeline de extracción automática ReliefWeb/OCHA
 - [x] Glosario humanitario de 40 términos (9 idiomas)
 - [x] Bot de Telegram con soporte de 9 idiomas

@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file.
 - 🌐 Multilingual crisis bulletin pipeline (Arabic, Persian, Dari, English, Chinese, Turkish)
 - 📡 ReliefWeb/OCHA automated report scraper
 - 🤖 Telegram bot with /start, /latest, /shelter, /language, /help commands
-- 📖 40-term humanitarian glossary in 5 languages (EN/FA/DAR/AR/ZH)
+- 📖 40-term humanitarian glossary in 8 languages (EN/FA/DAR/AR/ZH/FR/ES/RU)
 - 📻 Briar + Meshtastic offline architecture design documents
 - 🌍 Multi-language README (English, Persian, Arabic, Chinese)
 - 🌍 Multi-language CONTRIBUTING guide (English, Persian, Arabic)

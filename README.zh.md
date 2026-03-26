@@ -101,7 +101,7 @@
 
 ```bash
 git clone https://github.com/CuiweiG/openclaw-humanitarian.git
-cd crisisbridge
+cd openclaw-humanitarian
 npm install
 cp .env.example .env
 # 在 .env 中配置环境变量

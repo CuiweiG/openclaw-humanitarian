@@ -36,7 +36,7 @@ We fix that.
 
 ```bash
 git clone https://github.com/CuiweiG/openclaw-humanitarian.git
-cd crisisbridge
+cd openclaw-humanitarian
 pip install -r requirements.txt
 python src/demo.py  # See it work in 30 seconds
 ```
@@ -59,7 +59,7 @@ Send `/start` → choose your language → receive today's crisis bulletins in y
 |---------|-------------|
 | 📡 **Crisis Scraper** | Auto-pulls situation reports from ReliefWeb, OCHA, and UN agencies every 6 hours |
 | 🌐 **Multilingual Translator** | AI-powered translation with humanitarian-specific glossary (40+ verified terms) |
-| 🤖 **Telegram Bot** | Delivers bulletins in AR / FA / DAR / ZH / TR / EN on demand and via push alerts |
+| 🤖 **Telegram Bot** | Delivers bulletins in 9 languages (AR/FA/DAR/ZH/TR/EN/FR/ES/RU) on demand and via push alerts |
 
 ---
 
@@ -132,9 +132,9 @@ The project maintains a verified 40-term humanitarian glossary to ensure transla
 
 ## Roadmap
 
-- [x] Multilingual crisis bulletins (AR/FA/DAR/EN/ZH/TR)
+- [x] Multilingual crisis bulletins (AR/FA/DAR/EN/ZH/TR/FR/ES/RU)
 - [x] ReliefWeb/OCHA auto-scraping pipeline
-- [x] 40-term humanitarian glossary (5 languages)
+- [x] 40-term humanitarian glossary (8 languages)
 - [x] Telegram bot with 9-language support
 - [ ] Real-time shelter tracker for Lebanon
 - [ ] Briar + Meshtastic offline communication layer
