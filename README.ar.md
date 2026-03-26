@@ -2,7 +2,7 @@
 
 ---
 
-# 🌍 شبكة OpenClaw الإنسانية
+# 🌍 شبكة CrisisBridge الإنسانية
 
 **نشرات إنسانية متعددة اللغات مدعومة بالذكاء الاصطناعي للمدنيين المتضررين من أزمة الشرق الأوسط.**
 
@@ -100,8 +100,8 @@
 ## البدء السريع
 
 ```bash
-git clone https://github.com/CuiweiG/openclaw-humanitarian.git
-cd openclaw-humanitarian
+git clone https://github.com/CuiweiG/crisisbridge.git
+cd crisisbridge
 npm install
 cp .env.example .env
 # تعديل متغيرات البيئة في .env

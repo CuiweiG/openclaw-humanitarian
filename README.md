@@ -7,7 +7,7 @@
 <!-- Demo recording: see docs/demo-recording.md for instructions -->
 <!-- ![Demo](docs/demo.svg) -->
 
-# OpenClaw Humanitarian Network
+# CrisisBridge
 
 > **600,000–1 million households displaced. 28+ days of internet blackout. 94% of aid reports locked in English. We're breaking the language barrier.**
 
@@ -35,8 +35,8 @@ We fix that.
 ## Quick Start
 
 ```bash
-git clone https://github.com/CuiweiG/openclaw-humanitarian.git
-cd openclaw-humanitarian
+git clone https://github.com/CuiweiG/crisisbridge.git
+cd crisisbridge
 pip install -r requirements.txt
 python src/demo.py  # See it work in 30 seconds
 ```
@@ -156,7 +156,7 @@ This project builds on peer-reviewed research in humanitarian NLP, crisis inform
 - **Community feedback loops** — Two-way humanitarian information exchange via chatbots (TWB Uji, IRC Signpost)
 - **Crisis data standards** — HumSet-compatible output format for interoperability with UN systems ([OCHA HumSet](https://www.thedeep.io/))
 
-We actively seek collaboration with researchers. If your work intersects with ours, please [open an issue](https://github.com/CuiweiG/openclaw-humanitarian/issues) or email aid@agentmail.to.
+We actively seek collaboration with researchers. If your work intersects with ours, please [open an issue](https://github.com/CuiweiG/crisisbridge/issues) or email aid@agentmail.to.
 
 ---
 
@@ -207,7 +207,7 @@ This project will always be free and open. If you want to help financially, plea
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=CuiweiG/openclaw-humanitarian&type=Date)](https://star-history.com/#CuiweiG/openclaw-humanitarian&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=CuiweiG/crisisbridge&type=Date)](https://star-history.com/#CuiweiG/crisisbridge&Date)
 
 ---
 
@@ -221,7 +221,7 @@ MIT — use it, fork it, build on it. See [LICENSE](LICENSE).
 
 - 📧 Email: [aid@agentmail.to](mailto:aid@agentmail.to)
 - 🤖 Telegram: [@openclaw_aid_bot](https://t.me/openclaw_aid_bot)
-- 🐛 Issues: [GitHub Issues](https://github.com/CuiweiG/openclaw-humanitarian/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/CuiweiG/crisisbridge/issues)
 
 ---
 

@@ -113,7 +113,7 @@ class AutoSitrepGenerator:
             'report_type': 'situation_report',
             'date': date,
             'generated_at': datetime.utcnow().isoformat(),
-            'generator': 'openclaw-humanitarian/auto_sitrep',
+            'generator': 'crisisbridge/auto_sitrep',
             'methodology': 'Based on arXiv:2512.19475',
             'source_documents': len(documents),
             'sections': sections,

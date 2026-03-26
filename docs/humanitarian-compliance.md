@@ -1,13 +1,13 @@
 # Humanitarian Compliance Framework
 
-> **OpenClaw Humanitarian Network** — Compliance & Ethics Document  
+> **CrisisBridge** — Compliance & Ethics Document  
 > Version: 1.0 | References: ICRC Handbook on Data Protection in Humanitarian Action (2nd ed., 2020)
 
 ---
 
 ## 1. Core Principles
 
-OpenClaw operates under three non-negotiable humanitarian principles, drawn from the International Humanitarian Law framework and operationalized in our technical design:
+CrisisBridge operates under three non-negotiable humanitarian principles, drawn from the International Humanitarian Law framework and operationalized in our technical design:
 
 ### 1.1 Do No Harm
 
@@ -30,7 +30,7 @@ In a digital context, this means:
 
 > *"Collect only the personal data that is adequate, relevant, and limited to what is necessary."*
 
-**How we implement it**: OpenClaw collects zero personal data. There are no user accounts, no query logs, no location history, and no analytics tied to individuals. The system is designed so that there is nothing to hand over even under legal compulsion. See Section 3 for technical guarantees.
+**How we implement it**: CrisisBridge collects zero personal data. There are no user accounts, no query logs, no location history, and no analytics tied to individuals. The system is designed so that there is nothing to hand over even under legal compulsion. See Section 3 for technical guarantees.
 
 ---
 
@@ -144,7 +144,7 @@ This is enforced by code review policy: any log statement containing user input 
 
 ### 3.4 Open Source = Auditable
 
-The entire codebase is published under AGPL-3.0 at `github.com/openclaw/openclaw-humanitarian`. This means:
+The entire codebase is published under AGPL-3.0 at `github.com/CuiweiG/openclaw-humanitarian`. This means:
 
 - Any security researcher can audit the data handling
 - Any partner organization can verify the content pipeline
@@ -158,7 +158,7 @@ The AGPL license ensures that any modified deployments must also publish their s
 
 ### 4.1 Permitted Content
 
-OpenClaw bulletins may only contain:
+CrisisBridge bulletins may only contain:
 
 | Category | Examples |
 |----------|---------|
@@ -209,9 +209,9 @@ Any API response from a non-whitelisted domain is rejected before parsing. This 
 
 This is a genuine concern raised during design review. A mesh network that delivers location information could theoretically be used to coordinate military activity. Our mitigations:
 
-**Content control**: The mesh network only relays OpenClaw bulletins. There is no general-purpose messaging capability exposed to arbitrary users. Messages must be formatted and signed (SHA-256 hash) to be relayed by OpenClaw nodes.
+**Content control**: The mesh network only relays CrisisBridge bulletins. There is no general-purpose messaging capability exposed to arbitrary users. Messages must be formatted and signed (SHA-256 hash) to be relayed by CrisisBridge nodes.
 
-**Source verification**: All bulletin content must originate from the online layer (verified humanitarian APIs). Field devices cannot inject arbitrary content into the mesh — they can only relay signed content received from OpenClaw servers.
+**Source verification**: All bulletin content must originate from the online layer (verified humanitarian APIs). Field devices cannot inject arbitrary content into the mesh — they can only relay signed content received from CrisisBridge servers.
 
 **No location data**: Meshtastic nodes have GPS broadcast **disabled in firmware configuration**. Nodes do not advertise their location. Users cannot query "where are all the nodes."
 
@@ -239,14 +239,14 @@ The bandwidth constraint is a feature, not a bug — it makes the system structu
 
 ### 5.3 Content Signature Verification
 
-Every OpenClaw bulletin includes a SHA-256 hash of its content:
+Every CrisisBridge bulletin includes a SHA-256 hash of its content:
 
 ```
-[OPENCLAW-AID v1]
+[CrisisBridge-AID v1]
 DATE: 2026-03-26
 LANG: fa
 HASH: sha256:3a7f2b9c...
-SIGNED-BY: openclaw-server-01
+SIGNED-BY: CrisisBridge-server-01
 ---
 [content]
 ---
@@ -259,25 +259,25 @@ Field devices and Meshtastic relay nodes verify the hash before relaying. Conten
 
 A partner organization attempting to inject false shelter locations would need to:
 1. Obtain the AES-256 channel key (distributed only to vetted partner organizations)
-2. Generate a valid HMAC signature (requires access to OpenClaw server signing key)
+2. Generate a valid HMAC signature (requires access to CrisisBridge server signing key)
 3. Format the bulletin correctly (documented but integrity-checked)
 
-The signing key is held only by OpenClaw server infrastructure and is rotated monthly.
+The signing key is held only by CrisisBridge server infrastructure and is rotated monthly.
 
 ---
 
 ## 6. Partner Organization Agreement Requirements
 
-Any organization deploying OpenClaw mesh hardware must agree in writing to:
+Any organization deploying CrisisBridge mesh hardware must agree in writing to:
 
 1. Use nodes exclusively for humanitarian information relay
 2. Not modify the firmware to enable position broadcasting
 3. Not inject unsigned or self-signed bulletins into the network
-4. Report any suspected misuse to the OpenClaw security team
+4. Report any suspected misuse to the CrisisBridge security team
 5. Destroy or return nodes if their humanitarian mandate changes
 
 This agreement does not have legal force in all jurisdictions. It is a trust mechanism, not a legal control — and is documented here honestly as such. The technical mitigations in Section 5 are the primary safeguard.
 
 ---
 
-*Last reviewed: March 2026. For compliance questions, contact the OpenClaw ethics review board.*
+*Last reviewed: March 2026. For compliance questions, contact the CrisisBridge ethics review board.*

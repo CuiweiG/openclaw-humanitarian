@@ -1,4 +1,4 @@
-# Bot API Reference — OpenClaw Humanitarian Network
+# Bot API Reference — CrisisBridge
 
 > Telegram Bot: [@openclaw_aid_bot](https://t.me/openclaw_aid_bot)
 
@@ -35,7 +35,7 @@
 
 **Response format:**
 ```
-🌍 OpenClaw Humanitarian Bulletin
+🌍 CrisisBridge Bulletin
 
 Date: YYYY-MM-DD
 Source: https://reliefweb.int/report/...

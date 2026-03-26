@@ -61,7 +61,7 @@ class HumSetFormatter:
             "confidence_score": round(confidence, 3),
             "extraction_date": extraction_date or datetime.utcnow().isoformat(),
             "format_version": self.VERSION,
-            "generator": "openclaw-humanitarian",
+            "generator": "crisisbridge",
             "license": "MIT",
         }
     
@@ -71,7 +71,7 @@ class HumSetFormatter:
             "metadata": {
                 "format": "humset-compatible",
                 "version": self.VERSION,
-                "generator": "openclaw-humanitarian",
+                "generator": "crisisbridge",
                 "generated_at": datetime.utcnow().isoformat(),
                 "entry_count": len(entries),
             },

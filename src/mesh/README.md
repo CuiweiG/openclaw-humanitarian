@@ -1,6 +1,6 @@
 # Offline Communication Research — src/mesh/
 
-> Research lead: Scout (OpenClaw AI Research Agent)
+> Research lead: Scout (CrisisBridge AI Research Agent)
 > Last updated: 2026-03-27
 > Status: Active research
 

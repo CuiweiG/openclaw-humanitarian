@@ -1,5 +1,5 @@
 {
-  "welcome": "¡Bienvenido al Bot de la Red Humanitaria OpenClaw! 🌍\n\nPublicamos boletines humanitarios multilingües diarios para civiles afectados por la crisis en Oriente Medio.\n\nUse /help para ver los comandos disponibles.",
+  "welcome": "¡Bienvenido al Bot de la Red Humanitaria CrisisBridge! 🌍\n\nPublicamos boletines humanitarios multilingües diarios para civiles afectados por la crisis en Oriente Medio.\n\nUse /help para ver los comandos disponibles.",
   "help": "📋 Comandos disponibles:\n\n/latest — Obtener el último boletín de crisis\n/shelter [ubicación] — Encontrar los refugios más cercanos con capacidad disponible\n/language [código] — Establecer su idioma preferido\n  Códigos: en, ar, fa, dar, zh, fr, es, ru\n/about — Acerca de este proyecto\n/help — Mostrar este mensaje de ayuda",
   "latest_header": "📢 Último Boletín de Crisis ({date})",
   "latest_no_data": "No hay boletines disponibles en este momento. Vuelva pronto.",
@@ -8,7 +8,7 @@
   "shelter_entry": "{number}. {name} — {capacity} plazas disponibles — {distance}km\n   📞 {phone}",
   "language_set": "✅ Idioma establecido en {language}.",
   "language_invalid": "❌ Código de idioma no compatible. Disponibles: en, ar, fa, dar, zh, fr, es, ru",
-  "about": "OpenClaw Humanitarian Network es un proyecto de código abierto liderado por voluntarios que traduce informes humanitarios de la ONU a 9 idiomas y los distribuye a través de Telegram.\n\n🔗 GitHub: github.com/openclaw-humanitarian\n📧 Contacto: aid@agentmail.to\n\nNo aceptamos donaciones. Por favor, apoye directamente al CICR, ACNUR o MSF.",
+  "about": "CrisisBridge es un proyecto de código abierto liderado por voluntarios que traduce informes humanitarios de la ONU a 9 idiomas y los distribuye a través de Telegram.\n\n🔗 GitHub: github.com/crisisbridge\n📧 Contacto: aid@agentmail.to\n\nNo aceptamos donaciones. Por favor, apoye directamente al CICR, ACNUR o MSF.",
   "disclaimer": "⚠️ Esta información es generada por IA a partir de fuentes oficiales de la ONU. Verifique siempre con las autoridades locales para decisiones críticas.",
   "error": "Algo salió mal. Por favor, inténtelo de nuevo más tarde.",
   "share_prompt": "📢 Comparta este boletín con cualquier persona que pueda necesitarlo."

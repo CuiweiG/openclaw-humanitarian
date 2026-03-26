@@ -1,6 +1,6 @@
 """
 messages.py — 多语言消息模板字典
-Multilingual message templates for the OpenClaw Humanitarian Telegram Bot.
+Multilingual message templates for the CrisisBridge Telegram Bot.
 
 所有用户可见的文本集中在这里，方便翻译和维护。
 All user-facing strings are centralised here for easy translation and maintenance.
@@ -29,7 +29,7 @@ LANGUAGE_NAMES: dict[str, str] = {
 
 WELCOME_MESSAGES: dict[str, str] = {
     "en": (
-        "🌍 *Welcome to OpenClaw Humanitarian Network Bot*\n\n"
+        "🌍 *Welcome to CrisisBridge Bot*\n\n"
         "We deliver daily humanitarian bulletins in 6 languages: "
         "Arabic, Persian, Dari, English, Chinese, and Turkish.\n\n"
         "Commands:\n"
@@ -40,7 +40,7 @@ WELCOME_MESSAGES: dict[str, str] = {
         "🆘 *Emergency contacts:* UNHCR: +961 1 850 100 | ICRC: +961 1 333 407"
     ),
     "fa": (
-        "🌍 *به ربات شبکه بشردوستانه OpenClaw خوش آمدید*\n\n"
+        "🌍 *به ربات شبکه بشردوستانه CrisisBridge خوش آمدید*\n\n"
         "ما هر روز خلاصه‌های بشردوستانه را به ۶ زبان ارائه می‌دهیم: "
         "عربی، فارسی، دری، انگلیسی، چینی و ترکی.\n\n"
         "دستورات:\n"
@@ -51,7 +51,7 @@ WELCOME_MESSAGES: dict[str, str] = {
         "🆘 *تماس اضطراری:* UNHCR: +98 21 8899 5000"
     ),
     "dar": (
-        "🌍 *به ربات شبکه بشردوستانه OpenClaw خوش آمدید*\n\n"
+        "🌍 *به ربات شبکه بشردوستانه CrisisBridge خوش آمدید*\n\n"
         "ما هر روز خلاصه‌های بشردوستانه را به ۶ زبان ارائه می‌دهیم: "
         "عربی، فارسی، دری، انگلیسی، چینی و ترکی.\n\n"
         "دستورات:\n"
@@ -62,7 +62,7 @@ WELCOME_MESSAGES: dict[str, str] = {
         "🆘 *تماس اضطراری:* UNHCR: +98 21 8899 5000"
     ),
     "ar": (
-        "🌍 *مرحباً بكم في روبوت شبكة OpenClaw الإنسانية*\n\n"
+        "🌍 *مرحباً بكم في روبوت شبكة CrisisBridge الإنسانية*\n\n"
         "نوفر نشرات إنسانية يومية بـ 6 لغات: "
         "العربية والفارسية والدرية والإنجليزية والصينية والتركية.\n\n"
         "الأوامر:\n"
@@ -73,7 +73,7 @@ WELCOME_MESSAGES: dict[str, str] = {
         "🆘 *اتصالات الطوارئ:* UNHCR: +961 1 850 100 | ICRC: +961 1 333 407"
     ),
     "zh": (
-        "🌍 *欢迎使用 OpenClaw 人道主义网络机器人*\n\n"
+        "🌍 *欢迎使用 CrisisBridge 人道主义网络机器人*\n\n"
         "我们每天以6种语言发布人道主义简报：阿拉伯语、波斯语、达里语、英语、中文和土耳其语。\n\n"
         "命令：\n"
         "/latest — 最新简报\n"
@@ -83,7 +83,7 @@ WELCOME_MESSAGES: dict[str, str] = {
         "🆘 *紧急联系：* UNHCR: +961 1 850 100"
     ),
     "tr": (
-        "🌍 *OpenClaw İnsani Yardım Ağı Botuna Hoş Geldiniz*\n\n"
+        "🌍 *CrisisBridge İnsani Yardım Ağı Botuna Hoş Geldiniz*\n\n"
         "Her gün 6 dilde insani yardım bültenleri sunuyoruz: "
         "Arapça, Farsça, Dari, İngilizce, Çince ve Türkçe.\n\n"
         "Komutlar:\n"
@@ -101,7 +101,7 @@ WELCOME_MESSAGES: dict[str, str] = {
 
 HELP_MESSAGES: dict[str, str] = {
     "en": (
-        "ℹ️ *OpenClaw Humanitarian Bot — Help*\n\n"
+        "ℹ️ *CrisisBridge Bot — Help*\n\n"
         "*/start* — Show welcome message\n"
         "*/latest* — Get the latest humanitarian bulletin\n"
         "*/shelter [location]* — Search for shelter near a location\n"
@@ -112,7 +112,7 @@ HELP_MESSAGES: dict[str, str] = {
         "🤖 Bot: @openclaw_aid_bot"
     ),
     "fa": (
-        "ℹ️ *ربات بشردوستانه OpenClaw — راهنما*\n\n"
+        "ℹ️ *ربات بشردوستانه CrisisBridge — راهنما*\n\n"
         "*/start* — نمایش پیام خوش‌آمدگویی\n"
         "*/latest* — دریافت آخرین خلاصه بشردوستانه\n"
         "*/shelter [مکان]* — جستجوی سرپناه\n"
@@ -121,7 +121,7 @@ HELP_MESSAGES: dict[str, str] = {
         "*/help* — نمایش این راهنما"
     ),
     "dar": (
-        "ℹ️ *ربات بشردوستانه OpenClaw — کمک*\n\n"
+        "ℹ️ *ربات بشردوستانه CrisisBridge — کمک*\n\n"
         "*/start* — نشان دادن پیام خوش‌آمدگویی\n"
         "*/latest* — گرفتن آخرین خلاصه بشردوستانه\n"
         "*/shelter [مکان]* — جستجوی سرپناه\n"
@@ -130,7 +130,7 @@ HELP_MESSAGES: dict[str, str] = {
         "*/help* — نشان دادن این کمک"
     ),
     "ar": (
-        "ℹ️ *روبوت OpenClaw الإنساني — المساعدة*\n\n"
+        "ℹ️ *روبوت CrisisBridge الإنساني — المساعدة*\n\n"
         "*/start* — عرض رسالة الترحيب\n"
         "*/latest* — الحصول على آخر نشرة إنسانية\n"
         "*/shelter [موقع]* — البحث عن مأوى\n"
@@ -139,7 +139,7 @@ HELP_MESSAGES: dict[str, str] = {
         "*/help* — عرض هذه المساعدة"
     ),
     "zh": (
-        "ℹ️ *OpenClaw 人道主义机器人 — 帮助*\n\n"
+        "ℹ️ *CrisisBridge 人道主义机器人 — 帮助*\n\n"
         "*/start* — 显示欢迎消息\n"
         "*/latest* — 获取最新人道主义简报\n"
         "*/shelter [地点]* — 搜索庇护所\n"
@@ -148,7 +148,7 @@ HELP_MESSAGES: dict[str, str] = {
         "*/help* — 显示此帮助"
     ),
     "tr": (
-        "ℹ️ *OpenClaw İnsani Bot — Yardım*\n\n"
+        "ℹ️ *CrisisBridge İnsani Bot — Yardım*\n\n"
         "*/start* — Karşılama mesajını göster\n"
         "*/latest* — Son insani yardım bültenini al\n"
         "*/shelter [konum]* — Barınak ara\n"

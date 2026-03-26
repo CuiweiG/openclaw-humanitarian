@@ -1,6 +1,6 @@
 # Translation Pipeline
 
-> **OpenClaw Humanitarian Network** — Translation System Design  
+> **CrisisBridge** — Translation System Design  
 > Version: 1.0 | Module: `src/translator/`
 
 ---
@@ -324,7 +324,7 @@ ARABIC_INDIC_DIGIT_PATTERN = re.compile(r"[٠-٩]")
 
 ## 6. Persian vs Dari Handling
 
-Persian (Farsi, `fa`) and Dari (`dar`) are mutually intelligible but differ in vocabulary, particularly for humanitarian/administrative terms. OpenClaw treats them as distinct translation targets.
+Persian (Farsi, `fa`) and Dari (`dar`) are mutually intelligible but differ in vocabulary, particularly for humanitarian/administrative terms. CrisisBridge treats them as distinct translation targets.
 
 ### 6.1 The 12 Critical Difference Pairs
 
@@ -457,4 +457,4 @@ Add the language to:
 
 ---
 
-*This document is maintained by the OpenClaw translation team. For glossary contributions or language-specific feedback, open a GitHub issue with the `translation` label.*
+*This document is maintained by the CrisisBridge translation team. For glossary contributions or language-specific feedback, open a GitHub issue with the `translation` label.*

@@ -1,4 +1,4 @@
-# System Architecture — OpenClaw Humanitarian Network
+# System Architecture — CrisisBridge
 
 > Version: 1.0 | Last updated: 2026-03-27
 
@@ -6,7 +6,7 @@
 
 ## Overview
 
-OpenClaw Humanitarian Network is a multi-layer information distribution system designed to deliver accurate, multilingual humanitarian bulletins to civilians in conflict zones — even under degraded or disconnected network conditions.
+CrisisBridge is a multi-layer information distribution system designed to deliver accurate, multilingual humanitarian bulletins to civilians in conflict zones — even under degraded or disconnected network conditions.
 
 ---
 
@@ -144,8 +144,8 @@ For scenarios where governments restrict internet access:
 ### Quick Deploy
 
 ```bash
-git clone https://github.com/CuiweiG/openclaw-humanitarian.git
-cd openclaw-humanitarian
+git clone https://github.com/CuiweiG/crisisbridge.git
+cd crisisbridge
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
@@ -167,13 +167,13 @@ For production, run as a systemd service or Docker container:
 ```bash
 # systemd service example
 [Unit]
-Description=OpenClaw Humanitarian Bot
+Description=CrisisBridge Bot
 After=network.target
 
 [Service]
-WorkingDirectory=/opt/openclaw-humanitarian
-EnvironmentFile=/opt/openclaw-humanitarian/.env
-ExecStart=/opt/openclaw-humanitarian/venv/bin/python -m src.bot.telegram_bot
+WorkingDirectory=/opt/crisisbridge
+EnvironmentFile=/opt/crisisbridge/.env
+ExecStart=/opt/crisisbridge/venv/bin/python -m src.bot.telegram_bot
 Restart=on-failure
 RestartSec=10
 

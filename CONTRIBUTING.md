@@ -1,4 +1,4 @@
-# Contributing to OpenClaw Humanitarian Network
+# Contributing to CrisisBridge
 
 Thank you for considering contributing. This project exists because people showed up. Here's how you can help.
 

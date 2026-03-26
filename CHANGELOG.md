@@ -25,4 +25,4 @@ All notable changes to this project will be documented in this file.
 - Glossary-enforced terminology consistency
 - Persian vs Dari automatic distinction handling
 
-[0.1.0]: https://github.com/CuiweiG/openclaw-humanitarian/releases/tag/v0.1.0
+[0.1.0]: https://github.com/CuiweiG/crisisbridge/releases/tag/v0.1.0

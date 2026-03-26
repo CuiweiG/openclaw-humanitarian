@@ -1,6 +1,6 @@
 """
 telegram_bot.py — Telegram Bot 核心逻辑
-Core Telegram Bot logic for OpenClaw Humanitarian Network.
+Core Telegram Bot logic for CrisisBridge.
 
 使用 python-telegram-bot v20+ 的异步框架。
 Uses the python-telegram-bot v20+ async framework.
@@ -115,7 +115,7 @@ def main() -> None:
         )
         sys.exit(1)
 
-    logger.info("Starting OpenClaw Humanitarian Bot…")
+    logger.info("Starting CrisisBridge Bot…")
     application = build_application(token)
 
     # 使用长轮询模式启动 / Start with long polling

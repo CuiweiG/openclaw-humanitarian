@@ -167,7 +167,7 @@ def fetch_reports(
         "Accept": "application/json",
         "Content-Type": "application/json",
         # 标识自己的 user-agent，遵守 ReliefWeb API 使用规范
-        "User-Agent": "OpenClaw-HumanitarianBot/1.0 (aid@agentmail.to)",
+        "User-Agent": "crisisbridgeBot/1.0 (aid@agentmail.to)",
     }
 
     last_error: Optional[Exception] = None

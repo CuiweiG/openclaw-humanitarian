@@ -235,7 +235,7 @@ def translate_bulletin(
 
     # 3. 构建 Markdown 输出 / Build Markdown output
     lines: list[str] = [
-        "# 🌍 OpenClaw Humanitarian Bulletin",
+        "# 🌍 CrisisBridge Bulletin",
         "",
         f"**Date:** {report_date or 'N/A'}",
         f"**Source:** {source_url or 'N/A'}",

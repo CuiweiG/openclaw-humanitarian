@@ -149,7 +149,7 @@ class TestTranslateBulletin:
             glossary_path=glossary_file,
         )
         assert isinstance(result, str)
-        assert "OpenClaw Humanitarian Bulletin" in result
+        assert "CrisisBridge Bulletin" in result
 
     def test_english_passthrough_not_translated(self, glossary_file: Path):
         """英文内容应直接输出，不经翻译 / English content should pass through without translation."""

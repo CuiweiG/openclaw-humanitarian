@@ -2,7 +2,7 @@
 
 ---
 
-# 🌍 OpenClaw — Red Humanitaria
+# 🌍 CrisisBridge — Red Humanitaria
 
 **Boletines humanitarios multilingües impulsados por IA para civiles afectados por la crisis en Oriente Medio.**
 
@@ -69,8 +69,8 @@ Pipeline automatizado que:
 ## Inicio Rápido
 
 ```bash
-git clone https://github.com/CuiweiG/openclaw-humanitarian.git
-cd openclaw-humanitarian
+git clone https://github.com/CuiweiG/crisisbridge.git
+cd crisisbridge
 pip install -r requirements.txt
 python src/demo.py  # Véalo funcionar en 30 segundos
 ```
@@ -128,7 +128,7 @@ Este proyecto siempre será gratuito y abierto. Si desea ayudar económicamente,
 
 - 📧 Correo: [aid@agentmail.to](mailto:aid@agentmail.to)
 - 🤖 Telegram: [@openclaw_aid_bot](https://t.me/openclaw_aid_bot)
-- 🐛 Issues: [GitHub Issues](https://github.com/CuiweiG/openclaw-humanitarian/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/CuiweiG/crisisbridge/issues)
 
 ---
 

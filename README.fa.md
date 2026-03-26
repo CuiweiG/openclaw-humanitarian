@@ -2,7 +2,7 @@
 
 ---
 
-# 🌍 شبکه انسان‌دوستانه OpenClaw
+# 🌍 شبکه انسان‌دوستانه CrisisBridge
 
 **بولتن‌های انسان‌دوستانه چندزبانه مبتنی بر هوش مصنوعی برای غیرنظامیان درگیر در بحران خاورمیانه.**
 
@@ -100,8 +100,8 @@
 ## شروع سریع
 
 ```bash
-git clone https://github.com/CuiweiG/openclaw-humanitarian.git
-cd openclaw-humanitarian
+git clone https://github.com/CuiweiG/crisisbridge.git
+cd crisisbridge
 npm install
 cp .env.example .env
 # تنظیم متغیرهای محیطی در .env

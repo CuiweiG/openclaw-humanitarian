@@ -2,7 +2,7 @@
 
 ---
 
-# 🌍 OpenClaw — Гуманитарная Сеть
+# 🌍 CrisisBridge — Гуманитарная Сеть
 
 **Многоязычные гуманитарные бюллетени на основе ИИ для мирных жителей, пострадавших от кризиса на Ближнем Востоке.**
 
@@ -69,8 +69,8 @@
 ## Быстрый Старт
 
 ```bash
-git clone https://github.com/CuiweiG/openclaw-humanitarian.git
-cd openclaw-humanitarian
+git clone https://github.com/CuiweiG/crisisbridge.git
+cd crisisbridge
 pip install -r requirements.txt
 python src/demo.py  # Посмотрите, как это работает, за 30 секунд
 ```
@@ -128,7 +128,7 @@ python src/demo.py  # Посмотрите, как это работает, за
 
 - 📧 Email: [aid@agentmail.to](mailto:aid@agentmail.to)
 - 🤖 Telegram: [@openclaw_aid_bot](https://t.me/openclaw_aid_bot)
-- 🐛 Issues: [GitHub Issues](https://github.com/CuiweiG/openclaw-humanitarian/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/CuiweiG/crisisbridge/issues)
 
 ---
 

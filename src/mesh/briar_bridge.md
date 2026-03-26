@@ -37,7 +37,7 @@ Briar Mailbox is an official Briar feature (introduced in Briar 1.4) that allows
 
 **Implementation path:**
 ```
-OpenClaw Bot → Briar Mailbox API → Volunteer Android Device
+CrisisBridge Bot → Briar Mailbox API → Volunteer Android Device
                                          ↓ Bluetooth LE
                               Displaced persons in camp
 ```
@@ -63,7 +63,7 @@ The Briar team is developing a headless Linux version that could run as a daemon
 
 ```
 ┌─────────────────────────────────────────┐
-│  OpenClaw Translation Pipeline          │
+│  CrisisBridge Translation Pipeline          │
 │  (translate.py + quality_check.py)      │
 └────────────────────┬────────────────────┘
                      │ Compressed bulletin (≤200 words)
@@ -97,7 +97,7 @@ The Briar team is developing a headless Linux version that could run as a daemon
 Bulletins must be compressed for Briar (max message size: ~65 KB, practical limit ~2 KB for reliable sync):
 
 ```
-[OPENCLAW] 2026-03-27
+[CrisisBridge] 2026-03-27
 🆘 Iran/Lebanon Update
 
 • WFP: 33,000 Afghan refugees receiving food aid in Iran

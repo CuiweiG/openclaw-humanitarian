@@ -1,6 +1,6 @@
 # Offline Architecture: Dual-Layer Mesh Network
 
-> **OpenClaw Humanitarian Network** — Technical Design Document  
+> **CrisisBridge** — Technical Design Document  
 > Version: 1.0 | Audience: Engineers, Field Coordinators, Security Reviewers
 
 ---
@@ -17,7 +17,7 @@ Internet shutdowns are not hypothetical — they are a documented, recurring tac
 
 When the network goes down, Telegram bots stop working. The populations that need life-saving information most urgently — people fleeing conflict — are exactly the ones most likely to lose connectivity.
 
-**OpenClaw's response**: build a degradation-tolerant architecture that continues delivering shelter locations, aid contact numbers, and emergency guidance even when the internet is completely unavailable.
+**CrisisBridge's response**: build a degradation-tolerant architecture that continues delivering shelter locations, aid contact numbers, and emergency guidance even when the internet is completely unavailable.
 
 ---
 
@@ -86,10 +86,10 @@ Messages propagate through the mesh hop-by-hop. A bulletin broadcast from a volu
 
 ### 3.3 Message Format (Standardised Bulletin)
 
-All OpenClaw bulletins transmitted over Briar use a compact plaintext format:
+All CrisisBridge bulletins transmitted over Briar use a compact plaintext format:
 
 ```
-[OPENCLAW-AID v1]
+[CrisisBridge-AID v1]
 DATE: 2026-03-26
 LANG: fa
 HASH: sha256:a3f2...  ← Content integrity check
@@ -109,7 +109,7 @@ Key properties:
 
 ### 3.4 Briar Mailbox API Integration
 
-Briar's [Mailbox API](https://code.briarproject.org/briar/briar/-/wikis/Mailbox-API) allows a persistent internet-connected node to act as a relay ("mailbox") for offline devices. OpenClaw deploys one Briar Mailbox node per city cluster:
+Briar's [Mailbox API](https://code.briarproject.org/briar/briar/-/wikis/Mailbox-API) allows a persistent internet-connected node to act as a relay ("mailbox") for offline devices. CrisisBridge deploys one Briar Mailbox node per city cluster:
 
 ```
 ┌─────────────────┐
@@ -167,7 +167,7 @@ lora:
   tx_power: 20                  # dBm (100mW, within legal limits)
 
 channel:
-  name: "OPENCLAW-AID"
+  name: "CrisisBridge-AID"
   psk: <pre-shared AES-256 key> # Distributed to partner organizations
 
 position:
@@ -294,7 +294,7 @@ A city-scale deployment covering 10 km² requires approximately 20–30 nodes.
     └── [Family D]              [Family E] → ...
 ```
 
-**Deployment**: Volunteers pre-loaded with Briar + OpenClaw bulletin channel.
+**Deployment**: Volunteers pre-loaded with Briar + CrisisBridge bulletin channel.
 
 ### 8.2 Rural — South Lebanon
 
@@ -335,4 +335,4 @@ A city-scale deployment covering 10 km² requires approximately 20–30 nodes.
 
 ---
 
-*This document is maintained by the OpenClaw technical team. For field deployment support, contact the mesh hardware coordinator via secure channel.*
+*This document is maintained by the CrisisBridge technical team. For field deployment support, contact the mesh hardware coordinator via secure channel.*

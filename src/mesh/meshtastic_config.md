@@ -70,7 +70,7 @@ Install Meshtastic app → connect via Bluetooth → configure:
 ```yaml
 # Channel Configuration
 channel:
-  name: "OPENCLAW"
+  name: "CrisisBridge"
   psk: "[shared key - distribute via secure channel]"
   # LoRa modulation settings
   modem_preset: LONG_SLOW      # Best range, slower speed
@@ -92,7 +92,7 @@ device:
 
 ```yaml
 user:
-  long_name: "OpenClaw Aid Node"
+  long_name: "CrisisBridge Aid Node"
   short_name: "OCLN"
 ```
 
@@ -136,11 +136,11 @@ reliefweb.int
 - Use abbreviations: `IR` (Iran), `LB` (Lebanon), `WFP`, `UNHCR`
 - Numbers: Use Western digits (0-9) for maximum compatibility
 - Date: ISO format `YYYY-MM-DD`
-- Prefix `OC|` identifies OpenClaw bulletins
+- Prefix `OC|` identifies CrisisBridge bulletins
 
 ---
 
-## Integration with OpenClaw Pipeline
+## Integration with CrisisBridge Pipeline
 
 Future implementation plan:
 
@@ -157,7 +157,7 @@ def broadcast_bulletin(compressed_text: str, interface_port: str = "/dev/ttyUSB0
     with mesh_interface.MeshInterface(devPath=interface_port) as iface:
         iface.sendText(
             text=compressed_text,
-            channelIndex=0,  # OpenClaw channel
+            channelIndex=0,  # CrisisBridge channel
             wantAck=False,   # Broadcast, no ACK needed
         )
 ```

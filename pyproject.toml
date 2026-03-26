@@ -3,13 +3,13 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.backends._legacy:_Backend"
 
 [project]
-name = "openclaw-humanitarian"
+name = "crisisbridge"
 version = "0.1.0"
 description = "AI-powered multilingual humanitarian bulletins for crisis-affected civilians"
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.10"
-authors = [{name = "OpenClaw Humanitarian Network", email = "aid@agentmail.to"}]
+authors = [{name = "CrisisBridge", email = "aid@agentmail.to"}]
 keywords = ["humanitarian", "translation", "crisis", "multilingual", "telegram"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -31,9 +31,9 @@ dependencies = [
 dev = ["pytest>=7.0", "pytest-asyncio>=0.21.0"]
 
 [project.urls]
-Homepage = "https://github.com/CuiweiG/openclaw-humanitarian"
-Documentation = "https://github.com/CuiweiG/openclaw-humanitarian/tree/main/docs"
-Issues = "https://github.com/CuiweiG/openclaw-humanitarian/issues"
+Homepage = "https://github.com/CuiweiG/crisisbridge"
+Documentation = "https://github.com/CuiweiG/crisisbridge/tree/main/docs"
+Issues = "https://github.com/CuiweiG/crisisbridge/issues"
 
 [tool.black]
 line-length = 100

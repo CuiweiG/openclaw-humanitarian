@@ -1,5 +1,5 @@
 """
-OpenClaw Humanitarian Network — Live Demo
+CrisisBridge — Live Demo
 ==========================================
 Run:  python src/demo.py
 
@@ -124,7 +124,7 @@ def _hr_single(label: str = "", width: int = WIDTH) -> str:
 def _print_header() -> None:
     print()
     print(_bold(_c(_hr_double(), CYAN)))
-    title = "🌍  OpenClaw Humanitarian Network — Live Demo"
+    title = "🌍  CrisisBridge — Live Demo"
     print(_bold(_c(f"  {title}", CYAN)))
     print(_bold(_c(_hr_double(), CYAN)))
     print()
@@ -137,7 +137,7 @@ def _print_footer() -> None:
     print(_green("  🎉  Demo complete!"))
     print()
     print(f"  👉  Live bot: {_cyan('https://t.me/openclaw_aid_bot')}")
-    print(f"  💻  GitHub:   {_cyan('https://github.com/CuiweiG/openclaw-humanitarian')}")
+    print(f"  💻  GitHub:   {_cyan('https://github.com/CuiweiG/crisisbridge')}")
     print()
     print(_dim("  No API key was used. Set ANTHROPIC_API_KEY for real AI translation."))
     print()
@@ -258,7 +258,7 @@ def _fetch_reports(limit: int = 3) -> list[dict[str, Any]]:
         headers={
             "Content-Type": "application/json",
             "Accept": "application/json",
-            "User-Agent": "OpenClaw-HumanitarianBot/1.0 (aid@agentmail.to)",
+            "User-Agent": "crisisbridgeBot/1.0 (aid@agentmail.to)",
         },
         method="POST",
     )

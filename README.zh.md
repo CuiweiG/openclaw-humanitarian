@@ -2,7 +2,7 @@
 
 ---
 
-# 🌍 OpenClaw 人道主义网络
+# 🌍 CrisisBridge 人道主义网络
 
 **为受中东危机影响的平民提供 AI 驱动的多语言人道主义简报。**
 
@@ -100,8 +100,8 @@
 ## 快速开始
 
 ```bash
-git clone https://github.com/CuiweiG/openclaw-humanitarian.git
-cd openclaw-humanitarian
+git clone https://github.com/CuiweiG/crisisbridge.git
+cd crisisbridge
 npm install
 cp .env.example .env
 # 在 .env 中配置环境变量

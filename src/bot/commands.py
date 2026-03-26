@@ -1,6 +1,6 @@
 """
 commands.py — Telegram Bot 命令处理函数
-Command handler functions for the OpenClaw Humanitarian Telegram Bot.
+Command handler functions for the CrisisBridge Telegram Bot.
 
 每个函数对应一个 Bot 命令，负责处理业务逻辑并发送回复。
 Each function corresponds to one bot command and handles business logic + reply.

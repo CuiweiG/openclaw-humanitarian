@@ -1,5 +1,5 @@
 {
-  "welcome": "Bienvenue sur le Bot du Réseau Humanitaire OpenClaw ! 🌍\n\nNous diffusons quotidiennement des bulletins humanitaires multilingues pour les civils touchés par la crise au Moyen-Orient.\n\nUtilisez /help pour afficher les commandes disponibles.",
+  "welcome": "Bienvenue sur le Bot du Réseau Humanitaire CrisisBridge ! 🌍\n\nNous diffusons quotidiennement des bulletins humanitaires multilingues pour les civils touchés par la crise au Moyen-Orient.\n\nUtilisez /help pour afficher les commandes disponibles.",
   "help": "📋 Commandes disponibles :\n\n/latest — Obtenir le dernier bulletin de crise\n/shelter [lieu] — Trouver les abris les plus proches avec capacité disponible\n/language [code] — Définir votre langue préférée\n  Codes : en, ar, fa, dar, zh, fr, es, ru\n/about — À propos de ce projet\n/help — Afficher ce message d'aide",
   "latest_header": "📢 Dernier Bulletin de Crise ({date})",
   "latest_no_data": "Aucun bulletin disponible pour le moment. Revenez bientôt.",
@@ -8,7 +8,7 @@
   "shelter_entry": "{number}. {name} — {capacity} places disponibles — {distance}km\n   📞 {phone}",
   "language_set": "✅ Langue définie sur {language}.",
   "language_invalid": "❌ Code de langue non pris en charge. Disponibles : en, ar, fa, dar, zh, fr, es, ru",
-  "about": "OpenClaw Humanitarian Network est un projet open-source mené par des bénévoles qui traduit les rapports humanitaires de l'ONU en 9 langues et les diffuse via Telegram.\n\n🔗 GitHub : github.com/openclaw-humanitarian\n📧 Contact : aid@agentmail.to\n\nNous n'acceptons pas de dons. Veuillez soutenir directement le CICR, le HCR ou MSF.",
+  "about": "CrisisBridge est un projet open-source mené par des bénévoles qui traduit les rapports humanitaires de l'ONU en 9 langues et les diffuse via Telegram.\n\n🔗 GitHub : github.com/crisisbridge\n📧 Contact : aid@agentmail.to\n\nNous n'acceptons pas de dons. Veuillez soutenir directement le CICR, le HCR ou MSF.",
   "disclaimer": "⚠️ Ces informations sont générées par IA à partir de sources officielles de l'ONU. Vérifiez toujours auprès des autorités locales pour les décisions critiques.",
   "error": "Une erreur s'est produite. Veuillez réessayer plus tard.",
   "share_prompt": "📢 Partagez ce bulletin avec toute personne qui pourrait en avoir besoin."
