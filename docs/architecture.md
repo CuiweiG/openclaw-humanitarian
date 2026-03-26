@@ -144,7 +144,7 @@ For scenarios where governments restrict internet access:
 ### Quick Deploy
 
 ```bash
-git clone https://github.com/CuiweiG/crisisbridge.git
+git clone https://github.com/CuiweiG/openclaw-humanitarian.git
 cd crisisbridge
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt

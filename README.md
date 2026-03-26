@@ -1,7 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Languages](https://img.shields.io/badge/languages-6-orange.svg)](#what-we-do)
+[![Languages](https://img.shields.io/badge/languages-9-orange.svg)](#what-we-do)
 [![Telegram Bot](https://img.shields.io/badge/Telegram-Bot-2CA5E0?logo=telegram)](https://t.me/openclaw_aid_bot)
 
 <!-- Demo recording: see docs/demo-recording.md for instructions -->
@@ -11,7 +11,7 @@
 
 > **600,000–1 million households displaced. 28+ days of internet blackout. 94% of aid reports locked in English. We're breaking the language barrier.**
 
-An open-source AI pipeline that scrapes humanitarian reports from OCHA, ReliefWeb, and UN agencies — then translates them into Arabic, Farsi, Dari, Chinese, Turkish, and English — and delivers them to civilians in crisis zones via Telegram, SMS, and offline mesh networks.
+An open-source platform ensuring life-saving humanitarian information reaches every civilian, in their language, online or offline. Currently serving the 2026 Middle East crisis in 9 languages: Arabic, Persian, Dari, French, Spanish, Russian, English, Chinese, and Turkish.
 
 **Read in your language:** &nbsp; [فارسی](README.fa.md) &nbsp;|&nbsp; [العربية](README.ar.md) &nbsp;|&nbsp; [中文](README.zh.md) &nbsp;|&nbsp; [Français](README.fr.md) &nbsp;|&nbsp; [Español](README.es.md) &nbsp;|&nbsp; [Русский](README.ru.md) &nbsp;|&nbsp; [English](README.md)
 
@@ -35,7 +35,7 @@ We fix that.
 ## Quick Start
 
 ```bash
-git clone https://github.com/CuiweiG/crisisbridge.git
+git clone https://github.com/CuiweiG/openclaw-humanitarian.git
 cd crisisbridge
 pip install -r requirements.txt
 python src/demo.py  # See it work in 30 seconds
@@ -156,7 +156,7 @@ This project builds on peer-reviewed research in humanitarian NLP, crisis inform
 - **Community feedback loops** — Two-way humanitarian information exchange via chatbots (TWB Uji, IRC Signpost)
 - **Crisis data standards** — HumSet-compatible output format for interoperability with UN systems ([OCHA HumSet](https://www.thedeep.io/))
 
-We actively seek collaboration with researchers. If your work intersects with ours, please [open an issue](https://github.com/CuiweiG/crisisbridge/issues) or email aid@agentmail.to.
+We actively seek collaboration with researchers. If your work intersects with ours, please [open an issue](https://github.com/CuiweiG/openclaw-humanitarian/issues) or email aid@agentmail.to.
 
 ---
 
@@ -207,7 +207,7 @@ This project will always be free and open. If you want to help financially, plea
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=CuiweiG/crisisbridge&type=Date)](https://star-history.com/#CuiweiG/crisisbridge&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=CuiweiG/openclaw-humanitarian&type=Date)](https://star-history.com/#CuiweiG/openclaw-humanitarian&Date)
 
 ---
 
@@ -221,7 +221,7 @@ MIT — use it, fork it, build on it. See [LICENSE](LICENSE).
 
 - 📧 Email: [aid@agentmail.to](mailto:aid@agentmail.to)
 - 🤖 Telegram: [@openclaw_aid_bot](https://t.me/openclaw_aid_bot)
-- 🐛 Issues: [GitHub Issues](https://github.com/CuiweiG/crisisbridge/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/CuiweiG/openclaw-humanitarian/issues)
 
 ---
 

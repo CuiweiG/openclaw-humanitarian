@@ -8,7 +8,7 @@
   "shelter_entry": "{number}. {name} — 可用 {capacity} 个床位 — {distance} 公里\n   📞 {phone}",
   "language_set": "✅ 语言已设置为 {language}。",
   "language_invalid": "❌ 不支持该语言代码。可用代码：en, ar, fa, dar, zh, tr",
-  "about": "CrisisBridge 人道主义网络是一个由志愿者主导的开源项目，将联合国人道主义报告翻译成 6 种语言并通过 Telegram 发布。\n\n🔗 GitHub: github.com/crisisbridge\n📧 联系方式: aid@agentmail.to\n\n我们不接受捐款。请直接支持 ICRC、UNHCR 或 MSF。",
+  "about": "CrisisBridge 人道主义网络是一个由志愿者主导的开源项目，将联合国人道主义报告翻译成 6 种语言并通过 Telegram 发布。\n\n🔗 GitHub: github.com/CuiweiG/openclaw-humanitarian\n📧 联系方式: aid@agentmail.to\n\n我们不接受捐款。请直接支持 ICRC、UNHCR 或 MSF。",
   "disclaimer": "⚠️ 本信息由人工智能基于联合国官方来源生成。对于重要决策，请始终向当地有关部门核实。",
   "error": "出错了，请稍后再试。",
   "share_prompt": "📢 请将此简报分享给任何可能需要它的人。"

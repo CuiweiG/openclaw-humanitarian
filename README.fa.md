@@ -100,7 +100,7 @@
 ## شروع سریع
 
 ```bash
-git clone https://github.com/CuiweiG/crisisbridge.git
+git clone https://github.com/CuiweiG/openclaw-humanitarian.git
 cd crisisbridge
 npm install
 cp .env.example .env

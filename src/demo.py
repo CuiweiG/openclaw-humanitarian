@@ -137,7 +137,7 @@ def _print_footer() -> None:
     print(_green("  🎉  Demo complete!"))
     print()
     print(f"  👉  Live bot: {_cyan('https://t.me/openclaw_aid_bot')}")
-    print(f"  💻  GitHub:   {_cyan('https://github.com/CuiweiG/crisisbridge')}")
+    print(f"  💻  GitHub:   {_cyan('https://github.com/CuiweiG/openclaw-humanitarian')}")
     print()
     print(_dim("  No API key was used. Set ANTHROPIC_API_KEY for real AI translation."))
     print()

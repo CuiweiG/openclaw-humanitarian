@@ -31,9 +31,9 @@ dependencies = [
 dev = ["pytest>=7.0", "pytest-asyncio>=0.21.0"]
 
 [project.urls]
-Homepage = "https://github.com/CuiweiG/crisisbridge"
-Documentation = "https://github.com/CuiweiG/crisisbridge/tree/main/docs"
-Issues = "https://github.com/CuiweiG/crisisbridge/issues"
+Homepage = "https://github.com/CuiweiG/openclaw-humanitarian"
+Documentation = "https://github.com/CuiweiG/openclaw-humanitarian/tree/main/docs"
+Issues = "https://github.com/CuiweiG/openclaw-humanitarian/issues"
 
 [tool.black]
 line-length = 100

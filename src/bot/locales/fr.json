@@ -8,7 +8,7 @@
   "shelter_entry": "{number}. {name} — {capacity} places disponibles — {distance}km\n   📞 {phone}",
   "language_set": "✅ Langue définie sur {language}.",
   "language_invalid": "❌ Code de langue non pris en charge. Disponibles : en, ar, fa, dar, zh, fr, es, ru",
-  "about": "CrisisBridge est un projet open-source mené par des bénévoles qui traduit les rapports humanitaires de l'ONU en 9 langues et les diffuse via Telegram.\n\n🔗 GitHub : github.com/crisisbridge\n📧 Contact : aid@agentmail.to\n\nNous n'acceptons pas de dons. Veuillez soutenir directement le CICR, le HCR ou MSF.",
+  "about": "CrisisBridge est un projet open-source mené par des bénévoles qui traduit les rapports humanitaires de l'ONU en 9 langues et les diffuse via Telegram.\n\n🔗 GitHub : github.com/CuiweiG/openclaw-humanitarian\n📧 Contact : aid@agentmail.to\n\nNous n'acceptons pas de dons. Veuillez soutenir directement le CICR, le HCR ou MSF.",
   "disclaimer": "⚠️ Ces informations sont générées par IA à partir de sources officielles de l'ONU. Vérifiez toujours auprès des autorités locales pour les décisions critiques.",
   "error": "Une erreur s'est produite. Veuillez réessayer plus tard.",
   "share_prompt": "📢 Partagez ce bulletin avec toute personne qui pourrait en avoir besoin."
