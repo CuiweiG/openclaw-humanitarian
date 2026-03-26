@@ -30,7 +30,7 @@ LANGUAGE_NAMES: dict[str, str] = {
 WELCOME_MESSAGES: dict[str, str] = {
     "en": (
         "🌍 *Welcome to CrisisBridge Bot*\n\n"
-        "We deliver daily humanitarian bulletins in 6 languages: "
+        "We deliver daily humanitarian bulletins in 9 languages: "
         "Arabic, Persian, Dari, English, Chinese, and Turkish.\n\n"
         "Commands:\n"
         "/latest — Latest bulletin\n"

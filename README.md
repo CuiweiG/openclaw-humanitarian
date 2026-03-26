@@ -41,7 +41,7 @@ pip install -r requirements.txt
 python src/demo.py  # See it work in 30 seconds
 ```
 
-That's it. In 30 seconds you'll see a live humanitarian bulletin scraped and translated into 6 languages.
+That's it. In 30 seconds you'll see a live humanitarian bulletin scraped and translated into 9 languages.
 
 ---
 
@@ -135,7 +135,7 @@ The project maintains a verified 40-term humanitarian glossary to ensure transla
 - [x] Multilingual crisis bulletins (AR/FA/DAR/EN/ZH/TR)
 - [x] ReliefWeb/OCHA auto-scraping pipeline
 - [x] 40-term humanitarian glossary (5 languages)
-- [x] Telegram bot with 6-language support
+- [x] Telegram bot with 9-language support
 - [ ] Real-time shelter tracker for Lebanon
 - [ ] Briar + Meshtastic offline communication layer
 - [ ] SMS gateway for partial connectivity zones

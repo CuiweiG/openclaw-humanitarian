@@ -21,7 +21,7 @@ All notable changes to this project will be documented in this file.
 ### Technical
 - Pluggable translation backend (Claude API / local model / stub)
 - ReliefWeb API v2 integration with retry logic
-- 6-language i18n system (JSON locale files)
+- 9-language i18n system (JSON locale files)
 - Glossary-enforced terminology consistency
 - Persian vs Dari automatic distinction handling
 
