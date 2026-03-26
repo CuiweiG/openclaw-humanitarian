@@ -100,7 +100,7 @@
 ## شروع سریع
 
 ```bash
-git clone https://github.com/openclaw-humanitarian/openclaw-humanitarian.git
+git clone https://github.com/CuiweiG/openclaw-humanitarian.git
 cd openclaw-humanitarian
 npm install
 cp .env.example .env

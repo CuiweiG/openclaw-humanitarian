@@ -143,7 +143,7 @@ For scenarios where governments restrict internet access:
 ### Quick Deploy
 
 ```bash
-git clone https://github.com/openclaw-humanitarian/openclaw-humanitarian.git
+git clone https://github.com/CuiweiG/openclaw-humanitarian.git
 cd openclaw-humanitarian
 python -m venv venv && source venv/bin/activate
 pip install -r requirements.txt

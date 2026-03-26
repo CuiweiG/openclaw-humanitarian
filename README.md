@@ -32,7 +32,7 @@ We fix that.
 ## Quick Start
 
 ```bash
-git clone https://github.com/openclaw-humanitarian/openclaw-humanitarian.git
+git clone https://github.com/CuiweiG/openclaw-humanitarian.git
 cd openclaw-humanitarian
 pip install -r requirements.txt
 python src/demo.py  # See it work in 30 seconds
@@ -174,7 +174,7 @@ This project will always be free and open. If you want to help financially, plea
 
 ## Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=openclaw-humanitarian/openclaw-humanitarian&type=Date)](https://star-history.com/#openclaw-humanitarian/openclaw-humanitarian&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=CuiweiG/openclaw-humanitarian&type=Date)](https://star-history.com/#CuiweiG/openclaw-humanitarian&Date)
 
 ---
 
@@ -188,7 +188,7 @@ MIT — use it, fork it, build on it. See [LICENSE](LICENSE).
 
 - 📧 Email: [aid@agentmail.to](mailto:aid@agentmail.to)
 - 🤖 Telegram: [@openclaw_aid_bot](https://t.me/openclaw_aid_bot)
-- 🐛 Issues: [GitHub Issues](https://github.com/openclaw-humanitarian/openclaw-humanitarian/issues)
+- 🐛 Issues: [GitHub Issues](https://github.com/CuiweiG/openclaw-humanitarian/issues)
 
 ---
 
