@@ -4,6 +4,9 @@
 [![Languages](https://img.shields.io/badge/languages-6-orange.svg)](#what-we-do)
 [![Telegram Bot](https://img.shields.io/badge/Telegram-Bot-2CA5E0?logo=telegram)](https://t.me/openclaw_aid_bot)
 
+<!-- Demo recording: see docs/demo-recording.md for instructions -->
+<!-- ![Demo](docs/demo.svg) -->
+
 # OpenClaw Humanitarian Network
 
 > **3.2 million displaced. 4 weeks of internet blackout. Zero multilingual civilian warning systems. We're building one.**

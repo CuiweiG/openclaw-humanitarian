@@ -24,6 +24,15 @@ serve:  ## Start the Telegram bot
 demo:  ## Run demo (scrape + translate one report)
 	python src/demo.py
 
+lint:  ## Run linter (ruff)
+	ruff check src/ tests/
+
+format:  ## Format code (black)
+	black src/ tests/
+
+typecheck:  ## Run type checker (mypy)
+	mypy src/
+
 clean:  ## Remove generated files
 	find . -type d -name __pycache__ -exec rm -rf {} +
 	find . -type f -name "*.pyc" -delete
