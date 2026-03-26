@@ -1,0 +1,15 @@
+{
+  "welcome": "欢迎使用 OpenClaw 人道主义网络机器人！🌍\n\n我们每日为受中东危机影响的平民提供多语言人道主义简报。\n\n使用 /help 查看可用命令。",
+  "help": "📋 可用命令：\n\n/latest — 获取最新危机简报\n/shelter [地点] — 查找附近有空位的庇护所\n/language [代码] — 设置您的首选语言\n  代码：en, ar, fa, dar, zh, tr\n/about — 关于本项目\n/help — 显示此帮助信息",
+  "latest_header": "📢 最新危机简报（{date}）",
+  "latest_no_data": "目前暂无简报。请稍后再查看。",
+  "shelter_header": "📍 {location} 附近最近的庇护所：",
+  "shelter_no_results": "该地点暂无庇护所数据。我们正在努力扩大覆盖范围。",
+  "shelter_entry": "{number}. {name} — 可用 {capacity} 个床位 — {distance} 公里\n   📞 {phone}",
+  "language_set": "✅ 语言已设置为 {language}。",
+  "language_invalid": "❌ 不支持该语言代码。可用代码：en, ar, fa, dar, zh, tr",
+  "about": "OpenClaw 人道主义网络是一个由志愿者主导的开源项目，将联合国人道主义报告翻译成 6 种语言并通过 Telegram 发布。\n\n🔗 GitHub: github.com/openclaw-humanitarian\n📧 联系方式: aid@agentmail.to\n\n我们不接受捐款。请直接支持 ICRC、UNHCR 或 MSF。",
+  "disclaimer": "⚠️ 本信息由人工智能基于联合国官方来源生成。对于重要决策，请始终向当地有关部门核实。",
+  "error": "出错了，请稍后再试。",
+  "share_prompt": "📢 请将此简报分享给任何可能需要它的人。"
+}

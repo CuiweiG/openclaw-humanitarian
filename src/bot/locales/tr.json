@@ -1,0 +1,15 @@
+{
+  "welcome": "OpenClaw İnsani Yardım Ağı Botuna Hoş Geldiniz! 🌍\n\nOrta Doğu krizinden etkilenen sivillere günlük çok dilli insani yardım bültenleri sunuyoruz.\n\nMevcut komutları görmek için /help kullanın.",
+  "help": "📋 Mevcut komutlar:\n\n/latest — En son kriz bültenini al\n/shelter [konum] — Kapasiteli en yakın sığınakları bul\n/language [kod] — Tercih ettiğin dili ayarla\n  Kodlar: en, ar, fa, dar, zh, tr\n/about — Bu proje hakkında\n/help — Bu yardım mesajını göster",
+  "latest_header": "📢 En Son Kriz Bülteni ({date})",
+  "latest_no_data": "Şu anda mevcut bülten yok. Yakında tekrar kontrol edin.",
+  "shelter_header": "📍 {location} yakınındaki en yakın sığınaklar:",
+  "shelter_no_results": "Bu konum için henüz sığınak verisi mevcut değil. Kapsama alanını genişletmek için çalışıyoruz.",
+  "shelter_entry": "{number}. {name} — {capacity} yer mevcut — {distance} km\n   📞 {phone}",
+  "language_set": "✅ Dil {language} olarak ayarlandı.",
+  "language_invalid": "❌ Desteklenmeyen dil kodu. Mevcut: en, ar, fa, dar, zh, tr",
+  "about": "OpenClaw İnsani Yardım Ağı, BM insani yardım raporlarını 6 dile çeviren ve Telegram aracılığıyla dağıtan, gönüllüler tarafından yürütülen açık kaynaklı bir projedir.\n\n🔗 GitHub: github.com/openclaw-humanitarian\n📧 İletişim: aid@agentmail.to\n\nBağış kabul etmiyoruz. Lütfen ICRC, UNHCR veya MSF'ye doğrudan destek olun.",
+  "disclaimer": "⚠️ Bu bilgiler resmi BM kaynaklarından yapay zeka tarafından üretilmiştir. Kritik kararlar için her zaman yerel yetkililerle doğrulayın.",
+  "error": "Bir şeyler ters gitti. Lütfen daha sonra tekrar deneyin.",
+  "share_prompt": "📢 Bu bülteni ihtiyacı olabilecek herkesle paylaşın."
+}

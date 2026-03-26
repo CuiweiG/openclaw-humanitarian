@@ -1,0 +1,15 @@
+{
+  "welcome": "Welcome to OpenClaw Humanitarian Network Bot! 🌍\n\nWe deliver daily multilingual humanitarian bulletins for civilians affected by the Middle East crisis.\n\nUse /help to see available commands.",
+  "help": "📋 Available commands:\n\n/latest — Get the latest crisis bulletin\n/shelter [location] — Find nearest shelters with capacity\n/language [code] — Set your preferred language\n  Codes: en, ar, fa, dar, zh, tr\n/about — About this project\n/help — Show this help message",
+  "latest_header": "📢 Latest Crisis Bulletin ({date})",
+  "latest_no_data": "No bulletins available at the moment. Check back soon.",
+  "shelter_header": "📍 Nearest shelters near {location}:",
+  "shelter_no_results": "No shelter data available for this location yet. We're working on expanding coverage.",
+  "shelter_entry": "{number}. {name} — {capacity} spots available — {distance}km\n   📞 {phone}",
+  "language_set": "✅ Language set to {language}.",
+  "language_invalid": "❌ Unsupported language code. Available: en, ar, fa, dar, zh, tr",
+  "about": "OpenClaw Humanitarian Network is a volunteer-led open-source project that translates UN humanitarian reports into 6 languages and delivers them via Telegram.\n\n🔗 GitHub: github.com/openclaw-humanitarian\n📧 Contact: aid@agentmail.to\n\nWe do not accept donations. Please support ICRC, UNHCR, or MSF directly.",
+  "disclaimer": "⚠️ This information is AI-generated from official UN sources. Always verify with local authorities for critical decisions.",
+  "error": "Something went wrong. Please try again later.",
+  "share_prompt": "📢 Share this bulletin with anyone who might need it."
+}
