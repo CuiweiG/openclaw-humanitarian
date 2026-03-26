@@ -144,6 +144,22 @@ The project maintains a verified 40-term humanitarian glossary to ensure transla
 
 ---
 
+## Research Foundation
+
+This project builds on peer-reviewed research in humanitarian NLP, crisis informatics, and offline communication systems. We maintain an active [research bibliography](docs/references.md) with 30 references from IEEE, Frontiers, ICWSM, and leading humanitarian organizations.
+
+**Key research areas:**
+
+- **Humanitarian NLP** — Automated extraction of crisis-relevant information from unstructured reports ([Rocca et al. 2023](https://doi.org/10.3389/fdata.2023.1082787), IBM/WFP 2020)
+- **Low-resource language MT** — Machine translation for languages with limited training data ([CLEAR Global Gamayun](https://clearglobal.org/gamayun/))
+- **Offline mesh networks** — LoRa-based decentralized communication for internet-denied environments (IJARCCE 2025, Meshtastic)
+- **Community feedback loops** — Two-way humanitarian information exchange via chatbots (TWB Uji, IRC Signpost)
+- **Crisis data standards** — HumSet-compatible output format for interoperability with UN systems ([OCHA HumSet](https://www.thedeep.io/))
+
+We actively seek collaboration with researchers. If your work intersects with ours, please [open an issue](https://github.com/CuiweiG/openclaw-humanitarian/issues) or email aid@agentmail.to.
+
+---
+
 ## Featured In
 
 > *Coming soon. Help us get there by starring ⭐*

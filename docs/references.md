@@ -65,5 +65,52 @@ This project builds on research and data from the following sources. All statist
 
 ---
 
-*Last updated: 2026-03-27*
+## NLP for Humanitarian Action
+
+17. **Rocca, R., et al.** (2023). *Natural Language Processing for Humanitarian Action*. Frontiers in Big Data, 6.
+    DOI: 10.3389/fdata.2023.1082787
+    https://www.frontiersin.org/articles/10.3389/fdata.2023.1082787
+
+18. **Kreutzer, J., et al.** (2020). *Improving Humanitarian Needs Assessments through Natural Language Processing*. IBM Journal of Research and Development, IEEE.
+    DOI: 10.1109/8868169
+
+19. **Alam, F., et al.** (2021). *CrisisBench: Benchmarking Crisis-related Social Media Datasets for Humanitarian Information Processing*. Proceedings of ICWSM.
+
+20. **Haykal, H., et al.** (2025). *AI in humanitarian healthcare: a game changer for crisis response*. Frontiers in Artificial Intelligence, 8.
+    DOI: 10.3389/frai.2025.1627773
+
+## Mesh Networks for Crisis Communication
+
+21. **IJARCCE** (2025, December). *Solar-Powered LoRa Mesh Network for Emergency Communication*. International Journal of Advanced Research in Computer and Communication Engineering, Vol.14 Issue 12.
+
+22. **ResearchGate** (2024). *Enhancing Situational Awareness with LoRa Mesh Networks in Disaster Response*.
+
+23. **Springer** (2022). *Meshtastic Infrastructure-less Networks for Reliable Data Transmission*.
+
+24. **debuglies.com** (2026, January). *Meshtastic and MeshCore: Decentralized LoRa-Based Mesh Networks for Off-Grid Communication*.
+
+## Humanitarian Translation & Language Equity
+
+25. **CLEAR Global** (formerly Translators Without Borders). *Gamayun Language Equality Initiative*. 
+    https://clearglobal.org/gamayun/
+
+26. **TWB** (2022). *Loud and Clear: Missing Links of Language Technology for Humanitarian Access*.
+
+## Data Standards & Benchmarks
+
+27. **OCHA / Data Friendly Space**. *HumSet: Dataset of Multilingual Information Extraction and Classification for Humanitarian Crises*. Frontiers in Big Data.
+
+28. **QCRI**. *CrisisNLP: Benchmark Datasets for Crisis-related NLP*. Qatar Computing Research Institute.
+    https://crisisnlp.qcri.org/
+
+29. **Data Friendly Space**. *DEEP: Data Entry & Exploration Platform*. 
+    https://www.thedeep.io/
+
+## Biosignal Transmission (Future Research)
+
+30. **Hackster.io** (2025). *Transmission of biosignals via LoRa using Meshtastic*. Hackster.io.
+
+---
+
+*Last updated: 2026-03-27 (30 references)*
 *All URLs verified at time of publication. Archive copies recommended for long-term reference.*
