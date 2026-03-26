@@ -112,5 +112,38 @@ This project builds on research and data from the following sources. All statist
 
 ---
 
-*Last updated: 2026-03-27 (30 references)*
+## LLM for Crisis Management (2024-2026)
+
+31. **arXiv:2512.19475** (2025, December). *A Large-Language-Model Framework for Automated Humanitarian Situation Reporting*. arXiv preprint.
+    https://arxiv.org/abs/2512.19475
+
+32. **Odubola, O., et al.** (2025). *AI in Social Good: LLM powered Interventions in Crisis Management and Disaster Response*. Journal of Artificial Intelligence, Machine Learning & Data Science.
+
+33. **EU Scientific Advice Mechanism** (2025, December). *Artificial Intelligence in Emergency and Crisis Management: Rapid Evidence Review Report*. European Commission.
+
+34. **Otal, B. & Canbaz, M.A.** (2024). *LLM-Assisted Crisis Management: Building Advanced LLM Platforms for Effective Emergency Response and Public Collaboration*. arXiv:2402.10908.
+    https://arxiv.org/abs/2402.10908
+
+35. **ScienceDirect** (2025, November). *Artificial Intelligence in Humanitarian Aid: A Review and Future Research Agenda*. International Journal of Disaster Risk Reduction.
+
+36. **Humanitarian Leadership Academy** (2025, December). *How are humanitarians using AI in 2025?* Survey Report.
+
+## AI in Humanitarian Healthcare
+
+37. **Haykal, H., et al.** (2025). *AI in humanitarian healthcare: a game changer for crisis response*. Frontiers in Artificial Intelligence, 8.
+    DOI: 10.3389/frai.2025.1627773
+    https://doi.org/10.3389/frai.2025.1627773
+
+38. **Kolivand, H., et al.** (2025). *AI applications in disaster governance with health approach: a systematic review*. Archives of Public Health, 83.
+    DOI: 10.1186/s13690-025-01712-2
+
+## Additional Mesh Network Research
+
+39. **debuglies.com** (2026, January). *Meshtastic and MeshCore: Decentralized LoRa-Based Mesh Networks as Tools for Communication Resilience*.
+
+40. **Hackster.io** (2025, September). *Transmission of biosignals via LoRa using the Meshtastic network*.
+
+---
+
+*Last updated: 2026-03-27 (40 references)*
 *All URLs verified at time of publication. Archive copies recommended for long-term reference.*

@@ -168,6 +168,20 @@ If you've written about this project, open a PR to add your link here.
 
 ---
 
+## Limitations & Ethical Considerations
+
+We believe in transparency about what this system can and cannot do:
+
+- **AI translation is imperfect.** Especially for low-resource languages like Dari, translation quality varies. We maintain a [verified glossary](data/glossary.json) and welcome native speaker corrections.
+- **We are not a replacement for professional humanitarian agencies.** Our role is information bridging, not aid delivery.
+- **LLMs can hallucinate.** All AI-generated content goes through our [source verification system](src/verification/). Every claim links to its original source.
+- **Offline mesh networks are experimental.** The Briar + Meshtastic layer is a research initiative, not a deployed solution yet.
+- **User safety is paramount.** In countries with internet shutdowns, using communication tools can carry personal risk. We do not collect or store any user data.
+
+See our [humanitarian compliance framework](docs/humanitarian-compliance.md) for detailed privacy and ethics policies.
+
+---
+
 ## Contributing
 
 We welcome translators, developers, humanitarian workers, and anyone who gives a damn.
