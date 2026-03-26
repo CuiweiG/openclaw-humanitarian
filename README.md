@@ -80,8 +80,8 @@ Send `/start` → choose your language → explore available crisis bulletins in
                          ▼
 ┌─────────────────────────────────────────────────────┐
 │              TRANSLATION ENGINE                      │
-│  AI model + glossary.json (40 terms, 8 languages)        │
-│  → 9 languages (see above)               │
+│  AI model + glossary.json · 40 terms · 9 languages      │
+│  Quality checks · Source verification                    │
 └────────────────────────┬────────────────────────────┘
                          │
                     ┌────┴────┐
