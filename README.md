@@ -9,7 +9,7 @@
 
 # CrisisBridge
 
-> **600,000–1 million households displaced. 28+ days of internet blackout. 94% of aid reports locked in English. We're breaking the language barrier.**
+> **600,000–1 million households displaced. 28+ days of internet blackout. Most aid reports locked in English. We're breaking the language barrier.**
 
 An open-source platform ensuring life-saving humanitarian information reaches every civilian, in their language, online or offline. Currently serving the 2026 Middle East crisis in 9 languages: Arabic, Persian, Dari, French, Spanish, Russian, English, Chinese, and Turkish.
 
@@ -24,7 +24,7 @@ An open-source platform ensuring life-saving humanitarian information reaches ev
 | 🏚️ **600K–1M households** | Displaced in Iran alone in the current escalation | *UNHCR Flash Refugee Response Plan, March 2026* |
 | 📵 **28+ days** | Iran internet blackout affecting ~90 million people | *NetBlocks, March 2026* |
 | 👥 **33,000** | Afghan refugees in Iran receiving WFP food assistance | *WFP Situation Report #4, March 26, 2026* |
-| 📄 **94%** | Humanitarian situation reports published in English only | *OCHA Information Management Review* |
+| 📄 **~90%** | Humanitarian situation reports published in English only | *OCHA, ReliefWeb language analysis* |
 
 Humanitarian organizations produce life-saving information every day. It's locked in English PDFs. The people who need it most — displaced civilians in Iran, Afghanistan, Lebanon, Syria — can't read it.
 
@@ -57,8 +57,8 @@ Send `/start` → choose your language → receive today's crisis bulletins in y
 
 | Product | Description |
 |---------|-------------|
-| 📡 **Crisis Scraper** | Auto-pulls situation reports from ReliefWeb, OCHA, and UN agencies every 6 hours |
-| 🌐 **Multilingual Translator** | AI-powered translation with humanitarian-specific glossary (40+ verified terms) |
+| 📡 **Crisis Scraper** | Auto-scrapes situation reports from ReliefWeb and OCHA APIs |
+| 🌐 **Multilingual Translator** | AI-powered translation with humanitarian-specific glossary (40 terms, verification tracked) |
 | 🤖 **Telegram Bot** | Delivers bulletins in 9 languages (AR/FA/DAR/ZH/TR/EN/FR/ES/RU) on demand and via push alerts |
 
 ---
@@ -98,7 +98,7 @@ Full architecture details: [docs/architecture.md](docs/architecture.md)
 
 ## Daily Output Example
 
-Here's what a civilian in Iran or Afghanistan receives every morning:
+Here's what a translated bulletin looks like:
 
 ```
 🚨 گزارش بحران — ۲۷ مارس ۲۰۲۶
@@ -189,7 +189,7 @@ We welcome translators, developers, humanitarian workers, and anyone who gives a
 - 🐛 [Report a bug](.github/ISSUE_TEMPLATE/bug_report.md)
 - ✨ [Request a feature](.github/ISSUE_TEMPLATE/feature_request.md)
 - 🌐 [Contribute a translation](.github/ISSUE_TEMPLATE/translation_request.md)
-- 📖 Read the full guide: [CONTRIBUTING.md](CONTRIBUTING.md) · [بالعربية](CONTRIBUTING.ar.md) · [به فارسی](CONTRIBUTING.fa.md)
+- 📖 Read the full guide: [CONTRIBUTING.md](CONTRIBUTING.md) · [بالعربية](CONTRIBUTING-ar.md) · [به فارسی](CONTRIBUTING-fa.md)
 
 All skill levels welcome. If you speak a crisis-affected language and can verify translations, that's more valuable than code.
 
