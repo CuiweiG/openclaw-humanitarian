@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+
+  scraper:
+    build: .
+    command: python -m src.scraper.reliefweb
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+      - ./output:/app/output
+    # Run daily at 10:00 UTC+8
+    # Use external cron or systemd timer to trigger

@@ -4,279 +4,439 @@
     "fa": "آوارگان / افراد آواره",
     "dar": "آوارگان / بیجاشدگان",
     "ar": "النازحون / المهجّرون",
-    "zh": "流离失所者"
+    "zh": "流离失所者",
+    "fr": "personnes déplacées",
+    "es": "personas desplazadas",
+    "ru": "перемещённые лица",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "humanitarian corridor",
     "fa": "کریدور انسان‌دوستانه",
     "dar": "کوریدور بشردوستانه",
     "ar": "الممر الإنساني",
-    "zh": "人道主义走廊"
+    "zh": "人道主义走廊",
+    "fr": "couloir humanitaire",
+    "es": "corredor humanitario",
+    "ru": "гуманитарный коридор",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "shelter",
     "fa": "سرپناه",
     "dar": "سرپناه / مسکن",
     "ar": "المأوى / المسكن",
-    "zh": "庇护所 / 住所"
+    "zh": "庇护所 / 住所",
+    "fr": "abri",
+    "es": "refugio / alojamiento",
+    "ru": "убежище / жильё",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "food security",
     "fa": "امنیت غذایی",
     "dar": "امنیت خوراکی",
     "ar": "الأمن الغذائي",
-    "zh": "粮食安全"
+    "zh": "粮食安全",
+    "fr": "sécurité alimentaire",
+    "es": "seguridad alimentaria",
+    "ru": "продовольственная безопасность",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "ceasefire",
     "fa": "آتش‌بس",
     "dar": "آتش‌بس",
     "ar": "وقف إطلاق النار",
-    "zh": "停火"
+    "zh": "停火",
+    "fr": "cessez-le-feu",
+    "es": "alto el fuego",
+    "ru": "прекращение огня",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "evacuation",
     "fa": "تخلیه",
     "dar": "تخلیه",
     "ar": "الإخلاء",
-    "zh": "撤离"
+    "zh": "撤离",
+    "fr": "évacuation",
+    "es": "evacuación",
+    "ru": "эвакуация",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "aid worker",
     "fa": "کارکن امدادی / کارمند بشردوستانه",
     "dar": "کارمند بشردوستانه",
     "ar": "العامل الإنساني",
-    "zh": "援助工作者"
+    "zh": "援助工作者",
+    "fr": "travailleur humanitaire",
+    "es": "trabajador humanitario",
+    "ru": "гуманитарный работник",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "refugee",
     "fa": "پناهنده",
     "dar": "پناهنده",
     "ar": "اللاجئ",
-    "zh": "难民"
+    "zh": "难民",
+    "fr": "réfugié",
+    "es": "refugiado",
+    "ru": "беженец",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "IDP (internally displaced person)",
     "fa": "آواره داخلی / بیجاشده داخلی",
     "dar": "بیجاشده داخلی",
     "ar": "النازح الداخلي",
-    "zh": "国内流离失所者"
+    "zh": "国内流离失所者",
+    "fr": "PDI (personne déplacée interne)",
+    "es": "PDI (persona desplazada interna)",
+    "ru": "ВПЛ (внутренне перемещённое лицо)",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "humanitarian access",
     "fa": "دسترسی انسان‌دوستانه",
     "dar": "دسترسی بشردوستانه",
     "ar": "الوصول الإنساني",
-    "zh": "人道主义准入"
+    "zh": "人道主义准入",
+    "fr": "accès humanitaire",
+    "es": "acceso humanitario",
+    "ru": "гуманитарный доступ",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "relief supplies",
     "fa": "کمک‌های امدادی / اقلام اضطراری",
     "dar": "اقلام اضطراری",
     "ar": "الإمدادات الإغاثية",
-    "zh": "救援物资"
+    "zh": "救援物资",
+    "fr": "fournitures de secours",
+    "es": "suministros de socorro",
+    "ru": "гуманитарные грузы",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "civilian casualties",
     "fa": "تلفات غیرنظامی / کشته‌شدگان ملکی",
     "dar": "تلفات ملکی",
     "ar": "الضحايا المدنيون",
-    "zh": "平民伤亡"
+    "zh": "平民伤亡",
+    "fr": "victimes civiles",
+    "es": "víctimas civiles",
+    "ru": "жертвы среди мирного населения",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "safe passage",
     "fa": "گذرگاه امن",
     "dar": "گذرگاه امن",
     "ar": "الممر الآمن",
-    "zh": "安全通道"
+    "zh": "安全通道",
+    "fr": "passage sûr",
+    "es": "paso seguro",
+    "ru": "безопасный проход",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "emergency response",
     "fa": "پاسخ اضطراری",
     "dar": "پاسخ اضطراری",
     "ar": "الاستجابة الطارئة",
-    "zh": "紧急响应"
+    "zh": "紧急响应",
+    "fr": "réponse d'urgence",
+    "es": "respuesta de emergencia",
+    "ru": "экстренное реагирование",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "coordination",
     "fa": "هماهنگی",
     "dar": "هماهنگی",
     "ar": "التنسيق",
-    "zh": "协调"
+    "zh": "协调",
+    "fr": "coordination",
+    "es": "coordinación",
+    "ru": "координация",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "deconfliction",
     "fa": "جداسازی نظامی-غیرنظامی",
     "dar": "جداسازی نظامی-ملکی",
     "ar": "آلية الفصل العسكري-المدني",
-    "zh": "冲突去冲突化机制"
+    "zh": "冲突去冲突化机制",
+    "fr": "déconfliction",
+    "es": "desconflicción",
+    "ru": "деконфликтинг",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "aerial strikes",
     "fa": "حملات هوایی",
     "dar": "حملات هوایی",
     "ar": "الضربات الجوية",
-    "zh": "空袭"
+    "zh": "空袭",
+    "fr": "frappes aériennes",
+    "es": "ataques aéreos",
+    "ru": "авиаудары",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "host community",
     "fa": "جامعه میزبان",
     "dar": "جامعه میزبان",
     "ar": "المجتمع المضيف",
-    "zh": "接收社区"
+    "zh": "接收社区",
+    "fr": "communauté d'accueil",
+    "es": "comunidad de acogida",
+    "ru": "принимающее сообщество",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "humanitarian crisis",
     "fa": "بحران بشردوستانه",
     "dar": "بحران بشردوستانه",
     "ar": "الأزمة الإنسانية",
-    "zh": "人道主义危机"
+    "zh": "人道主义危机",
+    "fr": "crise humanitaire",
+    "es": "crisis humanitaria",
+    "ru": "гуманитарный кризис",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "displacement",
     "fa": "آوارگی / جابه‌جایی اجباری",
     "dar": "بیجاشدگی",
     "ar": "النزوح / التهجير",
-    "zh": "流离失所"
+    "zh": "流离失所",
+    "fr": "déplacement",
+    "es": "desplazamiento",
+    "ru": "перемещение / вынужденное переселение",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "field hospital",
     "fa": "بیمارستان صحرایی",
     "dar": "شفاخانه صحرایی",
     "ar": "المستشفى الميداني",
-    "zh": "野战医院"
+    "zh": "野战医院",
+    "fr": "hôpital de campagne",
+    "es": "hospital de campaña",
+    "ru": "полевой госпиталь",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "triage",
     "fa": "تریاژ / اولویت‌بندی درمانی",
     "dar": "تریاژ / اولویت‌بندی بیماران",
     "ar": "الفرز الطبي / الإسعاف الأولوي",
-    "zh": "检伤分类"
+    "zh": "检伤分类",
+    "fr": "triage",
+    "es": "triaje",
+    "ru": "медицинская сортировка / триаж",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "trauma care",
     "fa": "مراقبت از آسیب‌دیدگان",
     "dar": "مراقبت از مجروحین",
     "ar": "رعاية المصابين بصدمات",
-    "zh": "创伤救治"
+    "zh": "创伤救治",
+    "fr": "soins de traumatologie",
+    "es": "atención de traumatismos",
+    "ru": "лечение травм",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "medical supplies",
     "fa": "تجهیزات پزشکی / لوازم طبی",
     "dar": "لوازم طبی",
     "ar": "المستلزمات الطبية",
-    "zh": "医疗物资"
+    "zh": "医疗物资",
+    "fr": "fournitures médicales",
+    "es": "suministros médicos",
+    "ru": "медицинские принадлежности",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "vaccination",
     "fa": "واکسیناسیون / تلقیح",
     "dar": "واکسیناسیون",
     "ar": "التطعيم / التحصين",
-    "zh": "疫苗接种"
+    "zh": "疫苗接种",
+    "fr": "vaccination",
+    "es": "vacunación",
+    "ru": "вакцинация",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "cholera",
     "fa": "وبا",
     "dar": "وبا",
     "ar": "الكوليرا",
-    "zh": "霍乱"
+    "zh": "霍乱",
+    "fr": "choléra",
+    "es": "cólera",
+    "ru": "холера",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "malnutrition",
     "fa": "سوءتغذیه",
     "dar": "سوءتغذیه / کم‌خوراکی",
     "ar": "سوء التغذية",
-    "zh": "营养不良"
+    "zh": "营养不良",
+    "fr": "malnutrition",
+    "es": "malnutrición / desnutrición",
+    "ru": "недоедание / нарушение питания",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "wound care",
     "fa": "مراقبت از زخم",
     "dar": "مراقبت از زخم",
     "ar": "العناية بالجروح",
-    "zh": "伤口护理"
+    "zh": "伤口护理",
+    "fr": "soins des plaies",
+    "es": "cuidado de heridas",
+    "ru": "уход за ранами",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "ambulance",
     "fa": "آمبولانس",
     "dar": "امبولانس",
     "ar": "سيارة الإسعاف",
-    "zh": "救护车"
+    "zh": "救护车",
+    "fr": "ambulance",
+    "es": "ambulancia",
+    "ru": "машина скорой помощи",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "first aid",
     "fa": "کمک‌های اولیه",
     "dar": "کمک‌های اولیه",
     "ar": "الإسعافات الأولية",
-    "zh": "急救"
+    "zh": "急救",
+    "fr": "premiers secours",
+    "es": "primeros auxilios",
+    "ru": "первая помощь",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "temporary shelter",
     "fa": "سرپناه موقت",
     "dar": "سرپناه موقت",
     "ar": "المأوى المؤقت",
-    "zh": "临时庇护所"
+    "zh": "临时庇护所",
+    "fr": "abri temporaire",
+    "es": "alojamiento temporal",
+    "ru": "временное жильё / временное убежище",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "host family",
     "fa": "خانواده میزبان",
     "dar": "خانواده میزبان",
     "ar": "الأسرة المستضيفة",
-    "zh": "接收家庭"
+    "zh": "接收家庭",
+    "fr": "famille d'accueil",
+    "es": "familia de acogida",
+    "ru": "принимающая семья",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "collective center",
     "fa": "مرکز جمعی / اردوگاه مشترک",
     "dar": "مرکز جمعی",
     "ar": "المركز الجماعي",
-    "zh": "集体安置中心"
+    "zh": "集体安置中心",
+    "fr": "centre collectif",
+    "es": "centro colectivo",
+    "ru": "коллективный центр размещения",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "registration",
     "fa": "ثبت‌نام / ثبت",
     "dar": "راجستریشن / ثبت‌نام",
     "ar": "التسجيل",
-    "zh": "登记注册"
+    "zh": "登记注册",
+    "fr": "enregistrement",
+    "es": "registro",
+    "ru": "регистрация",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "WASH (water sanitation hygiene)",
     "fa": "آب، بهداشت و صفایی",
     "dar": "آب، صفایی و بهداشت",
     "ar": "المياه والصرف الصحي والنظافة",
-    "zh": "水、卫生与个人卫生"
+    "zh": "水、卫生与个人卫生",
+    "fr": "EAH (eau assainissement hygiène)",
+    "es": "WASH (agua saneamiento higiene)",
+    "ru": "ВСГ (водоснабжение, санитария и гигиена)",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "food distribution",
     "fa": "توزیع مواد غذایی",
     "dar": "توزیع خوراک",
     "ar": "توزيع الغذاء",
-    "zh": "食物分发"
+    "zh": "食物分发",
+    "fr": "distribution alimentaire",
+    "es": "distribución de alimentos",
+    "ru": "распределение продовольствия",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "ration card",
     "fa": "کارت جیره‌بندی",
     "dar": "کارت جیره‌بندی خوراک",
     "ar": "بطاقة الحصة الغذائية",
-    "zh": "口粮卡"
+    "zh": "口粮卡",
+    "fr": "carte de rationnement",
+    "es": "tarjeta de ración",
+    "ru": "продовольственная карточка",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "supplementary feeding",
     "fa": "تغذیه تکمیلی",
     "dar": "تغذیه تکمیلی",
     "ar": "التغذية التكميلية",
-    "zh": "补充喂养"
+    "zh": "补充喂养",
+    "fr": "alimentation supplémentaire",
+    "es": "alimentación suplementaria",
+    "ru": "дополнительное питание",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "therapeutic feeding",
     "fa": "تغذیه درمانی",
     "dar": "تغذیه درمانی",
     "ar": "التغذية العلاجية",
-    "zh": "治疗性喂养"
+    "zh": "治疗性喂养",
+    "fr": "alimentation thérapeutique",
+    "es": "alimentación terapéutica",
+    "ru": "терапевтическое питание",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   },
   {
     "en": "nutrition screening",
     "fa": "غربالگری تغذیه‌ای",
     "dar": "غربالگری تغذیه",
     "ar": "الفحص الغذائي / تقييم التغذية",
-    "zh": "营养筛查"
+    "zh": "营养筛查",
+    "fr": "dépistage nutritionnel",
+    "es": "tamizaje nutricional",
+    "ru": "скрининг питания / оценка нутритивного статуса",
+    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true }
   }
 ]

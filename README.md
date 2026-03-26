@@ -9,24 +9,24 @@
 
 # OpenClaw Humanitarian Network
 
-> **3.2 million displaced. 4 weeks of internet blackout. Zero multilingual civilian warning systems. We're building one.**
+> **600,000–1 million households displaced. 28+ days of internet blackout. 94% of aid reports locked in English. We're breaking the language barrier.**
 
 An open-source AI pipeline that scrapes humanitarian reports from OCHA, ReliefWeb, and UN agencies — then translates them into Arabic, Farsi, Dari, Chinese, Turkish, and English — and delivers them to civilians in crisis zones via Telegram, SMS, and offline mesh networks.
 
-**Read in your language:** &nbsp; [فارسی](README.fa.md) &nbsp;|&nbsp; [العربية](README.ar.md) &nbsp;|&nbsp; [中文](README.zh.md) &nbsp;|&nbsp; [English](README.md)
+**Read in your language:** &nbsp; [فارسی](README.fa.md) &nbsp;|&nbsp; [العربية](README.ar.md) &nbsp;|&nbsp; [中文](README.zh.md) &nbsp;|&nbsp; [Français](README.fr.md) &nbsp;|&nbsp; [Español](README.es.md) &nbsp;|&nbsp; [Русский](README.ru.md) &nbsp;|&nbsp; [English](README.md)
 
 ---
 
 ## The Problem
 
-| Stat | Reality |
-|------|---------|
-| 🏚️ **3.2 million** | People displaced in active conflict zones with no local-language information |
-| 📵 **28 days** | Average internet blackout duration during major crisis events |
-| ☠️ **2,698** | Civilian deaths directly linked to missed evacuation warnings (2023–2024) |
-| 📄 **94%** | Humanitarian situation reports published in English only |
+| Stat | Reality | Source |
+|------|---------|--------|
+| 🏚️ **600K–1M households** | Displaced in Iran alone in the current escalation | *UNHCR Flash Refugee Response Plan, March 2026* |
+| 📵 **28+ days** | Iran internet blackout affecting ~90 million people | *NetBlocks, March 2026* |
+| 👥 **33,000** | Afghan refugees in Iran receiving WFP food assistance | *WFP Situation Report #4, March 26, 2026* |
+| 📄 **94%** | Humanitarian situation reports published in English only | *OCHA Information Management Review* |
 
-Humanitarian organizations produce life-saving information every day. It's locked in English PDFs. The people who need it most — displaced civilians in Sudan, Gaza, Lebanon, Afghanistan — can't read it.
+Humanitarian organizations produce life-saving information every day. It's locked in English PDFs. The people who need it most — displaced civilians in Iran, Afghanistan, Lebanon, Syria — can't read it.
 
 We fix that.
 
