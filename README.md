@@ -41,7 +41,7 @@ pip install -r requirements.txt
 python src/demo.py  # See it work in 30 seconds
 ```
 
-That's it. In 30 seconds you'll see a live humanitarian bulletin scraped and translated into 9 languages.
+That's it. In 30 seconds you'll see a humanitarian bulletin scraped from ReliefWeb and translated using our glossary engine.
 
 ---
 
@@ -49,7 +49,7 @@ That's it. In 30 seconds you'll see a live humanitarian bulletin scraped and tra
 
 📱 **Telegram Bot:** [@openclaw_aid_bot](https://t.me/openclaw_aid_bot)
 
-Send `/start` → choose your language → receive today's crisis bulletins in your language.
+Send `/start` → choose your language → explore available crisis bulletins in your language.
 
 ---
 
@@ -80,7 +80,7 @@ Send `/start` → choose your language → receive today's crisis bulletins in y
                          ▼
 ┌─────────────────────────────────────────────────────┐
 │              TRANSLATION ENGINE                      │
-│  AI model + glossary.json (40 verified terms)        │
+│  AI model + glossary.json (40 terms, 8 languages)        │
 │  → 9 languages (see above)               │
 └────────────────────────┬────────────────────────────┘
                          │
@@ -98,7 +98,7 @@ Full architecture details: [docs/architecture.md](docs/architecture.md)
 
 ## Daily Output Example
 
-Here's what a translated bulletin looks like:
+Here's an illustrative example of a translated bulletin (data shown is for demonstration):
 
 ```
 🚨 گزارش بحران — ۲۷ مارس ۲۰۲۶
@@ -117,7 +117,7 @@ Here's what a translated bulletin looks like:
 
 ## Glossary
 
-The project maintains a verified 40-term humanitarian glossary to ensure translation accuracy across all languages:
+The project maintains a 40-term humanitarian glossary (with per-term verification tracking) to ensure translation accuracy across all languages:
 
 | English | العربية | فارسی | 中文 |
 |---------|---------|-------|------|
