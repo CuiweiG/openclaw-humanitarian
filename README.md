@@ -136,6 +136,13 @@ The project maintains a 40-term humanitarian glossary (with per-term verificatio
 - [x] ReliefWeb/OCHA auto-scraping pipeline
 - [x] 40-term humanitarian glossary (8 languages)
 - [x] Telegram bot with 9-language support
+- [x] Family links tracing system (privacy-by-design)
+- [x] Mental health & psychosocial support (9 languages)
+- [x] UXO/mine safety education
+- [x] Document protection guide
+- [x] Simplified language + emoji markers for low-literacy users
+- [x] Audio bulletin generation (pluggable TTS backend)
+- [x] Emergency contact database (IR/LB/AF/SY)
 - [ ] Real-time shelter tracker for Lebanon
 - [ ] Briar + Meshtastic offline communication layer
 - [ ] SMS gateway for partial connectivity zones

@@ -1,0 +1,11 @@
+﻿"""
+UXO (Unexploded Ordnance) Safety Education
+Critical safety information for civilians in post-conflict areas.
+
+Sources:
+- HALO Trust safety guidelines
+- LMAC (Lebanon Mine Action Center) public guides
+- UNMAS (UN Mine Action Service) educational materials
+"""
+
+from typing import Dict
