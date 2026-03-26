@@ -9,7 +9,7 @@
 
 # CrisisBridge
 
-> **600,000–1 million households displaced. 28+ days of internet blackout. Most aid reports locked in English. We're breaking the language barrier.**
+> **600,000–1 million households displaced. 28+ days of internet blackout. Most humanitarian reports available only in English. CrisisBridge is building a multilingual bridge.**
 
 An open-source platform ensuring life-saving humanitarian information reaches every civilian, in their language, online or offline. Currently serving the 2026 Middle East crisis in 9 languages: Arabic, Persian, Dari, French, Spanish, Russian, English, Chinese, and Turkish.
 
@@ -26,9 +26,9 @@ An open-source platform ensuring life-saving humanitarian information reaches ev
 | 👥 **33,000** | Afghan refugees in Iran receiving WFP food assistance | *WFP Situation Report #4, March 26, 2026* |
 | 📄 **~90%** | Humanitarian situation reports published in English only | *OCHA, ReliefWeb language analysis* |
 
-Humanitarian organizations produce life-saving information every day. It's locked in English PDFs. The people who need it most — displaced civilians in Iran, Afghanistan, Lebanon, Syria — can't read it.
+Humanitarian organizations produce critical situation reports daily — predominantly in English. Affected populations in Iran, Afghanistan, Lebanon, and Syria, who primarily speak Arabic, Persian, and Dari, lack access to this information.
 
-We fix that.
+CrisisBridge addresses this gap.
 
 ---
 
@@ -41,7 +41,7 @@ pip install -r requirements.txt
 python src/demo.py  # See it work in 30 seconds
 ```
 
-That's it. In 30 seconds you'll see a humanitarian bulletin scraped from ReliefWeb and translated using our glossary engine.
+The demo fetches a real report from the ReliefWeb API and demonstrates the translation pipeline with glossary-based terminology enforcement.
 
 ---
 
@@ -162,9 +162,7 @@ We actively seek collaboration with researchers. If your work intersects with ou
 
 ## Featured In
 
-> *Coming soon. Help us get there by starring ⭐*
-
-If you've written about this project, open a PR to add your link here.
+> *No media coverage yet. If you write about this project, please open a PR to add your link here.*
 
 ---
 
@@ -184,20 +182,20 @@ See our [humanitarian compliance framework](docs/humanitarian-compliance.md) for
 
 ## Contributing
 
-We welcome translators, developers, humanitarian workers, and anyone who gives a damn.
+We welcome translators, developers, humanitarian professionals, and volunteers of all backgrounds.
 
 - 🐛 [Report a bug](.github/ISSUE_TEMPLATE/bug_report.md)
 - ✨ [Request a feature](.github/ISSUE_TEMPLATE/feature_request.md)
 - 🌐 [Contribute a translation](.github/ISSUE_TEMPLATE/translation_request.md)
 - 📖 Read the full guide: [CONTRIBUTING.md](CONTRIBUTING.md) · [بالعربية](CONTRIBUTING-ar.md) · [به فارسی](CONTRIBUTING-fa.md)
 
-All skill levels welcome. If you speak a crisis-affected language and can verify translations, that's more valuable than code.
+All skill levels welcome. Native speakers of crisis-affected languages who can verify translations are especially valued.
 
 ---
 
 ## We Don't Accept Donations
 
-This project will always be free and open. If you want to help financially, please give directly to the people doing life-saving work on the ground:
+This project does not accept financial contributions. To support humanitarian operations directly, please consider donating to established organizations:
 
 - 🔴 **ICRC** — [icrc.org/en/donate](https://www.icrc.org/en/donate)
 - 🔵 **UNHCR** — [donate.unhcr.org](https://donate.unhcr.org)
@@ -213,7 +211,7 @@ This project will always be free and open. If you want to help financially, plea
 
 ## License
 
-MIT — use it, fork it, build on it. See [LICENSE](LICENSE).
+Released under the [MIT License](LICENSE). Free to use, modify, and distribute.
 
 ---
 
@@ -225,4 +223,4 @@ MIT — use it, fork it, build on it. See [LICENSE](LICENSE).
 
 ---
 
-*Built with urgency. Every star helps this project reach someone who needs it.*
+*Developed to bridge the humanitarian information gap. Contributions and visibility help this project reach affected communities.*
