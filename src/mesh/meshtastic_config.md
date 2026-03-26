@@ -23,16 +23,16 @@
 
 ## Recommended Hardware
 
-### Primary: LILYGO T-Beam
+### Primary: LILYGO T-Beam (ESP32-based)
 
-- Built-in GPS + LoRa + WiFi + Bluetooth
+- ESP32 microcontroller + built-in GPS + LoRa (SX1262) + WiFi + Bluetooth
 - 18650 battery support
 - ~$35–45 USD
 - Available: AliExpress, Amazon
 
-### Budget Alternative: Heltec LoRa32 V3
+### Budget Alternative: Heltec LoRa32 V3 (ESP32-S3)
 
-- No GPS (lighter, cheaper)
+- ESP32-S3 chip, no GPS (lighter, cheaper)
 - ~$20–30 USD
 - Good for relay nodes without GPS need
 
