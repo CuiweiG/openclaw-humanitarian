@@ -53,3 +53,5 @@ data/cache/
 data/output/
 translations/output/
 output/
+do_commits.ps1
+deploy.ps1
