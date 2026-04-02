@@ -6,6 +6,7 @@ Command handler functions for the CrisisBridge Telegram Bot.
 Each function corresponds to one bot command and handles business logic + reply.
 """
 
+import hashlib
 import logging
 from typing import Optional
 
@@ -65,6 +66,16 @@ def _get_locale_message(lang: str, key: str, fallback: str = "") -> str:
 
 logger = logging.getLogger(__name__)
 
+
+def _hash_uid(user_id: int) -> str:
+    """Hash Telegram user ID for privacy-safe logging.
+
+    Raw user IDs are personal data under ICRC data protection
+    guidelines.  We log only a truncated SHA-256 hash to enable
+    anomaly detection without storing identifiable information.
+    """
+    return hashlib.sha256(str(user_id).encode()).hexdigest()[:12]
+
 # ──────────────────────────────────────────
 # 用户语言偏好存储 / User language preference storage
 #
@@ -113,7 +124,7 @@ async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         return
 
     lang = _get_user_lang(user.id)
-    logger.info("/start from user %d (lang=%s)", user.id, lang)
+    logger.info("/start from user %s (lang=%s)", _hash_uid(user.id), lang)
 
     welcome_text = get_message(WELCOME_MESSAGES, lang)
     if not welcome_text or welcome_text == get_message(WELCOME_MESSAGES, "en") and lang != "en":
@@ -144,7 +155,7 @@ async def cmd_latest(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None
         return
 
     lang = _get_user_lang(user.id)
-    logger.info("/latest from user %d (lang=%s)", user.id, lang)
+    logger.info("/latest from user %s (lang=%s)", _hash_uid(user.id), lang)
 
     # 发送加载提示 / Send loading indicator
     loading_msg = get_message(LATEST_LOADING, lang)
@@ -220,7 +231,7 @@ async def cmd_shelter(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
 
     lang = _get_user_lang(user.id)
     location: Optional[str] = " ".join(context.args) if context.args else None
-    logger.info("/shelter from user %d, location=%s", user.id, location)
+    logger.info("/shelter from user %s, location=%s", _hash_uid(user.id), location)
 
     msg = get_message(SHELTER_NOT_IMPLEMENTED, lang)
     await update.message.reply_text(msg, parse_mode=ParseMode.MARKDOWN)
@@ -265,7 +276,7 @@ async def cmd_language(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
     # 保存语言偏好 / Save language preference
     user_language_cache[user.id] = requested_lang
-    logger.info("User %d set language to '%s'", user.id, requested_lang)
+    logger.info("User %s set language to '%s'", _hash_uid(user.id), requested_lang)
 
     confirm_msg = get_message(LANGUAGE_SET_MESSAGES, requested_lang)
     if not confirm_msg:
@@ -291,7 +302,7 @@ async def cmd_help(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         return
 
     lang = _get_user_lang(user.id)
-    logger.info("/help from user %d (lang=%s)", user.id, lang)
+    logger.info("/help from user %s (lang=%s)", _hash_uid(user.id), lang)
 
     help_text = get_message(HELP_MESSAGES, lang)
     if not help_text or help_text == get_message(HELP_MESSAGES, "en") and lang != "en":
