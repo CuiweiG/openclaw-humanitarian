@@ -27,11 +27,20 @@ When the network goes down, Telegram bots stop working. The populations that nee
 ┌─────────────────────────────────────────────────┐
 │              ONLINE LAYER (Normal)              │
 │  Telegram Bot ←→ ReliefWeb/OCHA ←→ AI Pipeline  │
+│  + SMS w/ HMAC signing (Iran +98 paused)        │
 │         ↕ (internet available)                   │
+├─────────────────────────────────────────────────┤
+│       D2C SATELLITE LAYER (New — P1)            │
+│  Starlink Direct-to-Cell / AST SpaceMobile      │
+│  Bypasses all ground infrastructure              │
+│  API interface: src/offline/mesh.py              │
+│         ↕ (satellite connectivity)               │
 ├─────────────────────────────────────────────────┤
 │           MESH LAYER (Degraded)                 │
 │  Briar (BLE/WiFi P2P) + Meshtastic (LoRa)      │
-│  Range: 10-30m (Briar) / 2-10km (Meshtastic)   │
+│  Range: 10-30m (Briar) / 2-60km (Meshtastic)   │
+│  Wire: 4B header + zlib payload + 8B dedup hash │
+│  Implementation: src/offline/mesh.py             │
 │         ↕ (no internet)                          │
 ├─────────────────────────────────────────────────┤
 │          BROADCAST LAYER (Minimal)              │
@@ -44,10 +53,12 @@ When the network goes down, Telegram bots stop working. The populations that nee
 
 ```
 INTERNET AVAILABLE?
-  ├─ YES → Online Layer (Telegram + live API data)
-  └─ NO  → MESH AVAILABLE?
-             ├─ YES → Mesh Layer (Briar + Meshtastic)
-             └─ NO  → Broadcast Layer (shortwave, listen-only)
+  ├─ YES → Online Layer (Telegram + SMS w/ HMAC)
+  └─ NO  → D2C SATELLITE AVAILABLE?
+             ├─ YES → Satellite Layer (D2C to smartphones)
+             └─ NO  → MESH AVAILABLE?
+                       ├─ YES → Mesh Layer (Briar + Meshtastic)
+                       └─ NO  → Broadcast Layer (shortwave, listen-only)
 ```
 
 The system degrades gracefully. Users in areas with partial connectivity may have access to Mesh Layer while their neighbor with a shortwave radio receives broadcast-only updates.
