@@ -1,0 +1,62 @@
+[
+  {
+    "id": "hormuz_strait",
+    "name": "Hormuz Strait",
+    "type": "sea",
+    "status": "restricted",
+    "last_updated": "2026-04-02",
+    "notes": "Commercial shipping crisis; vessel transit effectively suspended",
+    "alternative": "Overland via Turkey or airlift via UNHAS",
+    "affected_operations": ["WFP Gulf shipments", "UNICEF medical supplies"]
+  },
+  {
+    "id": "beirut_port",
+    "name": "Beirut Port",
+    "type": "sea",
+    "status": "partial",
+    "last_updated": "2026-04-02",
+    "notes": "Operating at reduced capacity due to conflict damage",
+    "alternative": "Tripoli port or overland from Jordan",
+    "affected_operations": ["UNHCR Lebanon", "WFP Lebanon"]
+  },
+  {
+    "id": "bandar_abbas",
+    "name": "Bandar Abbas Port",
+    "type": "sea",
+    "status": "restricted",
+    "last_updated": "2026-04-02",
+    "notes": "Major Iranian port; access disrupted by Hormuz crisis",
+    "alternative": "Chabahar port (limited capacity)",
+    "affected_operations": ["WFP Iran", "UNHCR Iran refugee operations"]
+  },
+  {
+    "id": "port_sudan",
+    "name": "Port Sudan",
+    "type": "sea",
+    "status": "partial",
+    "last_updated": "2026-04-02",
+    "notes": "Critical for Sudan humanitarian corridor; congestion reported",
+    "alternative": "Airlift via UNHAS from Nairobi/Addis Ababa",
+    "affected_operations": ["WFP Sudan", "ICRC Sudan"]
+  },
+  {
+    "id": "bab_al_hawa",
+    "name": "Bab al-Hawa Crossing",
+    "type": "land",
+    "status": "open",
+    "last_updated": "2026-04-02",
+    "notes": "Primary cross-border aid route into NW Syria; mandate renewed",
+    "alternative": "Damascus hub (access restricted)",
+    "affected_operations": ["OCHA Syria cross-border", "WHO NW Syria"]
+  },
+  {
+    "id": "rafah_crossing",
+    "name": "Rafah Crossing",
+    "type": "land",
+    "status": "closed",
+    "last_updated": "2026-04-02",
+    "notes": "Closed since May 2024; no humanitarian access via this route",
+    "alternative": "Kerem Abu Salem / maritime corridor (limited)",
+    "affected_operations": ["UNRWA Gaza", "WFP Gaza"]
+  }
+]
