@@ -75,7 +75,7 @@ Send `/start` → choose your language → explore available crisis bulletins in
 | 🌐 **Multilingual Translator** | ✅ Live | AI-powered translation with humanitarian-specific glossary (40 terms, 12 languages, verification tracked) |
 | 🤖 **Telegram Bot** | ✅ Live | Delivers bulletins in 12 languages on demand and via push alerts |
 | 🔍 **Source Verification** | ✅ Live | Credibility scoring for all information sources |
-| 🚨 **Airstrike Alert System** | 🔨 In Dev | Minute-level civilian safety alerts from ACLED, OCHA Flash Updates |
+| 🚨 **Airstrike Alert System** | 🔒 Restricted | Experimental — requires multi-source verification, human review, and partner SOP before activation |
 | 📶 **Offline Mesh Layer** | 🔨 In Dev | Briar + Meshtastic + D2C satellite for internet-denied environments |
 | 📱 **SMS Gateway** | 🔨 In Dev | SMS delivery with HMAC verification; Iran region paused for safety |
 | 📦 **Supply Chain Tracker** | 🔨 In Dev | WFP/OCHA logistics status for humanitarian coordinators |
@@ -157,14 +157,14 @@ The project maintains a 40-term humanitarian glossary (with per-term verificatio
 **✅ Live** — deployed and functional &nbsp;|&nbsp; **🔨 In Dev** — code exists, not production-ready &nbsp;|&nbsp; **📋 Planned** — documented, no code yet
 
 ### P0 — Critical (MVP Core)
-- 🔨 Briar + Meshtastic + D2C satellite offline layer — **promoted to MVP core**
-- 🔨 Airstrike civilian alert module (ACLED / OCHA Flash Updates / Airstrikes.live)
+- 🔨 Briar + Meshtastic offline layer — **promoted to MVP core**
 - 🔨 GPS-free routing via Cell Tower ID and governorate lookup tables
+- 📋 D2C satellite interface (experimental — Starlink/AST subject to jamming risk in target regions)
 
 ### P1 — High Priority
 - 🔨 SMS gateway with HMAC verification + Iran region pause protocol
 - ✅ Source credibility scoring engine (T1–T4 trust tiers)
-- 🔨 D2C satellite API interface (Starlink / AST SpaceMobile pre-reserved)
+- 📋 D2C satellite API interface (experimental — subject to GPS jamming and availability constraints)
 - 🔨 Pashto and Kurdish (Kurmanji) glossary terms — **40 terms added, unverified**
 - 🔨 Lebanese Arabic (Levantine) dialect support for 800K+ displaced in Lebanon
 
@@ -174,8 +174,8 @@ The project maintains a 40-term humanitarian glossary (with per-term verificatio
 - ✅ 40-term humanitarian glossary (12 languages, per-term verification tracking)
 - ✅ Telegram bot with 9-language support
 - ✅ Simplified language + emoji markers for low-literacy users
-- 🔨 Family links tracing system (privacy-by-design)
-- 🔨 Mental health & psychosocial support (MHPSS)
+- 🔒 Family links tracing system (**restricted** — requires DPIA + partner SOP + ICRC coordination)
+- 🔒 Mental health & psychosocial support (**restricted** — self-help content + helpline referral only; no clinical triage)
 - 🔨 UXO/mine safety education module
 - 🔨 Document protection guide
 - 🔨 Security canary system for bot scraping detection
