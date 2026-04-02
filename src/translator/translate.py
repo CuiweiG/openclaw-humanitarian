@@ -31,13 +31,14 @@ logger = logging.getLogger(__name__)
 DEFAULT_GLOSSARY_PATH = Path(__file__).parent.parent.parent / "data" / "glossary.json"
 
 # 支持的目标语言列表 / Supported target language codes
-SUPPORTED_LANGUAGES: list[str] = ["fa", "dar", "ar", "zh", "tr", "en", "fr", "es", "ru", "ps", "ku"]
+SUPPORTED_LANGUAGES: list[str] = ["fa", "dar", "ar", "apc", "zh", "tr", "en", "fr", "es", "ru", "ps", "ku"]
 
 # 语言显示名称（用于 Markdown 标题）/ Display names for Markdown headers
 LANGUAGE_DISPLAY: dict[str, str] = {
     "fa":  "🇮🇷 Persian (فارسی)",
     "dar": "🇦🇫 Dari (دری)",
     "ar":  "🇱🇧 Arabic (العربية)",
+    "apc": "🇱🇧 Lebanese Arabic (عربي لبناني)",
     "zh":  "🇨🇳 Chinese (中文)",
     "tr":  "🇹🇷 Turkish (Türkçe)",
     "en":  "🇬🇧 English",
