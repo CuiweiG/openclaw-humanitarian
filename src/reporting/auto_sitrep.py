@@ -80,8 +80,8 @@ class AutoSitrepGenerator:
         """
         date = date or datetime.utcnow().strftime('%Y-%m-%d')
         
-        # Step 1: Cluster documents by theme
-        clusters = self._cluster_by_theme(documents)
+        # Step 1: Cluster documents by theme (used for future section routing)
+        _clusters = self._cluster_by_theme(documents)  # noqa: F841
         
         # Step 2: Extract answers to standard questions
         sections = {}
