@@ -13,6 +13,9 @@ from telegram import Update
 from telegram.constants import ParseMode
 from telegram.ext import ContextTypes
 
+import json
+from pathlib import Path
+
 from .messages import (
     ERROR_GENERIC,
     HELP_MESSAGES,
@@ -26,6 +29,39 @@ from .messages import (
     WELCOME_MESSAGES,
     get_message,
 )
+
+# ──────────────────────────────────────────
+# Locale file loader for languages not in messages.py inline dicts
+# Falls back to JSON locale files in src/bot/locales/
+# ──────────────────────────────────────────
+_LOCALES_DIR = Path(__file__).parent / "locales"
+_locale_cache: dict[str, dict[str, str]] = {}
+
+
+def _load_locale(lang: str) -> dict[str, str]:
+    """Load a locale JSON file, with caching."""
+    if lang in _locale_cache:
+        return _locale_cache[lang]
+    locale_file = _LOCALES_DIR / f"{lang}.json"
+    if locale_file.exists():
+        try:
+            with open(locale_file, encoding="utf-8") as f:
+                data = json.load(f)
+            _locale_cache[lang] = data
+            return data
+        except Exception:
+            pass
+    return {}
+
+
+def _get_locale_message(lang: str, key: str, fallback: str = "") -> str:
+    """Get a message from locale file, with English fallback."""
+    locale = _load_locale(lang)
+    if key in locale:
+        return locale[key]
+    # Try English locale as fallback
+    en_locale = _load_locale("en")
+    return en_locale.get(key, fallback)
 
 logger = logging.getLogger(__name__)
 
@@ -80,6 +116,11 @@ async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     logger.info("/start from user %d (lang=%s)", user.id, lang)
 
     welcome_text = get_message(WELCOME_MESSAGES, lang)
+    if not welcome_text or welcome_text == get_message(WELCOME_MESSAGES, "en") and lang != "en":
+        # Fallback to locale JSON file for languages not in inline dicts
+        locale_text = _get_locale_message(lang, "welcome")
+        if locale_text:
+            welcome_text = locale_text
     await update.message.reply_text(welcome_text, parse_mode=ParseMode.MARKDOWN)
 
 
@@ -227,6 +268,12 @@ async def cmd_language(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     logger.info("User %d set language to '%s'", user.id, requested_lang)
 
     confirm_msg = get_message(LANGUAGE_SET_MESSAGES, requested_lang)
+    if not confirm_msg:
+        locale_text = _get_locale_message(requested_lang, "language_set")
+        if locale_text:
+            confirm_msg = locale_text.replace("{language}", LANGUAGE_NAMES.get(requested_lang, requested_lang))
+        else:
+            confirm_msg = f"✅ Language set to {LANGUAGE_NAMES.get(requested_lang, requested_lang)}."
     await update.message.reply_text(confirm_msg)
 
 
@@ -247,4 +294,8 @@ async def cmd_help(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     logger.info("/help from user %d (lang=%s)", user.id, lang)
 
     help_text = get_message(HELP_MESSAGES, lang)
+    if not help_text or help_text == get_message(HELP_MESSAGES, "en") and lang != "en":
+        locale_text = _get_locale_message(lang, "help")
+        if locale_text:
+            help_text = locale_text
     await update.message.reply_text(help_text, parse_mode=ParseMode.MARKDOWN)

@@ -12,15 +12,21 @@ from typing import Any
 # 语言配置 / Language configuration
 # ──────────────────────────────────────────
 
-SUPPORTED_LANGUAGES: list[str] = ["en", "fa", "dar", "ar", "zh", "tr"]
+SUPPORTED_LANGUAGES: list[str] = ["en", "fa", "dar", "ar", "apc", "zh", "tr", "fr", "es", "ru", "ps", "ku"]
 
 LANGUAGE_NAMES: dict[str, str] = {
     "en":  "English",
     "fa":  "فارسی (Persian)",
     "dar": "دری (Dari)",
     "ar":  "العربية (Arabic)",
+    "apc": "عربي لبناني (Lebanese Arabic)",
     "zh":  "中文 (Chinese)",
     "tr":  "Türkçe (Turkish)",
+    "fr":  "Français (French)",
+    "es":  "Español (Spanish)",
+    "ru":  "Русский (Russian)",
+    "ps":  "پښتو (Pashto)",
+    "ku":  "Kurdî (Kurdish Kurmanji)",
 }
 
 # ──────────────────────────────────────────
@@ -172,7 +178,7 @@ LANGUAGE_SET_MESSAGES: dict[str, str] = {
 }
 
 LANGUAGE_INVALID_MESSAGE = (
-    "❌ Invalid language code. Supported: `en`, `fa`, `dar`, `ar`, `zh`, `tr`\n"
+    "❌ Invalid language code. Supported: `en`, `fa`, `dar`, `ar`, `apc`, `zh`, `tr`, `fr`, `es`, `ru`, `ps`, `ku`\n"
     "Example: /language fa"
 )
 
