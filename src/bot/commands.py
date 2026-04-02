@@ -31,8 +31,20 @@ logger = logging.getLogger(__name__)
 
 # ──────────────────────────────────────────
 # 用户语言偏好存储 / User language preference storage
-# NOTE: 生产环境应替换为持久化存储（数据库/Redis）
-# In production, replace with persistent storage (DB/Redis).
+#
+# SECURITY / DATA MINIMIZATION:
+#   - Stores ONLY language preference keyed by Telegram user ID.
+#   - No geolocation, IP, message content, or interaction history.
+#   - In-memory only — all data lost on restart (by design during
+#     this phase; persistence must undergo privacy review first).
+#   - Never associate user IDs with geographic coordinates.
+#   - See src/security/canary.py for scrape detection approach.
+#   - See docs/threat-model.md for full security considerations.
+#
+# NOTE: 生产环境应替换为持久化存储（数据库/Redis），
+#       但必须先通过隐私审查。
+# In production, replace with persistent storage (DB/Redis)
+# after privacy review.
 # ──────────────────────────────────────────
 user_language_cache: dict[int, str] = {}
 
