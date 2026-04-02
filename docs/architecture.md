@@ -50,27 +50,28 @@ CrisisBridge is a multi-layer information distribution system designed to delive
           │
           ▼
 ╔══════════════════════════════════════════════════════════════════╗
+║                 ALERT LAYER (Layer 2.5)                          ║
+║  ┌─────────────────────────────────────────────────────────┐    ║
+║  │  src/alert/airstrike_monitor.py                              │    ║
+║  │  Minute-level civilian safety alerts                         │    ║
+║  │  Sources: ACLED · OCHA Flash Updates · Airstrikes.live       │    ║
+║  │  Output: region-level broadcast (governorate granularity)    │    ║
+║  └─────────────────────────────────────────────────────────┘    ║
+╚══════════════════════════════════════════════════════════════════╝
+          │
+          ▼
+╔══════════════════════════════════════════════════════════════════╗
 ║                   DISTRIBUTION (Layer 3)                         ║
 ║                                                                  ║
-║  ONLINE LAYER                   OFFLINE LAYER                    ║
-║  ┌─────────────────────┐       ┌──────────────────────────────┐  ║
-║  │  Telegram Bot       │       │  Mesh / Offline Network       │  ║
-║  │  @openclaw_aid_bot  │       │                               │  ║
-║  │                     │       │  ┌─────────────────────────┐ │  ║
-║  │  /start             │       │  │  Briar (Android app)    │ │  ║
-║  │  /latest            │       │  │  - P2P encrypted msgs   │ │  ║
-║  │  /shelter [loc]     │       │  │  - BLE/WiFi Direct      │ │  ║
-║  │  /language [code]   │       │  │  - No internet needed   │ │  ║
-║  │  /help              │       │  └────────────┬────────────┘ │  ║
-║  │                     │       │               │              │  ║
-║  │  Languages: 9       │       │  ┌────────────▼────────────┐ │  ║
-║  │  AR/FA/DAR/ZH/FR/   │       │  │  Meshtastic + LoRa      │ │  ║
-║  │  ES/RU/TR/EN        │       │  │                         │ │  ║
-║  └─────────────────────┘       │  │  - 2-15 km range        │ │  ║
-║                                │  │  - 915/868 MHz bands    │ │  ║
-║                                │  │  - Text broadcasts      │ │  ║
-║                                │  └─────────────────────────┘ │  ║
-║                                └──────────────────────────────┘  ║
+║  ONLINE          OFFLINE              SATELLITE                   ║
+║  ┌───────────┐  ┌────────────────┐  ┌────────────────┐  ║
+║  │ Telegram  │  │ Briar (BLE/    │  │ D2C Satellite  │  ║
+║  │ Bot       │  │ WiFi Direct)   │  │ (Starlink/AST) │  ║
+║  ├───────────┤  ├────────────────┤  │ Pre-reserved   │  ║
+║  │ SMS w/    │  │ Meshtastic     │  │ API interface   │  ║
+║  │ HMAC      │  │ (LoRa mesh,    │  └────────────────┘  ║
+║  │ signing   │  │  2–60 km)      │                         ║
+║  └───────────┘  └────────────────┘                         ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
@@ -101,7 +102,17 @@ All sources are publicly accessible, no authentication required.
 - **`src/translator/quality_check.py`**: Automated quality gate. Checks word count (≤200), source attribution, terminology consistency, and numeric format (Persian ۱۲۳ vs Arabic ١٢٣).
 - **`data/glossary.json`**: 40 humanitarian terms in 8 languages (EN/FA/DAR/AR/ZH/FR/ES/RU).
 
-### Layer 3a — Online Distribution (Telegram Bot)
+### Layer 2.5 — Alert System (P0)
+
+Real-time civilian safety alerts operating on a **minute-level** cycle, distinct from the hourly/daily bulletin pipeline.
+
+- **Module**: `src/alert/airstrike_monitor.py`
+- **Sources**: ACLED (conflict events), OCHA Flash Updates, Airstrikes.live (crowd-verified)
+- **Granularity**: Governorate-level broadcast (no individual targeting)
+- **Privacy**: No user geolocation collected; opt-in topic channels only
+- **Severity levels**: INFO (general update) → WARNING (elevated risk) → CRITICAL (active strikes)
+
+### Layer 3a — Online Distribution (Telegram + SMS)
 
 The Telegram bot is the primary distribution channel for users with internet access.
 
@@ -110,22 +121,38 @@ The Telegram bot is the primary distribution channel for users with internet acc
 - **Languages**: Persian, Dari, Arabic, Chinese, Turkish, English
 - **Architecture**: Stateless handlers; user language preferences stored in-memory (Redis in production)
 
-### Layer 3b — Offline Distribution (Research Phase)
+**SMS Gateway** (`src/sms/gateway.py`):
+- HMAC-SHA256 message signing for source verification
+- Brand prefix `[CrisisBridge]` on all outbound messages
+- Iran (+98) delivery **paused** due to government SMS intimidation campaigns
+- Recipients verify authenticity via published daily key on trusted channels
 
-For scenarios where governments restrict internet access:
+### Layer 3b — Offline Distribution (P0 — Promoted to MVP Core)
+
+For scenarios where governments restrict internet access (Iran: 28+ days blackout):
 
 **Briar** (recommended for high-censorship environments):
 - Android-native encrypted P2P messaging
 - Works over Bluetooth, WiFi Direct, or Tor
 - No central server; fully decentralised
-- Research status: API integration via Briar Mailbox being evaluated
+- Status: API integration via Briar Mailbox being evaluated
 
 **Meshtastic + LoRa**:
 - LoRa radio mesh for text message relay
 - Range: 2–15 km per node (up to 60 km with relay chain)
 - Frequency bands: 868 MHz (EU/Lebanon), 915 MHz (Iran/US)
 - Devices: ~$30–60 per node (LILYGO T-Beam, Heltec LoRa32)
-- Research status: Configuration guide complete; field testing pending
+- Status: Configuration guide complete; field testing pending
+
+### Layer 3c — Satellite Direct-to-Cell (P1 — Interface Reserved)
+
+Pre-reserved API interface for when D2C satellite services become available to humanitarian actors.
+
+- **Module**: `src/offline/mesh.py` → `D2CSatelliteTransport`
+- **Target APIs**: Starlink Direct-to-Cell, AST SpaceMobile
+- **Use case**: Bypass all ground infrastructure; reach ordinary smartphones directly
+- **Status**: Interface defined, awaiting API access
+- **Tracking**: `#DirectToCellForIran` initiative
 
 ---
 
