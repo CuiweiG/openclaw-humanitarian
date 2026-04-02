@@ -38,15 +38,37 @@ class Region:
 # ──────────────────────────────────────────
 
 IRAN_PROVINCES: dict[str, Region] = {
-    "tehran":     Region("IR", "Tehran",     "تهران",      ["fa"]),
-    "isfahan":    Region("IR", "Isfahan",    "اصفهان",     ["fa"]),
-    "fars":       Region("IR", "Fars",       "فارس",       ["fa"]),
-    "khuzestan":  Region("IR", "Khuzestan",  "خوزستان",    ["fa", "ar"]),
-    "kurdistan":  Region("IR", "Kurdistan",  "کردستان",    ["fa", "ku"]),
-    "kermanshah": Region("IR", "Kermanshah", "کرمانشاه",   ["fa", "ku"]),
-    "sistan":     Region("IR", "Sistan-Baluchestan", "سیستان و بلوچستان", ["fa", "ps"]),
-    "khorasan_r": Region("IR", "Razavi Khorasan", "خراسان رضوی", ["fa", "dar"]),
-    # ... remaining 23 provinces to be added
+    "tehran":       Region("IR", "Tehran",             "تهران",              ["fa"]),
+    "isfahan":      Region("IR", "Isfahan",            "اصفهان",             ["fa"]),
+    "fars":         Region("IR", "Fars",               "فارس",               ["fa"]),
+    "khuzestan":    Region("IR", "Khuzestan",          "خوزستان",            ["fa", "ar"]),
+    "kurdistan":    Region("IR", "Kurdistan",          "کردستان",            ["fa", "ku"]),
+    "kermanshah":   Region("IR", "Kermanshah",         "کرمانشاه",           ["fa", "ku"]),
+    "sistan":       Region("IR", "Sistan-Baluchestan", "سیستان و بلوچستان",  ["fa", "ps"]),
+    "khorasan_r":   Region("IR", "Razavi Khorasan",    "خراسان رضوی",        ["fa", "dar"]),
+    "alborz":       Region("IR", "Alborz",             "البرز",              ["fa"]),
+    "ardabil":      Region("IR", "Ardabil",            "اردبیل",             ["fa"]),
+    "bushehr":      Region("IR", "Bushehr",            "بوشهر",              ["fa"]),
+    "chaharmahal":  Region("IR", "Chaharmahal-Bakhtiari", "چهارمحال و بختیاری", ["fa"]),
+    "east_az":      Region("IR", "East Azerbaijan",    "آذربایجان شرقی",     ["fa"]),
+    "west_az":      Region("IR", "West Azerbaijan",    "آذربایجان غربی",     ["fa", "ku"]),
+    "golestan":     Region("IR", "Golestan",           "گلستان",             ["fa"]),
+    "gilan":        Region("IR", "Gilan",              "گیلان",              ["fa"]),
+    "hamadan":      Region("IR", "Hamadan",            "همدان",              ["fa"]),
+    "hormozgan":    Region("IR", "Hormozgan",          "هرمزگان",            ["fa"]),
+    "ilam":         Region("IR", "Ilam",               "ایلام",              ["fa", "ku"]),
+    "kerman":       Region("IR", "Kerman",             "کرمان",              ["fa"]),
+    "khorasan_n":   Region("IR", "North Khorasan",     "خراسان شمالی",       ["fa"]),
+    "khorasan_s":   Region("IR", "South Khorasan",     "خراسان جنوبی",       ["fa"]),
+    "kohgiluyeh":   Region("IR", "Kohgiluyeh-Boyer-Ahmad", "کهگیلویه و بویراحمد", ["fa"]),
+    "lorestan":     Region("IR", "Lorestan",           "لرستان",             ["fa"]),
+    "markazi":      Region("IR", "Markazi",            "مرکزی",              ["fa"]),
+    "mazandaran":   Region("IR", "Mazandaran",         "مازندران",           ["fa"]),
+    "qazvin":       Region("IR", "Qazvin",             "قزوین",              ["fa"]),
+    "qom":          Region("IR", "Qom",                "قم",                 ["fa"]),
+    "semnan":       Region("IR", "Semnan",             "سمنان",              ["fa"]),
+    "yazd":         Region("IR", "Yazd",               "یزد",                ["fa"]),
+    "zanjan":       Region("IR", "Zanjan",             "زنجان",              ["fa"]),
 }
 
 AFGHANISTAN_PROVINCES: dict[str, Region] = {
@@ -55,7 +77,15 @@ AFGHANISTAN_PROVINCES: dict[str, Region] = {
     "kandahar":   Region("AF", "Kandahar",   "کندهار",     ["ps"]),
     "nangarhar":  Region("AF", "Nangarhar",  "ننگرهار",    ["ps"]),
     "balkh":      Region("AF", "Balkh",      "بلخ",        ["dar"]),
-    # ... remaining provinces to be added
+    "badakhshan": Region("AF", "Badakhshan", "بدخشان",     ["dar"]),
+    "baghlan":    Region("AF", "Baghlan",    "بغلان",      ["dar"]),
+    "bamyan":     Region("AF", "Bamyan",     "بامیان",     ["dar"]),
+    "faryab":     Region("AF", "Faryab",     "فاریاب",     ["dar"]),
+    "ghazni":     Region("AF", "Ghazni",     "غزنی",       ["dar", "ps"]),
+    "helmand":    Region("AF", "Helmand",    "هلمند",      ["ps"]),
+    "kunduz":     Region("AF", "Kunduz",     "کندز",       ["dar"]),
+    "paktia":     Region("AF", "Paktia",     "پکتیا",      ["ps"]),
+    "takhar":     Region("AF", "Takhar",     "تخار",       ["dar"]),
 }
 
 LEBANON_GOVERNORATES: dict[str, Region] = {
@@ -76,7 +106,14 @@ SYRIA_GOVERNORATES: dict[str, Region] = {
     "hasakah":    Region("SY", "Al-Hasakah", "الحسكة",     ["ar", "ku"]),
     "raqqa":      Region("SY", "Raqqa",      "الرقة",       ["ar"]),
     "deir_ezzor": Region("SY", "Deir ez-Zor","دير الزور",   ["ar"]),
-    # ... remaining governorates to be added
+    "homs":       Region("SY", "Homs",       "حمص",         ["ar"]),
+    "hama":       Region("SY", "Hama",       "حماة",        ["ar"]),
+    "latakia":    Region("SY", "Latakia",    "اللاذقية",    ["ar"]),
+    "tartus":     Region("SY", "Tartus",     "طرطوس",      ["ar"]),
+    "daraa":      Region("SY", "Daraa",      "درعا",        ["ar"]),
+    "suwayda":    Region("SY", "As-Suwayda", "السويداء",    ["ar"]),
+    "quneitra":   Region("SY", "Quneitra",   "القنيطرة",    ["ar"]),
+    "rif_dimashq":Region("SY", "Rif Dimashq","ريف دمشق",    ["ar"]),
 }
 
 # Combined lookup
