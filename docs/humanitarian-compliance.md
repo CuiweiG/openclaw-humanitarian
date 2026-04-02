@@ -1,6 +1,6 @@
 # Humanitarian Compliance Framework
 
-> **CrisisBridge** — Compliance & Ethics Document  
+> **CrisisBridge** - Compliance & Ethics Document
 > Version: 1.0 | References: ICRC Handbook on Data Protection in Humanitarian Action (2nd ed., 2020)
 
 ---
@@ -30,7 +30,7 @@ In a digital context, this means:
 
 > *"Collect only the personal data that is adequate, relevant, and limited to what is necessary."*
 
-**How we implement it**: CrisisBridge collects zero personal data. There are no user accounts, no query logs, no location history, and no analytics tied to individuals. The system is designed so that there is nothing to hand over even under legal compulsion. See Section 3 for technical guarantees.
+**How we implement it**: CrisisBridge minimises data collection to the functional minimum. The bot stores only in-memory language preferences keyed by Telegram user ID (lost on restart). Application logs include Telegram user IDs at INFO level — this is a known deviation being addressed. No persistent database, no analytics, no location history. See `docs/data-flow.md` for the complete, auditable data flow map.
 
 ---
 
@@ -43,9 +43,9 @@ Reference: *Handbook on Data Protection in Humanitarian Action*, ICRC & Brussels
 **ICRC requirement**: Processing must have a lawful basis; for humanitarian actors this is typically "vital interests" of data subjects.
 
 **Our alignment**:
-- We process **no personal data** of affected populations. There are no user profiles, no message logs, no usage analytics linked to individuals.
-- The only data processed is publicly available humanitarian reports from OCHA/WFP/UNHCR — this is institutional data, not personal data.
-- Where Telegram bot interactions occur: Telegram's own privacy policy governs. We receive only the text of queries, not persistent user profiles. Query text is processed in-memory and not logged.
+- We process **minimal personal data**: Telegram user ID (for language preference) and query text (in-memory, discarded after response). Application logs currently include user IDs — migration to hashed IDs is planned.
+- The primary data processed is publicly available humanitarian reports from OCHA/WFP/UNHCR — institutional data, not personal data.
+- Telegram bot interactions: Telegram's own privacy policy governs their infrastructure. We receive message text and user ID. Query text is processed in-memory and not persisted to disk. User IDs appear in application logs (see `docs/data-flow.md`).
 
 ### Principle 2: Purpose Limitation
 
@@ -54,13 +54,13 @@ Reference: *Handbook on Data Protection in Humanitarian Action*, ICRC & Brussels
 **Our alignment**:
 - The system has a single, documented purpose: delivery of verified humanitarian information to affected populations.
 - No secondary use of any data. No advertising, no research data sales, no government data sharing.
-- Codebase is open source — purpose limitation is verifiable by inspection.
+- Codebase is open source - purpose limitation is verifiable by inspection.
 
 ### Principle 3: Data Minimization
 
 **ICRC requirement**: Only collect data necessary for the humanitarian purpose.
 
-**Our alignment**: See Section 3. We have implemented technical minimization, not just policy minimization — the system is architecturally incapable of retaining what it doesn't collect.
+**Our alignment**: See Section 3. We have implemented technical minimization, not just policy minimization - the system is architecturally incapable of retaining what it doesn't collect.
 
 ### Principle 4: Accuracy
 
@@ -98,9 +98,9 @@ Reference: *Handbook on Data Protection in Humanitarian Action*, ICRC & Brussels
 
 **Our alignment**:
 - This document is public and versioned in the repository
-- Code is open source under AGPL-3.0
+- Code is open source under MIT License
 - Data flows are documented in architecture docs
-- No "trust us" — the technical design makes compliance independently verifiable
+- No "trust us" - the technical design makes compliance independently verifiable
 
 ---
 
@@ -136,11 +136,11 @@ This is enforced by code review policy: any log statement containing user input 
 
 | Transport | Encryption |
 |-----------|------------|
-| Telegram API | TLS 1.3 (Telegram's MTProto) |
+| Telegram Bot API | TLS/MTProto (server-to-server, **NOT** E2E) |
 | ReliefWeb API | TLS 1.3 |
 | OCHA API | TLS 1.3 |
 | Briar P2P | Bramble Transport Protocol (end-to-end) |
-| Meshtastic LoRa | AES-256 PSK (channel-level) |
+| Meshtastic LoRa | AES-128 PSK (channel-level) |
 
 ### 3.4 Open Source = Auditable
 
@@ -199,7 +199,7 @@ APPROVED_SOURCES = [
 ]
 ```
 
-Any API response from a non-whitelisted domain is rejected before parsing. This is not a content filter — it is a source filter. The question is not "is this content harmful?" but "is this content from a trusted humanitarian actor?" If no, it never enters the pipeline.
+Any API response from a non-whitelisted domain is rejected before parsing. This is not a content filter - it is a source filter. The question is not "is this content harmful?" but "is this content from a trusted humanitarian actor?" If no, it never enters the pipeline.
 
 ---
 
@@ -211,7 +211,7 @@ This is a genuine concern raised during design review. A mesh network that deliv
 
 **Content control**: The mesh network only relays CrisisBridge bulletins. There is no general-purpose messaging capability exposed to arbitrary users. Messages must be formatted and signed (SHA-256 hash) to be relayed by CrisisBridge nodes.
 
-**Source verification**: All bulletin content must originate from the online layer (verified humanitarian APIs). Field devices cannot inject arbitrary content into the mesh — they can only relay signed content received from CrisisBridge servers.
+**Source verification**: All bulletin content must originate from the online layer (verified humanitarian APIs). Field devices cannot inject arbitrary content into the mesh - they can only relay signed content received from CrisisBridge servers.
 
 **No location data**: Meshtastic nodes have GPS broadcast **disabled in firmware configuration**. Nodes do not advertise their location. Users cannot query "where are all the nodes."
 
@@ -235,7 +235,7 @@ This rate is insufficient for:
 - Real-time tactical communication
 - Coordinating movements across checkpoints (requires higher bandwidth)
 
-The bandwidth constraint is a feature, not a bug — it makes the system structurally unsuitable for military use while adequate for humanitarian information delivery.
+The bandwidth constraint is a feature, not a bug - it makes the system structurally unsuitable for military use while adequate for humanitarian information delivery.
 
 ### 5.3 Content Signature Verification
 
@@ -255,7 +255,7 @@ SIGNED-BY: CrisisBridge-server-01
 
 Field devices and Meshtastic relay nodes verify the hash before relaying. Content that fails verification is:
 1. Dropped (not relayed)
-2. Logged locally as a tamper attempt (no external report — this would require internet)
+2. Logged locally as a tamper attempt (no external report - this would require internet)
 
 A partner organization attempting to inject false shelter locations would need to:
 1. Obtain the AES-256 channel key (distributed only to vetted partner organizations)
@@ -276,7 +276,7 @@ Any organization deploying CrisisBridge mesh hardware must agree in writing to:
 4. Report any suspected misuse to the CrisisBridge security team
 5. Destroy or return nodes if their humanitarian mandate changes
 
-This agreement does not have legal force in all jurisdictions. It is a trust mechanism, not a legal control — and is documented here honestly as such. The technical mitigations in Section 5 are the primary safeguard.
+This agreement does not have legal force in all jurisdictions. It is a trust mechanism, not a legal control - and is documented here honestly as such. The technical mitigations in Section 5 are the primary safeguard.
 
 ---
 
