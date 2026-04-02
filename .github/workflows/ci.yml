@@ -96,8 +96,9 @@ jobs:
 
       - name: Check for E2E encryption claims
         run: |
-          # Ensure no false E2E claims about Telegram Bot API
-          if grep -rni 'end-to-end.*telegram.*bot\|telegram.*bot.*end-to-end\|telegram provides end-to-end' docs/ SECURITY.md; then
+          # Ensure no false claims that Telegram Bot API provides E2E encryption.
+          # Our SECURITY.md explicitly clarifies that it does NOT — exclude those lines.
+          if grep -rni 'telegram.*provides.*end-to-end\|telegram.*bot.*end-to-end.*encrypt' docs/ SECURITY.md | grep -vi 'does NOT\|not.*end-to-end\|not.*E2E\|known limitation'; then
             echo "::error::Found potentially misleading Telegram E2E encryption claim"
             exit 1
           fi
