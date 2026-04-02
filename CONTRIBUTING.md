@@ -105,6 +105,37 @@ Violations of this code of conduct will result in comment removal and, for repea
 
 ---
 
+## 🔒 Security Threat Model
+
+CrisisBridge operates in adversarial environments where state actors actively monitor, disrupt, and exploit communication tools. Contributors should understand these threats.
+
+### Identified Threats
+
+**T1 — Bot Infiltration via Privileged Network Access**
+Governments may use unfiltered network connections (e.g. Iran's "white SIM cards") to interact with the Telegram bot, scrape user patterns, or inject disinformation. Mitigation: canary token system (`src/security/canary.py`), rate-based anomaly detection, honeypot commands.
+
+**T2 — SMS Spoofing & Intimidation Confusion**
+In Iran, government agencies send mass SMS warnings against using foreign services. Unverified SMS from CrisisBridge could be mistaken for — or used as cover for — state intimidation. Mitigation: HMAC-SHA256 message signing (`src/sms/gateway.py`), Iran region delivery paused until secure verification is established.
+
+**T3 — GPS Jamming Affecting Geolocation**
+Large-scale GPS signal interference (documented in Iran) degrades satellite connectivity and renders GPS-dependent features unreliable. Mitigation: GPS-free routing using Cell Tower ID and manual governorate selection (`src/geo/routing.py`).
+
+**T4 — User Deanonymization**
+State actors may attempt to correlate Telegram user IDs with geographic locations to identify and target users. Mitigation: no PII storage, no geolocation collection, hashed user IDs only in analytics, governorate-level granularity (never precise coordinates).
+
+**T5 — Content Poisoning**
+Compromised or state-affiliated sources may inject misleading information into the bulletin pipeline. Mitigation: trust scoring engine (`src/verification/trust_scorer.py`) with T1–T4 source classification, state media explicitly labelled rather than blocked.
+
+### Security Review for PRs
+
+All pull requests that touch `src/security/`, `src/sms/`, `src/bot/`, or `src/geo/` must include a brief threat assessment: which threats from the list above does the change interact with, and how are they addressed?
+
+### Responsible Disclosure
+
+If you discover a vulnerability that could endanger users in conflict zones, **do not open a public issue**. Email aid@agentmail.to with subject line `[SECURITY]` and we will respond within 48 hours.
+
+---
+
 ## Questions?
 
 - 📧 Email: aid@agentmail.to
