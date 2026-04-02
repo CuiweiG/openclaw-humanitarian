@@ -20,6 +20,7 @@ Multilingual translation pipeline for humanitarian bulletins.
 import json
 import logging
 import os
+import re
 from abc import ABC, abstractmethod
 from pathlib import Path
 from typing import Optional
@@ -30,7 +31,7 @@ logger = logging.getLogger(__name__)
 DEFAULT_GLOSSARY_PATH = Path(__file__).parent.parent.parent / "data" / "glossary.json"
 
 # 支持的目标语言列表 / Supported target language codes
-SUPPORTED_LANGUAGES: list[str] = ["fa", "dar", "ar", "zh", "tr", "en"]
+SUPPORTED_LANGUAGES: list[str] = ["fa", "dar", "ar", "zh", "tr", "en", "fr", "es", "ru", "ps", "ku"]
 
 # 语言显示名称（用于 Markdown 标题）/ Display names for Markdown headers
 LANGUAGE_DISPLAY: dict[str, str] = {
@@ -40,6 +41,11 @@ LANGUAGE_DISPLAY: dict[str, str] = {
     "zh":  "🇨🇳 Chinese (中文)",
     "tr":  "🇹🇷 Turkish (Türkçe)",
     "en":  "🇬🇧 English",
+    "fr":  "🇫🇷 French (Français)",
+    "es":  "🇪🇸 Spanish (Español)",
+    "ru":  "🇷🇺 Russian (Русский)",
+    "ps":  "🇦🇫 Pashto (پښتو)",
+    "ku":  "Kurdish Kurmanji (Kurdî)",
 }
 
 
@@ -52,17 +58,6 @@ class TranslationBackend(ABC):
 
     @abstractmethod
     def translate(self, text: str, target_lang: str) -> str:
-        """
-        翻译文本到目标语言。
-        Translate text to the target language.
-
-        Args:
-            text: 源语言（英文）文本。
-            target_lang: 目标语言代码（如 'fa', 'ar'）。
-
-        Returns:
-            翻译后的文本字符串。
-        """
         ...
 
 
@@ -70,19 +65,9 @@ class ClaudeBackend(TranslationBackend):
     """
     使用 Anthropic Claude API 进行翻译。
     Translation backend using the Anthropic Claude API.
-
-    需要环境变量 ANTHROPIC_API_KEY。
-    Requires the ANTHROPIC_API_KEY environment variable.
     """
 
     def __init__(self, model: str = "claude-3-5-haiku-20241022") -> None:
-        """
-        初始化 Claude 后端。
-        Initialise the Claude backend.
-
-        Args:
-            model: 使用的 Claude 模型名称。
-        """
         self.model = model
         api_key = os.getenv("ANTHROPIC_API_KEY")
         if not api_key:
@@ -98,11 +83,8 @@ class ClaudeBackend(TranslationBackend):
                 "anthropic package not installed. Run: pip install anthropic"
             ) from exc
 
-    def translate(self, text: str, target_lang: str) -> str:
-        """
-        使用 Claude API 翻译文本。
-        Translate text using the Claude API.
-        """
+    def translate(self, text: str, target_lang: str, glossary: list[dict] = None) -> str:
+        """Translate text using the Claude API with glossary constraints."""
         lang_names = {
             "fa": "Persian (Farsi)",
             "dar": "Dari",
@@ -112,11 +94,28 @@ class ClaudeBackend(TranslationBackend):
         }
         lang_name = lang_names.get(target_lang, target_lang)
 
+        # Build glossary constraints for the prompt
+        glossary_block = ""
+        if glossary:
+            constraints = []
+            for entry in glossary:
+                en_term = entry.get("en", "")
+                native = entry.get(target_lang, "")
+                if en_term and native:
+                    constraints.append(f"  {en_term} → {native}")
+            if constraints:
+                glossary_block = (
+                    "\n\nMANDATORY terminology — use these exact translations:\n"
+                    + "\n".join(constraints[:30])
+                    + "\n"
+                )
+
         prompt = (
             f"You are a professional humanitarian translator. "
             f"Translate the following English humanitarian bulletin into {lang_name}. "
             f"Keep it under 200 words. Be accurate, neutral, and use appropriate "
-            f"humanitarian terminology. Output only the translation, no commentary.\n\n"
+            f"humanitarian terminology. Output only the translation, no commentary."
+            f"{glossary_block}\n\n"
             f"{text}"
         )
 
@@ -129,13 +128,9 @@ class ClaudeBackend(TranslationBackend):
 
 
 class StubBackend(TranslationBackend):
-    """
-    占位翻译后端（用于测试）。
-    Stub translation backend for testing without a real API.
-    """
+    """占位翻译后端（用于测试）/ Stub backend for testing without a real API."""
 
     def translate(self, text: str, target_lang: str) -> str:
-        """返回带语言标记的原文（仅供测试）/ Return tagged source text (testing only)."""
         return f"[{target_lang.upper()} TRANSLATION PLACEHOLDER]\n{text}"
 
 
@@ -144,21 +139,37 @@ class StubBackend(TranslationBackend):
 # ──────────────────────────────────────────
 
 def load_glossary(path: Path = DEFAULT_GLOSSARY_PATH) -> list[dict]:
-    """
-    从 JSON 文件加载术语表。
-    Load the terminology glossary from a JSON file.
-
-    Args:
-        path: glossary.json 文件路径。
-
-    Returns:
-        术语表列表 / List of glossary entry dicts.
-    """
     if not path.exists():
         logger.warning("Glossary file not found at %s. Continuing without it.", path)
         return []
     with open(path, encoding="utf-8") as f:
         return json.load(f)
+
+
+# Languages that use non-Latin scripts where \b word boundaries are unreliable
+_NON_LATIN_LANGS = {"fa", "dar", "ar", "zh", "ps", "ku"}
+
+
+def _term_pattern(term: str, target_lang: str) -> re.Pattern:
+    """
+    Build a regex pattern for matching a glossary term in translated text.
+
+    For Latin-script languages (en, fr, es, tr, ru) standard \\b word
+    boundaries work correctly.  For Arabic-script and CJK languages the
+    \\b anchor is unreliable because the regex engine treats every
+    non-ASCII character as a non-word character.  We fall back to
+    whitespace-or-boundary anchoring instead.
+    """
+    escaped = re.escape(term)
+    if target_lang in _NON_LATIN_LANGS:
+        # Match term preceded/followed by whitespace, punctuation, or string edge
+        return re.compile(
+            r'(?:^|(?<=[\s\u200c\u200b.,;:!?()\[\]{}"\'/«»]))'
+            + escaped
+            + r'(?=$|[\s\u200c\u200b.,;:!?()\[\]{}"\'/«»])',
+            re.IGNORECASE,
+        )
+    return re.compile(r'\b' + escaped + r'\b', re.IGNORECASE)
 
 
 def check_glossary_consistency(
@@ -167,16 +178,11 @@ def check_glossary_consistency(
     glossary: list[dict],
 ) -> list[str]:
     """
-    检查翻译文本中是否使用了 glossary 规定的标准术语。
     Check whether the translated text uses glossary-approved terminology.
 
-    Args:
-        translated_text: 翻译后的文本。
-        target_lang: 目标语言代码。
-        glossary: 术语表列表。
-
-    Returns:
-        发现的不一致术语列表（空列表表示通过）/ List of inconsistency notes (empty = pass).
+    Uses Unicode-aware boundary matching for non-Latin scripts (Arabic,
+    Persian, Dari, Chinese) to avoid false negatives caused by \\b
+    treating all non-ASCII characters as non-word characters.
     """
     issues: list[str] = []
     for entry in glossary:
@@ -184,8 +190,8 @@ def check_glossary_consistency(
         preferred = entry.get(target_lang, "")
         if not preferred:
             continue
-        # 如果英文术语出现在翻译中，警告（翻译应使用目标语言术语）
-        if en_term.lower() in translated_text.lower():
+        pattern = _term_pattern(en_term, target_lang)
+        if pattern.search(translated_text):
             issues.append(
                 f"English term '{en_term}' found in {target_lang} translation. "
                 f"Expected: '{preferred}'"
@@ -205,35 +211,18 @@ def translate_bulletin(
     source_url: str = "",
     report_date: str = "",
 ) -> str:
-    """
-    将英文人道主义简报翻译成多语言 Markdown 文档。
-    Translate an English humanitarian bulletin into a multi-language Markdown document.
-
-    Args:
-        english_text: 源英文文本。
-        target_languages: 目标语言代码列表，如 ['fa', 'ar', 'zh']。
-        backend: 翻译后端实例；默认使用 StubBackend。
-        glossary_path: glossary.json 文件路径。
-        source_url: 原始报告的 URL（用于来源标注）。
-        report_date: 报告日期字符串（用于文档头部）。
-
-    Returns:
-        Markdown 格式的多语言简报字符串。
-    """
+    """Translate an English humanitarian bulletin into a multi-language Markdown document."""
     if backend is None:
         logger.warning("No translation backend provided. Using StubBackend (testing mode).")
         backend = StubBackend()
 
-    # 1. 加载术语表 / Load glossary
     glossary = load_glossary(glossary_path)
     logger.info("Loaded %d glossary entries.", len(glossary))
 
-    # 2. 过滤有效语言 / Filter valid languages
     valid_langs = [lang for lang in target_languages if lang in SUPPORTED_LANGUAGES]
     if not valid_langs:
         raise ValueError(f"No valid target languages. Supported: {SUPPORTED_LANGUAGES}")
 
-    # 3. 构建 Markdown 输出 / Build Markdown output
     lines: list[str] = [
         "# 🌍 CrisisBridge Bulletin",
         "",
@@ -250,26 +239,24 @@ def translate_bulletin(
         lines.append("")
 
         if lang == "en":
-            # 英文直接输出，不翻译 / English passthrough
             translated = english_text
         else:
             try:
-                translated = backend.translate(english_text, lang)
+                if isinstance(backend, ClaudeBackend):
+                    translated = backend.translate(english_text, lang, glossary=glossary)
+                else:
+                    translated = backend.translate(english_text, lang)
             except Exception as exc:
                 logger.error("Translation to '%s' failed: %s", lang, exc)
                 translated = f"[Translation failed: {exc}]"
 
-        # 后处理：验证术语一致性 / Post-process: check terminology
         issues = check_glossary_consistency(translated, lang, glossary)
         if issues:
-            logger.warning(
-                "Glossary inconsistencies for '%s': %s", lang, issues
-            )
+            logger.warning("Glossary inconsistencies for '%s': %s", lang, issues)
 
         lines.append(translated)
         lines.append("")
 
-        # 来源标注 / Source attribution
         if source_url:
             lines.append(f"*Source: {source_url}*")
             lines.append("")
@@ -281,7 +268,6 @@ def translate_bulletin(
 
 
 if __name__ == "__main__":
-    # 快速冒烟测试 / Quick smoke test
     sample_text = (
         "Nearly one month into the escalation, WFP is providing food assistance "
         "to approximately 33,000 Afghan refugees in Iran. In Lebanon, humanitarian "
