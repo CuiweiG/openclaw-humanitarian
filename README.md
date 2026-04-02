@@ -108,7 +108,7 @@ Send `/start` → choose your language → explore available crisis bulletins in
             ┌──────────┐ ┌────────┐ ┌──────────┐
             │ Telegram │ │ Alert  │ │ Offline  │
             │   Bot    │ │ System │ │SMS/Mesh/ │
-            │          │ │(ACLED) │ │Satellite │
+            │          │ │(OCHA)  │ │Satellite │
             └──────────┘ └────────┘ └──────────┘
 ```
 
@@ -148,7 +148,7 @@ The project maintains a 40-term humanitarian glossary (with per-term verificatio
 
 📖 Full glossary: [data/glossary.json](data/glossary.json)
 
-> ⚠️ **Persian (fa) and Dari (dar) translations are machine-generated and unverified.** Native speaker review is our top priority. See [Contributing](#contributing) if you can help.
+> ⚠️ **Persian (fa), Dari (dar), Pashto (ps), Kurdish (ku), and Lebanese Arabic (apc) translations are machine-generated and unverified.** Native speaker review is our top priority. See [Contributing](#contributing) and our [glossary review workflow](docs/glossary-review-workflow.md) if you can help.
 
 ---
 
@@ -172,7 +172,7 @@ The project maintains a 40-term humanitarian glossary (with per-term verificatio
 - ✅ Multilingual crisis bulletins (AR/APC/FA/DAR/PS/KU/EN/ZH/TR/FR/ES/RU)
 - ✅ ReliefWeb/OCHA auto-scraping pipeline
 - ✅ 40-term humanitarian glossary (12 languages, per-term verification tracking)
-- ✅ Telegram bot with 9-language support
+- ✅ Telegram bot with 12-language support
 - ✅ Simplified language + emoji markers for low-literacy users
 - 🔒 Family links tracing system (**restricted** — requires DPIA + partner SOP + ICRC coordination)
 - 🔒 Mental health & psychosocial support (**restricted** — self-help content + helpline referral only; no clinical triage)
@@ -219,7 +219,7 @@ We believe in transparency about what this system can and cannot do:
 - **We are not a replacement for professional humanitarian agencies.** Our role is information bridging, not aid delivery.
 - **LLMs can hallucinate.** All AI-generated content goes through our [source verification system](src/verification/). Every claim links to its original source.
 - **Offline mesh networks are experimental.** The Briar + Meshtastic layer is a research initiative, not a deployed solution yet.
-- **User safety is paramount.** In countries with internet shutdowns, using communication tools can carry personal risk. We do not collect or store any user data.
+- **User safety is paramount.** In countries with internet shutdowns, using communication tools can carry personal risk. We collect only in-memory language preferences (keyed by hashed user ID, lost on restart). See our [data flow map](docs/data-flow.md) for the full audit.
 
 See our [humanitarian compliance framework](docs/humanitarian-compliance.md) for detailed privacy and ethics policies.
 
