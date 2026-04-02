@@ -32,6 +32,20 @@ CrisisBridge addresses this gap.
 
 ---
 
+## ⚠️ Current Limitations
+
+We believe in being upfront about where this project stands:
+
+- **Telegram is unreachable in Iran.** With 28+ days of near-total internet blackout and connectivity at ~1% of normal levels, our primary distribution channel does not reach the population that needs it most. The offline mesh layer is being fast-tracked to address this.
+- **Persian and Dari glossary terms are unverified.** These are our two most critical target languages, but zero terms have been validated by native speakers yet. Translations may contain errors that matter in life-or-death contexts. We urgently need native speaker reviewers.
+- **Turkish glossary is missing.** We claim 9-language support, but the humanitarian glossary has no Turkish entries yet. Turkish translations rely entirely on AI without terminology constraints.
+- **Offline distribution is research-only.** The Briar + Meshtastic mesh layer exists as documentation and research notes — no working code yet.
+- **No persistent storage.** Reports and user preferences are not persisted. Restarting the system loses all state.
+
+If you can help with any of these, please [open an issue](https://github.com/CuiweiG/openclaw-humanitarian/issues) or reach out at aid@agentmail.to.
+
+---
+
 ## Quick Start
 
 ```bash
@@ -55,11 +69,16 @@ Send `/start` → choose your language → explore available crisis bulletins in
 
 ## What We Do
 
-| Product | Description |
-|---------|-------------|
-| 📡 **Crisis Scraper** | Auto-scrapes situation reports from ReliefWeb and OCHA APIs |
-| 🌐 **Multilingual Translator** | AI-powered translation with humanitarian-specific glossary (40 terms, verification tracked) |
-| 🤖 **Telegram Bot** | Delivers bulletins in 9 languages (AR/FA/DAR/ZH/TR/EN/FR/ES/RU) on demand and via push alerts |
+| Product | Status | Description |
+|---------|--------|-------------|
+| 📡 **Crisis Scraper** | ✅ Live | Auto-scrapes situation reports from ReliefWeb and OCHA APIs |
+| 🌐 **Multilingual Translator** | ✅ Live | AI-powered translation with humanitarian-specific glossary (40 terms, verification tracked) |
+| 🤖 **Telegram Bot** | ✅ Live | Delivers bulletins in 9 languages on demand and via push alerts |
+| 🔍 **Source Verification** | ✅ Live | Credibility scoring for all information sources |
+| 🚨 **Airstrike Alert System** | 🔨 In Dev | Minute-level civilian safety alerts from ACLED, OCHA Flash Updates |
+| 📶 **Offline Mesh Layer** | 🔨 In Dev | Briar + Meshtastic + D2C satellite for internet-denied environments |
+| 📱 **SMS Gateway** | 🔨 In Dev | SMS delivery with HMAC verification; Iran region paused for safety |
+| 📦 **Supply Chain Tracker** | 🔨 In Dev | WFP/OCHA logistics status for humanitarian coordinators |
 
 ---
 
@@ -84,12 +103,13 @@ Send `/start` → choose your language → explore available crisis bulletins in
 │  Quality checks · Source verification                    │
 └────────────────────────┬────────────────────────────┘
                          │
-                    ┌────┴────┐
-                    ▼         ▼
-            ┌──────────┐ ┌──────────┐
-            │ Telegram │ │  Future  │
-            │   Bot    │ │ SMS/Mesh │
-            └──────────┘ └──────────┘
+                    ┌────┴────┬──────────┐
+                    ▼         ▼          ▼
+            ┌──────────┐ ┌────────┐ ┌──────────┐
+            │ Telegram │ │ Alert  │ │ Offline  │
+            │   Bot    │ │ System │ │SMS/Mesh/ │
+            │          │ │(ACLED) │ │Satellite │
+            └──────────┘ └────────┘ └──────────┘
 ```
 
 Full architecture details: [docs/architecture.md](docs/architecture.md)
@@ -128,26 +148,44 @@ The project maintains a 40-term humanitarian glossary (with per-term verificatio
 
 📖 Full glossary: [data/glossary.json](data/glossary.json)
 
+> ⚠️ **Persian (fa) and Dari (dar) translations are machine-generated and unverified.** Native speaker review is our top priority. See [Contributing](#contributing) if you can help.
+
 ---
 
 ## Roadmap
 
-- [x] Multilingual crisis bulletins (AR/FA/DAR/EN/ZH/TR/FR/ES/RU)
-- [x] ReliefWeb/OCHA auto-scraping pipeline
-- [x] 40-term humanitarian glossary (8 languages)
-- [x] Telegram bot with 9-language support
-- [x] Family links tracing system (privacy-by-design)
-- [x] Mental health & psychosocial support (9 languages)
-- [x] UXO/mine safety education
-- [x] Document protection guide
-- [x] Simplified language + emoji markers for low-literacy users
-- [x] Audio bulletin generation (pluggable TTS backend)
-- [x] Emergency contact database (IR/LB/AF/SY)
-- [ ] Real-time shelter tracker for Lebanon
-- [ ] Briar + Meshtastic offline communication layer
-- [ ] SMS gateway for partial connectivity zones
-- [ ] Pashto and Kurdish language support
-- [ ] Browser extension for inline report translation
+**✅ Live** — deployed and functional &nbsp;|&nbsp; **🔨 In Dev** — code exists, not production-ready &nbsp;|&nbsp; **📋 Planned** — documented, no code yet
+
+### P0 — Critical (MVP Core)
+- 🔨 Briar + Meshtastic + D2C satellite offline layer — **promoted to MVP core**
+- 🔨 Airstrike civilian alert module (ACLED / OCHA Flash Updates / Airstrikes.live)
+- 🔨 GPS-free routing via Cell Tower ID and governorate lookup tables
+
+### P1 — High Priority
+- 🔨 SMS gateway with HMAC verification + Iran region pause protocol
+- ✅ Source credibility scoring engine (T1–T4 trust tiers)
+- 🔨 D2C satellite API interface (Starlink / AST SpaceMobile pre-reserved)
+- 🔨 Pashto and Kurdish (Kurmanji) glossary terms — **40 terms added, unverified**
+- 🔨 Lebanese Arabic (Levantine) dialect support for 800K+ displaced in Lebanon
+
+### Delivered
+- ✅ Multilingual crisis bulletins (AR/FA/DAR/EN/ZH/TR/FR/ES/RU)
+- ✅ ReliefWeb/OCHA auto-scraping pipeline
+- ✅ 40-term humanitarian glossary (9 languages + Pashto/Kurdish)
+- ✅ Telegram bot with 9-language support
+- ✅ Simplified language + emoji markers for low-literacy users
+- 🔨 Family links tracing system (privacy-by-design)
+- 🔨 Mental health & psychosocial support (MHPSS)
+- 🔨 UXO/mine safety education module
+- 🔨 Document protection guide
+- 🔨 Security canary system for bot scraping detection
+- 🔨 Supply chain status tracker for humanitarian coordinators
+
+### P2 — Planned
+- 📋 Audio bulletin generation (pluggable TTS backend)
+- 📋 Emergency contact database (IR/LB/AF/SY)
+- 📋 Real-time shelter tracker for Lebanon
+- 📋 Browser extension for inline report translation
 
 ---
 
@@ -196,7 +234,7 @@ We welcome translators, developers, humanitarian professionals, and volunteers o
 - 🌐 [Contribute a translation](.github/ISSUE_TEMPLATE/translation_request.md)
 - 📖 Read the full guide: [CONTRIBUTING.md](CONTRIBUTING.md) · [بالعربية](CONTRIBUTING-ar.md) · [به فارسی](CONTRIBUTING-fa.md)
 
-All skill levels welcome. Native speakers of crisis-affected languages who can verify translations are especially valued.
+All skill levels welcome. **Native speakers of Persian, Dari, Turkish, Pashto, and Kurdish who can verify translations are especially valued.**
 
 ---
 
