@@ -4,6 +4,7 @@
     "fa": "آوارگان / افراد آواره",
     "dar": "آوارگان / بیجاشدگان",
     "ar": "النازحون / المهجّرون",
+    "apc": "ناس مهجّرين",
     "zh": "流离失所者",
     "fr": "personnes déplacées",
     "es": "personas desplazadas",
@@ -11,13 +12,14 @@
     "tr": "yerinden edilmiş kişiler",
     "ps": "بې ځایه شوي کسان",
     "ku": "kesên koçber",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "humanitarian corridor",
     "fa": "کریدور انسان‌دوستانه",
     "dar": "کوریدور بشردوستانه",
     "ar": "الممر الإنساني",
+    "apc": "ممر إنساني",
     "zh": "人道主义走廊",
     "fr": "couloir humanitaire",
     "es": "corredor humanitario",
@@ -25,13 +27,14 @@
     "tr": "insani yardım koridoru",
     "ps": "بشردوستانه دهلیز",
     "ku": "korîdora mirovane",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "shelter",
     "fa": "سرپناه",
     "dar": "سرپناه / مسکن",
     "ar": "المأوى / المسكن",
+    "apc": "ملجأ",
     "zh": "庇护所 / 住所",
     "fr": "abri",
     "es": "refugio / alojamiento",
@@ -39,13 +42,14 @@
     "tr": "barınak",
     "ps": "سرپناه",
     "ku": "stargehk",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "food security",
     "fa": "امنیت غذایی",
     "dar": "امنیت خوراکی",
     "ar": "الأمن الغذائي",
+    "apc": "أمان غذائي",
     "zh": "粮食安全",
     "fr": "sécurité alimentaire",
     "es": "seguridad alimentaria",
@@ -53,13 +57,14 @@
     "tr": "gıda güvenliği",
     "ps": "د خوراکي امنیت",
     "ku": "ewlehiya xwarinê",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "ceasefire",
     "fa": "آتش‌بس",
     "dar": "آتش‌بس",
     "ar": "وقف إطلاق النار",
+    "apc": "وقف نار",
     "zh": "停火",
     "fr": "cessez-le-feu",
     "es": "alto el fuego",
@@ -67,13 +72,14 @@
     "tr": "ateşkes",
     "ps": "اوربند",
     "ku": "agirbes",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "evacuation",
     "fa": "تخلیه",
     "dar": "تخلیه",
     "ar": "الإخلاء",
+    "apc": "إخلا",
     "zh": "撤离",
     "fr": "évacuation",
     "es": "evacuación",
@@ -81,13 +87,14 @@
     "tr": "tahliye",
     "ps": "تخلیه",
     "ku": "valakirina deverê",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "aid worker",
     "fa": "کارکن امدادی / کارمند بشردوستانه",
     "dar": "کارمند بشردوستانه",
     "ar": "العامل الإنساني",
+    "apc": "عامل إغاثة",
     "zh": "援助工作者",
     "fr": "travailleur humanitaire",
     "es": "trabajador humanitario",
@@ -95,13 +102,14 @@
     "tr": "yardım görevlisi",
     "ps": "د مرستې کارکوونکی",
     "ku": "xebatkarê alîkariyê",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "refugee",
     "fa": "پناهنده",
     "dar": "پناهنده",
     "ar": "اللاجئ",
+    "apc": "لاجئ",
     "zh": "难民",
     "fr": "réfugié",
     "es": "refugiado",
@@ -109,13 +117,14 @@
     "tr": "mülteci",
     "ps": "کډوال",
     "ku": "penaber",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "IDP (internally displaced person)",
     "fa": "آواره داخلی / بیجاشده داخلی",
     "dar": "بیجاشده داخلی",
     "ar": "النازح الداخلي",
+    "apc": "نازح داخلي",
     "zh": "国内流离失所者",
     "fr": "PDI (personne déplacée interne)",
     "es": "PDI (persona desplazada interna)",
@@ -123,13 +132,14 @@
     "tr": "ülke içinde yerinden edilmiş kişi",
     "ps": "په کورنۍ توګه بې ځایه شوی کس",
     "ku": "kesê di hundirê welêt de koçkirî",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "humanitarian access",
     "fa": "دسترسی انسان‌دوستانه",
     "dar": "دسترسی بشردوستانه",
     "ar": "الوصول الإنساني",
+    "apc": "وصول إنساني",
     "zh": "人道主义准入",
     "fr": "accès humanitaire",
     "es": "acceso humanitario",
@@ -137,13 +147,14 @@
     "tr": "insani yardım erişimi",
     "ps": "بشردوستانه لاسرسی",
     "ku": "gihîştina mirovane",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "relief supplies",
     "fa": "کمک‌های امدادی / اقلام اضطراری",
     "dar": "اقلام اضطراری",
     "ar": "الإمدادات الإغاثية",
+    "apc": "مواد إغاثة",
     "zh": "救援物资",
     "fr": "fournitures de secours",
     "es": "suministros de socorro",
@@ -151,13 +162,14 @@
     "tr": "yardım malzemeleri",
     "ps": "د امداد توکي",
     "ku": "pêdiviyên alîkariyê",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "civilian casualties",
     "fa": "تلفات غیرنظامی / کشته‌شدگان ملکی",
     "dar": "تلفات ملکی",
     "ar": "الضحايا المدنيون",
+    "apc": "ضحايا مدنيين",
     "zh": "平民伤亡",
     "fr": "victimes civiles",
     "es": "víctimas civiles",
@@ -165,13 +177,14 @@
     "tr": "sivil kayıplar",
     "ps": "ملکي تلفات",
     "ku": "windayên sivîl",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "safe passage",
     "fa": "گذرگاه امن",
     "dar": "گذرگاه امن",
     "ar": "الممر الآمن",
+    "apc": "ممر آمن",
     "zh": "安全通道",
     "fr": "passage sûr",
     "es": "paso seguro",
@@ -179,13 +192,14 @@
     "tr": "güvenli geçiş",
     "ps": "خوندي تېرېدنه",
     "ku": "derbasbûna ewle",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "emergency response",
     "fa": "پاسخ اضطراری",
     "dar": "پاسخ اضطراری",
     "ar": "الاستجابة الطارئة",
+    "apc": "استجابة طوارئ",
     "zh": "紧急响应",
     "fr": "réponse d'urgence",
     "es": "respuesta de emergencia",
@@ -193,13 +207,14 @@
     "tr": "acil müdahale",
     "ps": "بیړنی غبرګون",
     "ku": "bersiva acîl",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "coordination",
     "fa": "هماهنگی",
     "dar": "هماهنگی",
     "ar": "التنسيق",
+    "apc": "تنسيق",
     "zh": "协调",
     "fr": "coordination",
     "es": "coordinación",
@@ -207,13 +222,14 @@
     "tr": "koordinasyon",
     "ps": "همغږي",
     "ku": "koordînasyon",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "deconfliction",
     "fa": "جداسازی نظامی-غیرنظامی",
     "dar": "جداسازی نظامی-ملکی",
     "ar": "آلية الفصل العسكري-المدني",
+    "apc": "فصل عسكري-مدني",
     "zh": "冲突去冲突化机制",
     "fr": "déconfliction",
     "es": "desconflicción",
@@ -221,13 +237,14 @@
     "tr": "çatışma önleme",
     "ps": "د شخړو مخنیوی",
     "ku": "parastina ji pevçûnan",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "aerial strikes",
     "fa": "حملات هوایی",
     "dar": "حملات هوایی",
     "ar": "الضربات الجوية",
+    "apc": "ضربات جوّية",
     "zh": "空袭",
     "fr": "frappes aériennes",
     "es": "ataques aéreos",
@@ -235,13 +252,14 @@
     "tr": "hava saldırıları",
     "ps": "هوایي بریدونه",
     "ku": "êrîşên asîmanî",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "host community",
     "fa": "جامعه میزبان",
     "dar": "جامعه میزبان",
     "ar": "المجتمع المضيف",
+    "apc": "مجتمع مضيف",
     "zh": "接收社区",
     "fr": "communauté d'accueil",
     "es": "comunidad de acogida",
@@ -249,13 +267,14 @@
     "tr": "ev sahibi topluluk",
     "ps": "کوربه ټولنه",
     "ku": "civaka mêvandar",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "humanitarian crisis",
     "fa": "بحران بشردوستانه",
     "dar": "بحران بشردوستانه",
     "ar": "الأزمة الإنسانية",
+    "apc": "أزمة إنسانية",
     "zh": "人道主义危机",
     "fr": "crise humanitaire",
     "es": "crisis humanitaria",
@@ -263,13 +282,14 @@
     "tr": "insani kriz",
     "ps": "بشردوستانه بحران",
     "ku": "krîza mirovane",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "displacement",
     "fa": "آوارگی / جابه‌جایی اجباری",
     "dar": "بیجاشدگی",
     "ar": "النزوح / التهجير",
+    "apc": "تهجير / نزوح",
     "zh": "流离失所",
     "fr": "déplacement",
     "es": "desplazamiento",
@@ -277,13 +297,14 @@
     "tr": "yerinden edilme",
     "ps": "بې ځایه کېدنه",
     "ku": "koçberbûn",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "field hospital",
     "fa": "بیمارستان صحرایی",
     "dar": "شفاخانه صحرایی",
     "ar": "المستشفى الميداني",
+    "apc": "مستشفى ميداني",
     "zh": "野战医院",
     "fr": "hôpital de campagne",
     "es": "hospital de campaña",
@@ -291,13 +312,14 @@
     "tr": "sahra hastanesi",
     "ps": "ساحوي روغتون",
     "ku": "nexweşxaneya meydanî",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "triage",
     "fa": "تریاژ / اولویت‌بندی درمانی",
     "dar": "تریاژ / اولویت‌بندی بیماران",
     "ar": "الفرز الطبي / الإسعاف الأولوي",
+    "apc": "فرز طبي",
     "zh": "检伤分类",
     "fr": "triage",
     "es": "triaje",
@@ -305,13 +327,14 @@
     "tr": "triaj",
     "ps": "تریاژ / د ناروغانو لومړیتوب بندي",
     "ku": "trîyaj",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "trauma care",
     "fa": "مراقبت از آسیب‌دیدگان",
     "dar": "مراقبت از مجروحین",
     "ar": "رعاية المصابين بصدمات",
+    "apc": "عناية بالصدمات",
     "zh": "创伤救治",
     "fr": "soins de traumatologie",
     "es": "atención de traumatismos",
@@ -319,13 +342,14 @@
     "tr": "travma bakımı",
     "ps": "د ټپونو پاملرنه",
     "ku": "lênihêrîna birîndariyan",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "medical supplies",
     "fa": "تجهیزات پزشکی / لوازم طبی",
     "dar": "لوازم طبی",
     "ar": "المستلزمات الطبية",
+    "apc": "مستلزمات طبية",
     "zh": "医疗物资",
     "fr": "fournitures médicales",
     "es": "suministros médicos",
@@ -333,13 +357,14 @@
     "tr": "tıbbi malzemeler",
     "ps": "طبي توکي",
     "ku": "pêdiviyên bijîşkî",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "vaccination",
     "fa": "واکسیناسیون / تلقیح",
     "dar": "واکسیناسیون",
     "ar": "التطعيم / التحصين",
+    "apc": "تلقيح",
     "zh": "疫苗接种",
     "fr": "vaccination",
     "es": "vacunación",
@@ -347,13 +372,14 @@
     "tr": "aşılama",
     "ps": "واکسیناسیون",
     "ku": "derzîlêdan",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "cholera",
     "fa": "وبا",
     "dar": "وبا",
     "ar": "الكوليرا",
+    "apc": "كوليرا",
     "zh": "霍乱",
     "fr": "choléra",
     "es": "cólera",
@@ -361,13 +387,14 @@
     "tr": "kolera",
     "ps": "وبا",
     "ku": "kolera",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "malnutrition",
     "fa": "سوءتغذیه",
     "dar": "سوءتغذیه / کم‌خوراکی",
     "ar": "سوء التغذية",
+    "apc": "سوء تغذية",
     "zh": "营养不良",
     "fr": "malnutrition",
     "es": "malnutrición / desnutrición",
@@ -375,13 +402,14 @@
     "tr": "yetersiz beslenme",
     "ps": "سوء تغذیه",
     "ku": "kêmxwarin",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "wound care",
     "fa": "مراقبت از زخم",
     "dar": "مراقبت از زخم",
     "ar": "العناية بالجروح",
+    "apc": "عناية بالجروح",
     "zh": "伤口护理",
     "fr": "soins des plaies",
     "es": "cuidado de heridas",
@@ -389,13 +417,14 @@
     "tr": "yara bakımı",
     "ps": "د زخم پاملرنه",
     "ku": "lênihêrîna birînan",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "ambulance",
     "fa": "آمبولانس",
     "dar": "امبولانس",
     "ar": "سيارة الإسعاف",
+    "apc": "سيارة إسعاف",
     "zh": "救护车",
     "fr": "ambulance",
     "es": "ambulancia",
@@ -403,13 +432,14 @@
     "tr": "ambulans",
     "ps": "امبولانس",
     "ku": "ambûlans",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "first aid",
     "fa": "کمک‌های اولیه",
     "dar": "کمک‌های اولیه",
     "ar": "الإسعافات الأولية",
+    "apc": "إسعافات أوّلية",
     "zh": "急救",
     "fr": "premiers secours",
     "es": "primeros auxilios",
@@ -417,13 +447,14 @@
     "tr": "ilk yardım",
     "ps": "لومړنۍ مرسته",
     "ku": "alîkariya pêşîn",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "temporary shelter",
     "fa": "سرپناه موقت",
     "dar": "سرپناه موقت",
     "ar": "المأوى المؤقت",
+    "apc": "ملجأ مؤقّت",
     "zh": "临时庇护所",
     "fr": "abri temporaire",
     "es": "alojamiento temporal",
@@ -431,13 +462,14 @@
     "tr": "geçici barınak",
     "ps": "موقت سرپناه",
     "ku": "stargehka demkî",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "host family",
     "fa": "خانواده میزبان",
     "dar": "خانواده میزبان",
     "ar": "الأسرة المستضيفة",
+    "apc": "عيلة مستضيفة",
     "zh": "接收家庭",
     "fr": "famille d'accueil",
     "es": "familia de acogida",
@@ -445,13 +477,14 @@
     "tr": "ev sahibi aile",
     "ps": "کوربه کورنۍ",
     "ku": "malbata mêvandar",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "collective center",
     "fa": "مرکز جمعی / اردوگاه مشترک",
     "dar": "مرکز جمعی",
     "ar": "المركز الجماعي",
+    "apc": "مركز إيواء جماعي",
     "zh": "集体安置中心",
     "fr": "centre collectif",
     "es": "centro colectivo",
@@ -459,13 +492,14 @@
     "tr": "toplu barınma merkezi",
     "ps": "ټولیز مرکز",
     "ku": "navenda civakî",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "registration",
     "fa": "ثبت‌نام / ثبت",
     "dar": "راجستریشن / ثبت‌نام",
     "ar": "التسجيل",
+    "apc": "تسجيل",
     "zh": "登记注册",
     "fr": "enregistrement",
     "es": "registro",
@@ -473,13 +507,14 @@
     "tr": "kayıt",
     "ps": "ثبت‌نام",
     "ku": "qeydkirin",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "WASH (water sanitation hygiene)",
     "fa": "آب، بهداشت و صفایی",
     "dar": "آب، صفایی و بهداشت",
     "ar": "المياه والصرف الصحي والنظافة",
+    "apc": "مي وصرف صحي ونظافة",
     "zh": "水、卫生与个人卫生",
     "fr": "EAH (eau assainissement hygiène)",
     "es": "WASH (agua saneamiento higiene)",
@@ -487,13 +522,14 @@
     "tr": "su, sanitasyon ve hijyen",
     "ps": "اوبه، روغتیا او پاکوالی",
     "ku": "av, paqijî û tenduristî",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "food distribution",
     "fa": "توزیع مواد غذایی",
     "dar": "توزیع خوراک",
     "ar": "توزيع الغذاء",
+    "apc": "توزيع أكل",
     "zh": "食物分发",
     "fr": "distribution alimentaire",
     "es": "distribución de alimentos",
@@ -501,13 +537,14 @@
     "tr": "gıda dağıtımı",
     "ps": "د خوراک ویش",
     "ku": "belavkirina xwarinê",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "ration card",
     "fa": "کارت جیره‌بندی",
     "dar": "کارت جیره‌بندی خوراک",
     "ar": "بطاقة الحصة الغذائية",
+    "apc": "بطاقة حصّة",
     "zh": "口粮卡",
     "fr": "carte de rationnement",
     "es": "tarjeta de ración",
@@ -515,13 +552,14 @@
     "tr": "erzak kartı",
     "ps": "د جیرې کارت",
     "ku": "karta parsûnê",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "supplementary feeding",
     "fa": "تغذیه تکمیلی",
     "dar": "تغذیه تکمیلی",
     "ar": "التغذية التكميلية",
+    "apc": "تغذية تكميلية",
     "zh": "补充喂养",
     "fr": "alimentation supplémentaire",
     "es": "alimentación suplementaria",
@@ -529,13 +567,14 @@
     "tr": "ek beslenme",
     "ps": "تکمیلي تغذیه",
     "ku": "xwarina temamker",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "therapeutic feeding",
     "fa": "تغذیه درمانی",
     "dar": "تغذیه درمانی",
     "ar": "التغذية العلاجية",
+    "apc": "تغذية علاجية",
     "zh": "治疗性喂养",
     "fr": "alimentation thérapeutique",
     "es": "alimentación terapéutica",
@@ -543,13 +582,14 @@
     "tr": "tedavi amaçlı beslenme",
     "ps": "درمانی تغذیه",
     "ku": "xwarina dermanî",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   },
   {
     "en": "nutrition screening",
     "fa": "غربالگری تغذیه‌ای",
     "dar": "غربالگری تغذیه",
     "ar": "الفحص الغذائي / تقييم التغذية",
+    "apc": "فحص تغذية",
     "zh": "营养筛查",
     "fr": "dépistage nutritionnel",
     "es": "tamizaje nutricional",
@@ -557,6 +597,6 @@
     "tr": "beslenme taraması",
     "ps": "د تغذیې لټون",
     "ku": "pişkînîna xwarinê",
-    "verified": { "fa": false, "dar": false, "ar": true, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
+    "verified": { "fa": false, "dar": false, "ar": true, "apc": false, "zh": true, "fr": true, "es": true, "ru": true, "tr": false, "ps": false, "ku": false }
   }
 ]
