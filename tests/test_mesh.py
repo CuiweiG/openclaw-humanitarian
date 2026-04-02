@@ -73,7 +73,8 @@ class TestFragmentation(unittest.TestCase):
             )
 
     def test_fragments_ordered_and_complete(self):
-        text = "A" * 2000  # forces multiple fragments
+        # Use varied content to prevent extreme zlib compression ratio
+        text = " ".join(f"bulletin item {i}: shelter update for region {i*7}" for i in range(200))
         fragments = fragment_for_meshtastic(text, "fa")
         self.assertGreater(len(fragments), 1)
         for i, frag in enumerate(fragments):
