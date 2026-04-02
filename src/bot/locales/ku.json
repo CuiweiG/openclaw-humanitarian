@@ -1,0 +1,15 @@
+{
+  "welcome": "Bi xêr hatî robota tora mirovane ya CrisisBridge! 🌍\n\nEm her roj nûçenameyên mirovane yên pirzimanî ji bo sivîlên ku ji krîza Rojhilata Navîn bandor bûne belav dikin.\n\nJi bo fermanên berdest /help bikar bîne.",
+  "help": "📋 Fermanên berdest:\n\n/latest — Nûçenameya krîzê ya herî dawî bistîne\n/shelter [cih] — Stargehên herî nêzîk bibîne\n/language [kod] — Zimanê xwe yê bijarte saz bike\n  Kod: en, ar, fa, dar, zh, tr, ps, ku\n/about — Derbarê vê projeyê\n/help — Vê peyama alîkariyê nîşan bide",
+  "latest_header": "📢 Nûçenameya krîzê ya herî dawî ({date})",
+  "latest_no_data": "Niha tu nûçename tune. Ji kerema xwe paşê dîsa kontrol bike.",
+  "shelter_header": "📍 Stargehên herî nêzîk li nêzî {location}:",
+  "shelter_no_results": "Ji bo vê cihê hîna daneyên stargehê tune. Em li ser berfireh kirina vê dixebitin.",
+  "shelter_entry": "{number}. {name} — {capacity} cihên vala — {distance} km\n   📞 {phone}",
+  "language_set": "✅ Ziman hate guhertin bo {language}.",
+  "language_invalid": "❌ Koda zimanî nayê piştgirîkirin. Berdest: en, ar, fa, dar, zh, tr, ps, ku",
+  "about": "CrisisBridge projeyek çavkaniya vekirî ye ku ji aliyê xwexwazyan ve tê birêvebirin. Ew raporên mirovane yên NY ji bo çend zimanan werdigerîne û bi riya Telegramê belav dike.\n\n🔗 GitHub: github.com/CuiweiG/openclaw-humanitarian\n📧 Têkilî: aid@agentmail.to\n\nEm bexşînan qebûl nakin. Ji kerema xwe rasterast piştgirîya ICRC, UNHCR, an MSF bikin.",
+  "disclaimer": "⚠️ Ev agahdarî ji hêla zîrekiya çêkirî ve ji çavkaniyên fermî yên NY hatine çêkirin. Ji bo biryarên girîng her dem ji rayedarên herêmî re piştrast bikin.",
+  "error": "Tiştek şaş çû. Ji kerema xwe paşê dîsa biceribîne.",
+  "share_prompt": "📢 Vê nûçenameyê bi her kesê ku hewcedariya wê heye re parve bike."
+}

@@ -1,0 +1,15 @@
+{
+  "welcome": "أهلاً فيك بروبوت شبكة CrisisBridge الإنسانية! 🌍\n\nمنوصّلك نشرات إنسانية يومية بعدة لغات للمدنيين المتأثرين بأزمة الشرق الأوسط.\n\nاستعمل /help لتشوف الأوامر المتاحة.",
+  "help": "📋 الأوامر المتاحة:\n\n/latest — آخر نشرة أزمة\n/shelter [المكان] — دوّر عأقرب ملجأ\n/language [الكود] — غيّر لغتك\n  الأكواد: en, ar, apc, fa, dar, zh, tr, ps, ku\n/about — عن المشروع\n/help — هالرسالة",
+  "latest_header": "📢 آخر نشرة أزمة ({date})",
+  "latest_no_data": "ما في نشرات هلق. ارجع شيك بعدين.",
+  "shelter_header": "📍 أقرب ملاجئ قريبة من {location}:",
+  "shelter_no_results": "ما في معلومات ملاجئ لهالمكان هلق. عم نشتغل عتوسيع التغطية.",
+  "shelter_entry": "{number}. {name} — {capacity} محل فاضي — {distance} كم\n   📞 {phone}",
+  "language_set": "✅ تغيّرت اللغة على {language}.",
+  "language_invalid": "❌ كود اللغة مش مدعوم. المتاح: en, ar, apc, fa, dar, zh, tr, ps, ku",
+  "about": "CrisisBridge مشروع مفتوح المصدر بيشتغل عليه متطوعين، بيترجم تقارير الأمم المتحدة الإنسانية لعدة لغات وبيوزعها عتيليغرام.\n\n🔗 GitHub: github.com/CuiweiG/openclaw-humanitarian\n📧 تواصل: aid@agentmail.to\n\nما منقبل تبرعات. ادعم ICRC أو UNHCR أو MSF مباشرة.",
+  "disclaimer": "⚠️ هالمعلومات مصنوعة بالذكاء الاصطناعي من مصادر أممية رسمية. دايماً تأكد من السلطات المحلية للقرارات المهمة.",
+  "error": "في شي غلط. جرّب بعدين.",
+  "share_prompt": "📢 شارك هالنشرة مع أي حدا ممكن يحتاجها."
+}
