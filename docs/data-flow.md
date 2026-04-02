@@ -43,14 +43,14 @@ The following data appears in application logs (stdout/journald):
 | ReliefWeb fetch results | No | `Fetched 5 reports.` |
 | Translation errors | No | `Translation to 'fa' failed: timeout` |
 
-### ⚠️ Known Issue: User ID in Logs
+### ✅ Resolved: User ID Hashing in Logs
 
-The current logging in `src/bot/commands.py` includes raw Telegram user IDs
-at INFO level. This is a **known deviation** from the "no personal data"
-claim in earlier documentation.
+As of v0.2.0, all logging in `src/bot/commands.py` uses `_hash_uid()`
+which produces a truncated SHA-256 hash of the Telegram user ID. Raw
+user IDs no longer appear in application logs.
 
-**Mitigation planned:** Replace raw user IDs with hashed identifiers in
-log statements. Track in issue #XX.
+The CI pipeline (`security-check` job) enforces this — any PR introducing
+raw user IDs in log statements will fail automated checks.
 
 ## 4. Data Transmitted
 

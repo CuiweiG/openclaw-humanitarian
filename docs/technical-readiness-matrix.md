@@ -77,16 +77,16 @@ CrisisBridge is a **verified multilingual public information distribution system
 
 | Gap | Priority | Status |
 |-----|----------|--------|
-| Native speaker glossary verification (fa/dar/ps/ku/apc) | P0 | Not started |
-| User ID hashing in application logs | P1 | Planned |
-| Data Protection Impact Assessment template | P1 | Not started |
-| Partner SOP for red-tier module activation | P0 | Not started |
-| Incident response plan | P1 | Not started |
-| AAP complaints/feedback channel | P2 | Not started |
-| CI/CD pipeline in .github/workflows | P2 | Not started |
-| Language reviewer workflow documentation | P1 | Not started |
-| Error correction / bulletin retraction mechanism | P1 | Partially implemented (scrape cycle supersedence) |
-| Kill switch for alert module | P0 | Not implemented |
+| Native speaker glossary verification (fa/dar/ps/ku/apc) | P0 | ✅ Workflow documented (`docs/glossary-review-workflow.md`) — reviewers needed |
+| User ID hashing in application logs | P1 | ✅ Implemented (`_hash_uid()` in commands.py) + CI enforced |
+| Data Protection Impact Assessment template | P1 | ✅ Template created (`docs/dpia-template.md`) |
+| Partner SOP for red-tier module activation | P0 | ✅ Created (`docs/partner-sop.md`) |
+| Incident response plan | P1 | ✅ Created (`docs/incident-response.md`) |
+| AAP complaints/feedback channel | P2 | ✅ Framework documented (`docs/aap-feedback.md`) |
+| CI/CD pipeline in .github/workflows | P2 | ✅ Created (lint + test + glossary + security checks) |
+| Language reviewer workflow documentation | P1 | ✅ Created (`docs/glossary-review-workflow.md`) |
+| Error correction / bulletin retraction mechanism | P1 | ✅ Documented in `docs/incident-response.md` |
+| Kill switch for alert module | P0 | ✅ Implemented (env var + file + runtime) |
 
 ---
 
