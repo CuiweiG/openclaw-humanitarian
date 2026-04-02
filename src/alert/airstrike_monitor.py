@@ -26,11 +26,19 @@ Status: SCAFFOLD — interfaces only, no working implementation yet.
 
 from __future__ import annotations
 
+import hashlib
 import logging
+import os
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from enum import IntEnum
+from urllib.parse import urlencode
+
+try:
+    import requests
+except ImportError:  # graceful degradation for minimal installs
+    requests = None  # type: ignore[assignment]
 
 logger = logging.getLogger(__name__)
 
@@ -81,12 +89,84 @@ class ACLEDSource(AlertSource):
 
 
 class OCHAFlashSource(AlertSource):
-    """OCHA Flash Updates from ReliefWeb API."""
+    """OCHA Flash Updates from ReliefWeb API v2.
+
+    Polls for flash updates and situation reports tagged as
+    'Flash Update' from OCHA, which typically indicate rapid-onset
+    events including airstrikes and escalations.
+    """
+
+    RELIEFWEB_API = "https://api.reliefweb.int/v1/reports"
+    FLASH_FORMAT = "Flash Update"
+    # Countries of interest (ISO3)
+    COUNTRIES = ["IRN", "LBN", "SYR", "AFG", "IRQ"]
 
     def poll(self, since_minutes: int = 15) -> list[CivilianAlert]:
-        # TODO: implement ReliefWeb flash update polling
-        logger.info("OCHAFlashSource: not yet implemented")
-        return []
+        if requests is None:
+            logger.warning("OCHAFlashSource: requests library not installed")
+            return []
+
+        cutoff = datetime.now(timezone.utc) - timedelta(minutes=since_minutes)
+        cutoff_str = cutoff.strftime("%Y-%m-%dT%H:%M:%S+00:00")
+
+        params = {
+            "appname": "crisisbridge",
+            "preset": "latest",
+            "limit": 10,
+            "filter[field]": "date.created",
+            "filter[value][from]": cutoff_str,
+            "fields[include][]": ["title", "source", "date", "country", "url"],
+        }
+
+        alerts: list[CivilianAlert] = []
+        try:
+            resp = requests.get(
+                self.RELIEFWEB_API,
+                params=params,  # type: ignore[arg-type]
+                timeout=15,
+                headers={"User-Agent": "CrisisBridge/1.0 (humanitarian)"},
+            )
+            resp.raise_for_status()
+            data = resp.json()
+        except Exception as exc:
+            logger.error("OCHAFlashSource request failed: %s", exc)
+            return []
+
+        for item in data.get("data", []):
+            fields = item.get("fields", {})
+            title = fields.get("title", "")
+
+            # Only process flash updates (rapid-onset events)
+            if self.FLASH_FORMAT.lower() not in title.lower():
+                continue
+
+            countries = fields.get("country", [])
+            country_names = [c.get("name", "") for c in countries]
+            region = ", ".join(country_names) or "Unknown"
+
+            source_list = fields.get("source", [])
+            source_name = source_list[0].get("name", "OCHA") if source_list else "OCHA"
+            source_url = fields.get("url", "")
+
+            # Determine severity from title keywords
+            severity = AlertSeverity.INFO
+            title_lower = title.lower()
+            if any(kw in title_lower for kw in ("strike", "attack", "bombing", "shelling", "killed")):
+                severity = AlertSeverity.CRITICAL
+            elif any(kw in title_lower for kw in ("escalation", "displacement", "emergency")):
+                severity = AlertSeverity.WARNING
+
+            alerts.append(CivilianAlert(
+                severity=severity,
+                region=region,
+                summary_en=title,
+                source=source_name,
+                source_url=source_url,
+                timestamp=datetime.now(timezone.utc),
+            ))
+
+        logger.info("OCHAFlashSource: found %d flash alerts", len(alerts))
+        return alerts
 
 
 # ──────────────────────────────────────────
@@ -99,12 +179,21 @@ _SOURCES: list[AlertSource] = [
 ]
 
 
+_seen_hashes: set[str] = set()
+
+
+def _alert_hash(alert: CivilianAlert) -> str:
+    """Compute a dedup key from alert content."""
+    raw = f"{alert.region}|{alert.severity}|{alert.source}|{alert.summary_en[:80]}"
+    return hashlib.sha256(raw.encode()).hexdigest()[:16]
+
+
 def check_alerts(since_minutes: int = 15) -> list[CivilianAlert]:
     """
     Poll all alert sources and return de-duplicated alerts.
 
-    De-duplication is by (region, severity, source) within the
-    TTL window.
+    De-duplication is by (region, severity, source, summary_prefix)
+    within the process lifetime.  Hash set resets on restart.
     """
     all_alerts: list[CivilianAlert] = []
     for source in _SOURCES:
@@ -112,5 +201,17 @@ def check_alerts(since_minutes: int = 15) -> list[CivilianAlert]:
             all_alerts.extend(source.poll(since_minutes))
         except Exception as exc:
             logger.error("Alert source %s failed: %s", type(source).__name__, exc)
-    # TODO: implement de-duplication logic
-    return all_alerts
+
+    deduped: list[CivilianAlert] = []
+    for alert in all_alerts:
+        h = _alert_hash(alert)
+        if h not in _seen_hashes:
+            _seen_hashes.add(h)
+            deduped.append(alert)
+
+    if len(all_alerts) != len(deduped):
+        logger.info(
+            "Dedup: %d alerts → %d after removing duplicates",
+            len(all_alerts), len(deduped),
+        )
+    return deduped
