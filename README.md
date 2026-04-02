@@ -36,11 +36,11 @@ CrisisBridge addresses this gap.
 
 We believe in being upfront about where this project stands:
 
-- **Telegram is unreachable in Iran.** With 28+ days of near-total internet blackout and connectivity at ~1% of normal levels, our primary distribution channel does not reach the population that needs it most. The offline mesh layer is being fast-tracked to address this.
-- **Persian and Dari glossary terms are unverified.** These are our two most critical target languages, but zero terms have been validated by native speakers yet. Translations may contain errors that matter in life-or-death contexts. We urgently need native speaker reviewers.
-- **Turkish glossary is missing.** We claim 9-language support, but the humanitarian glossary has no Turkish entries yet. Turkish translations rely entirely on AI without terminology constraints.
-- **Offline distribution is research-only.** The Briar + Meshtastic mesh layer exists as documentation and research notes — no working code yet.
+- **Telegram is unreachable in Iran.** With 28+ days of near-total internet blackout and connectivity at ~1% of normal levels, our primary distribution channel does not reach the population that needs it most. The offline mesh layer (Briar + Meshtastic + D2C satellite) is now a P0 MVP deliverable.
+- **Persian, Dari, Pashto, Kurdish, and Lebanese Arabic glossary terms are unverified.** These are our most critical target languages, but zero terms have been validated by native speakers yet. Translations may contain errors that matter in life-or-death contexts. We urgently need native speaker reviewers.
+- **Offline mesh transport is implemented but untested in the field.** `src/offline/mesh.py` provides Briar Mailbox and Meshtastic serial integration with compression, fragmentation, and dedup — but no field deployment has occurred yet.
 - **No persistent storage.** Reports and user preferences are not persisted. Restarting the system loses all state.
+- **ACLED API integration pending.** The airstrike alert module polls OCHA Flash Updates but the ACLED real-time feed requires an API key not yet configured.
 
 If you can help with any of these, please [open an issue](https://github.com/CuiweiG/openclaw-humanitarian/issues) or reach out at aid@agentmail.to.
 
@@ -73,7 +73,7 @@ Send `/start` → choose your language → explore available crisis bulletins in
 |---------|--------|-------------|
 | 📡 **Crisis Scraper** | ✅ Live | Auto-scrapes situation reports from ReliefWeb and OCHA APIs |
 | 🌐 **Multilingual Translator** | ✅ Live | AI-powered translation with humanitarian-specific glossary (40 terms, 12 languages, verification tracked) |
-| 🤖 **Telegram Bot** | ✅ Live | Delivers bulletins in 9 languages on demand and via push alerts |
+| 🤖 **Telegram Bot** | ✅ Live | Delivers bulletins in 12 languages on demand and via push alerts |
 | 🔍 **Source Verification** | ✅ Live | Credibility scoring for all information sources |
 | 🚨 **Airstrike Alert System** | 🔨 In Dev | Minute-level civilian safety alerts from ACLED, OCHA Flash Updates |
 | 📶 **Offline Mesh Layer** | 🔨 In Dev | Briar + Meshtastic + D2C satellite for internet-denied environments |
@@ -99,7 +99,7 @@ Send `/start` → choose your language → explore available crisis bulletins in
                          ▼
 ┌─────────────────────────────────────────────────────┐
 │              TRANSLATION ENGINE                      │
-│  AI model + glossary.json · 40 terms · 9 languages      │
+│  AI model + glossary.json · 40 terms · 12 languages     │
 │  Quality checks · Source verification                    │
 └────────────────────────┬────────────────────────────┘
                          │
