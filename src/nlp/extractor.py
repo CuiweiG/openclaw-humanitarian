@@ -17,7 +17,7 @@ class CrisisExtractor:
     # Patterns for common humanitarian data points
     CASUALTY_PATTERNS = [
         r'(\d[\d,]*)\s+(?:people\s+)?(?:have\s+been\s+|were\s+|are\s+)?(?:killed|dead|deaths|casualties|fatalities)',
-        r'(\d[\d,]*)\s+(?:people\s+)?(?:have\s+been\s+|were\s+|are\s+)?(?:injured|wounded|hurt)',
+        r'(\d[\d,]*)\s*(?:people\s+)?(?:have\s+been\s+|were\s+|are\s+)?(?:injured|wounded|hurt)',
         r'death\s+toll\s+(?:of\s+)?(\d[\d,]*)',
         r'(?:at\s+least\s+|around\s+|over\s+)(\d[\d,]*)\s+(?:people\s+)?(?:have\s+been\s+|were\s+)?(?:killed|dead)',
         r'(?:at\s+least\s+|around\s+|over\s+)(\d[\d,]*)\s+(?:people\s+)?(?:have\s+been\s+|were\s+)?(?:injured|wounded)',
