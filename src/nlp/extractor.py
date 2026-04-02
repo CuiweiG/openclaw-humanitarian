@@ -16,9 +16,11 @@ class CrisisExtractor:
     
     # Patterns for common humanitarian data points
     CASUALTY_PATTERNS = [
-        r'(\d[\d,]*)\s*(?:people\s+)?(?:killed|dead|deaths|casualties|fatalities)',
-        r'(\d[\d,]*)\s*(?:people\s+)?(?:injured|wounded|hurt)',
+        r'(\d[\d,]*)\s+(?:people\s+)?(?:have\s+been\s+|were\s+|are\s+)?(?:killed|dead|deaths|casualties|fatalities)',
+        r'(\d[\d,]*)\s+(?:people\s+)?(?:have\s+been\s+|were\s+|are\s+)?(?:injured|wounded|hurt)',
         r'death\s+toll\s+(?:of\s+)?(\d[\d,]*)',
+        r'(?:at\s+least\s+|around\s+|over\s+)(\d[\d,]*)\s+(?:people\s+)?(?:have\s+been\s+|were\s+)?(?:killed|dead)',
+        r'(?:at\s+least\s+|around\s+|over\s+)(\d[\d,]*)\s+(?:people\s+)?(?:have\s+been\s+|were\s+)?(?:injured|wounded)',
     ]
     
     DISPLACEMENT_PATTERNS = [
@@ -72,13 +74,13 @@ class CrisisExtractor:
 
     def _extract_casualties(self, text: str) -> dict:
         killed, injured = 0, 0
-        for pattern in self.CASUALTY_PATTERNS[:3]:
+        for pattern in self.CASUALTY_PATTERNS:
             match = re.search(pattern, text, re.IGNORECASE)
             if match:
                 num = int(match.group(1).replace(',', ''))
                 if any(w in match.group(0).lower() for w in ['killed', 'dead', 'death']):
                     killed = max(killed, num)
-                else:
+                elif any(w in match.group(0).lower() for w in ['injured', 'wounded', 'hurt']):
                     injured = max(injured, num)
         return {'killed': killed, 'injured': injured}
 
