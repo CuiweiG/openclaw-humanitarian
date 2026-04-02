@@ -29,6 +29,7 @@ from __future__ import annotations
 import hashlib
 import logging
 import os
+import threading
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
@@ -41,6 +42,55 @@ except ImportError:  # graceful degradation for minimal installs
     requests = None  # type: ignore[assignment]
 
 logger = logging.getLogger(__name__)
+
+
+# ──────────────────────────────────────────
+# Kill switch
+#
+# This module is a RED-TIER restricted module.  It is DISABLED by
+# default and must only be activated after satisfying the checklist
+# in docs/technical-readiness-matrix.md.
+#
+# The kill switch can be triggered by:
+#   1. Setting env var ALERT_KILL_SWITCH=1
+#   2. Calling kill_alerts() at runtime
+#   3. Creating the file .alert_kill (in working directory)
+#
+# When killed, check_alerts() returns an empty list and logs a
+# warning.  Re-enable by clearing all three triggers.
+# ──────────────────────────────────────────
+
+_kill_switch_lock = threading.Lock()
+_kill_switch_active: bool = True  # DEFAULT: KILLED (red-tier module)
+
+
+def is_alert_enabled() -> bool:
+    """Check whether the alert system is currently enabled."""
+    # Env var override (highest priority)
+    if os.getenv("ALERT_KILL_SWITCH", "").strip() in ("1", "true", "yes"):
+        return False
+    # File-based kill switch
+    if os.path.exists(".alert_kill"):
+        return False
+    # Runtime kill switch
+    with _kill_switch_lock:
+        return not _kill_switch_active
+
+
+def enable_alerts() -> None:
+    """Enable the alert system (requires all other kill switches cleared)."""
+    global _kill_switch_active
+    with _kill_switch_lock:
+        _kill_switch_active = False
+    logger.warning("ALERT SYSTEM ENABLED by runtime call")
+
+
+def kill_alerts() -> None:
+    """Emergency kill switch — immediately disable all alert processing."""
+    global _kill_switch_active
+    with _kill_switch_lock:
+        _kill_switch_active = True
+    logger.critical("ALERT SYSTEM KILLED by runtime call")
 
 
 class AlertSeverity(IntEnum):
@@ -188,13 +238,31 @@ def _alert_hash(alert: CivilianAlert) -> str:
     return hashlib.sha256(raw.encode()).hexdigest()[:16]
 
 
+def get_status() -> dict[str, object]:
+    """Return current alert system status for monitoring."""
+    return {
+        "enabled": is_alert_enabled(),
+        "runtime_killed": _kill_switch_active,
+        "env_killed": os.getenv("ALERT_KILL_SWITCH", "").strip() in ("1", "true", "yes"),
+        "file_killed": os.path.exists(".alert_kill"),
+        "seen_hashes": len(_seen_hashes),
+        "sources": [type(s).__name__ for s in _SOURCES],
+    }
+
+
 def check_alerts(since_minutes: int = 15) -> list[CivilianAlert]:
     """
     Poll all alert sources and return de-duplicated alerts.
 
     De-duplication is by (region, severity, source, summary_prefix)
     within the process lifetime.  Hash set resets on restart.
+
+    Returns an empty list if the kill switch is active.
     """
+    if not is_alert_enabled():
+        logger.warning("check_alerts called but alert system is KILLED — returning empty")
+        return []
+
     all_alerts: list[CivilianAlert] = []
     for source in _SOURCES:
         try:
