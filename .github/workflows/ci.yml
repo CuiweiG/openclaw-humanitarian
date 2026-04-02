@@ -1,0 +1,104 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install ruff
+
+      - name: Lint with ruff
+        run: ruff check src/ tests/ --output-format=github
+
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest pytest-asyncio
+
+      - name: Run tests
+        run: |
+          python -m pytest tests/ -v --tb=short
+        env:
+          PYTHONPATH: .
+
+  glossary-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate glossary.json
+        run: |
+          python -c "
+          import json, sys
+          with open('data/glossary.json') as f:
+              glossary = json.load(f)
+          errors = []
+          required_langs = ['en', 'fa', 'dar', 'ar', 'apc', 'zh', 'fr', 'es', 'ru', 'tr', 'ps', 'ku']
+          for i, entry in enumerate(glossary):
+              for lang in required_langs:
+                  if lang not in entry:
+                      errors.append(f'Term {i} ({entry.get(\"en\", \"?\")}) missing {lang}')
+              if 'verified' not in entry:
+                  errors.append(f'Term {i} ({entry.get(\"en\", \"?\")}) missing verified field')
+          if errors:
+              for e in errors:
+                  print(f'::error::{e}')
+              sys.exit(1)
+          print(f'✅ All {len(glossary)} terms have {len(required_langs)} languages + verification tracking')
+          "
+
+  security-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for raw user IDs in logs
+        run: |
+          # Ensure no raw Telegram user IDs in log statements
+          if grep -rn 'user.id' src/bot/commands.py | grep -v '_hash_uid' | grep -v '#' | grep 'logger'; then
+            echo "::error::Raw user IDs found in log statements. Use _hash_uid() instead."
+            exit 1
+          fi
+          echo "✅ No raw user IDs in log statements"
+
+      - name: Check for E2E encryption claims
+        run: |
+          # Ensure no false E2E claims about Telegram Bot API
+          if grep -rni 'end-to-end.*telegram.*bot\|telegram.*bot.*end-to-end\|telegram provides end-to-end' docs/ SECURITY.md; then
+            echo "::error::Found potentially misleading Telegram E2E encryption claim"
+            exit 1
+          fi
+          echo "✅ No misleading Telegram E2E claims"
