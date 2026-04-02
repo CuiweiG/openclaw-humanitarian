@@ -1,7 +1,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Languages](https://img.shields.io/badge/languages-9-orange.svg)](#what-we-do)
+[![Languages](https://img.shields.io/badge/languages-12-orange.svg)](#what-we-do)
 [![Telegram Bot](https://img.shields.io/badge/Telegram-Bot-2CA5E0?logo=telegram)](https://t.me/openclaw_aid_bot)
 
 <!-- Demo recording: see docs/demo-recording.md for instructions -->
@@ -11,7 +11,7 @@
 
 > **600,000–1 million households displaced. 28+ days of internet blackout. Most humanitarian reports available only in English. CrisisBridge is building a multilingual bridge.**
 
-An open-source platform ensuring life-saving humanitarian information reaches every civilian, in their language, online or offline. Currently serving the 2026 Middle East crisis in 9 languages: Arabic, Persian, Dari, French, Spanish, Russian, English, Chinese, and Turkish.
+An open-source platform ensuring life-saving humanitarian information reaches every civilian, in their language, online or offline. Currently serving the 2026 Middle East crisis in 12 languages: Arabic, Lebanese Arabic, Persian, Dari, Pashto, Kurdish (Kurmanji), French, Spanish, Russian, English, Chinese, and Turkish.
 
 **Read in your language:** &nbsp; [فارسی](README.fa.md) &nbsp;|&nbsp; [العربية](README.ar.md) &nbsp;|&nbsp; [中文](README.zh.md) &nbsp;|&nbsp; [Français](README.fr.md) &nbsp;|&nbsp; [Español](README.es.md) &nbsp;|&nbsp; [Русский](README.ru.md) &nbsp;|&nbsp; [English](README.md)
 
@@ -72,7 +72,7 @@ Send `/start` → choose your language → explore available crisis bulletins in
 | Product | Status | Description |
 |---------|--------|-------------|
 | 📡 **Crisis Scraper** | ✅ Live | Auto-scrapes situation reports from ReliefWeb and OCHA APIs |
-| 🌐 **Multilingual Translator** | ✅ Live | AI-powered translation with humanitarian-specific glossary (40 terms, verification tracked) |
+| 🌐 **Multilingual Translator** | ✅ Live | AI-powered translation with humanitarian-specific glossary (40 terms, 12 languages, verification tracked) |
 | 🤖 **Telegram Bot** | ✅ Live | Delivers bulletins in 9 languages on demand and via push alerts |
 | 🔍 **Source Verification** | ✅ Live | Credibility scoring for all information sources |
 | 🚨 **Airstrike Alert System** | 🔨 In Dev | Minute-level civilian safety alerts from ACLED, OCHA Flash Updates |
@@ -169,9 +169,9 @@ The project maintains a 40-term humanitarian glossary (with per-term verificatio
 - 🔨 Lebanese Arabic (Levantine) dialect support for 800K+ displaced in Lebanon
 
 ### Delivered
-- ✅ Multilingual crisis bulletins (AR/FA/DAR/EN/ZH/TR/FR/ES/RU)
+- ✅ Multilingual crisis bulletins (AR/APC/FA/DAR/PS/KU/EN/ZH/TR/FR/ES/RU)
 - ✅ ReliefWeb/OCHA auto-scraping pipeline
-- ✅ 40-term humanitarian glossary (9 languages + Pashto/Kurdish)
+- ✅ 40-term humanitarian glossary (12 languages, per-term verification tracking)
 - ✅ Telegram bot with 9-language support
 - ✅ Simplified language + emoji markers for low-literacy users
 - 🔨 Family links tracing system (privacy-by-design)
